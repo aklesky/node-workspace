@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "module": "CommonJS",
+        "types": ["jest", "node"],
+        "target": "ES5",
+        "moduleResolution": "NodeNext",
+        "declaration": true,
+        "esModuleInterop": false,
+        "declarationDir": "./@types"
+    },
+    "exclude": ["node_modules"]
+}

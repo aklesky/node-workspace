@@ -1,0 +1,35 @@
+{
+    "name": "@aklesky/ts-config",
+    "version": "0.0.9",
+    "description": "Shareable collection of typescript configurations.",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "license": "MIT",
+    "engines": {
+        "node": ">=16",
+        "npm": ">=7"
+    },
+    "directories": {
+        "node": "node"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "node"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/bliksy.git"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/bliksy/issues"
+    },
+    "dependencies": {
+        "@tsconfig/node18": "1.0.1",
+        "@types/node": "18.11.9"
+    },
+    "devDependencies": {
+        "typescript": "4.9.3"
+    }
+}
