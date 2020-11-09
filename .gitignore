@@ -1,0 +1,11 @@
+.idea
+.vscode
+*.lock
+node_modules
+build
+*.log
+dist
+logs
+.DS_Store
+*.pem
+.env
