@@ -1,0 +1,13 @@
+.idea
+.vscode
+.fleet
+*.lock
+node_modules
+build
+*.log
+dist
+logs
+.DS_Store
+.env
+.npmrc
+bin

@@ -1,0 +1,15 @@
+{
+    "packages": ["packages/*"],
+    "publishConfig": {
+        "access": "public"
+    },
+    "command": {
+        "add": {
+            "exact": true
+        },
+        "bootstrap": {
+            "hoist": "**"
+        }
+    },
+    "version": "independent"
+}

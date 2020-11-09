@@ -1,0 +1,66 @@
+{
+    "name": "@aklesky/eslint-config",
+    "version": "0.0.10",
+    "description": "Shareable collection of eslint configurations.",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "license": "MIT",
+    "type": "commonjs",
+    "main": "dist/index.js",
+    "types": "@types/index.d.ts",
+    "prettier": "@aklesky/prettier-config",
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        ".": {
+            "types": "./@types/index.d.ts",
+            "require": "./dist/index.js",
+            "import": "./dist/index.js"
+        },
+        "./node.js": {
+            "types": "./@types/node.d.ts",
+            "require": "./dist/node.js",
+            "import": "./dist/node.js"
+        },
+        "./jest.js": {
+            "types": "./@types/jest.d.ts",
+            "require": "./dist/jest.js",
+            "import": "./dist/jest.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "directories": {
+        "dist": "dist",
+        "@types": "@types"
+    },
+    "files": [
+        "dist",
+        "@types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/bliksy.git"
+    },
+    "scripts": {
+        "clean": "rm -rf ./dist && rm -rf ./@types",
+        "build": "npm run clean && tsc --project tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/bliksy/issues"
+    },
+    "devDependencies": {
+        "@aklesky/ts-config": "^0.0.9",
+        "@types/eslint": "8.4.10",
+        "typescript": "4.9.3"
+    },
+    "dependencies": {
+        "@aklesky/prettier-config": "^0.0.9",
+        "@typescript-eslint/eslint-plugin": "5.43.0",
+        "@typescript-eslint/parser": "5.43.0",
+        "eslint": "8.28.0",
+        "eslint-config-prettier": "8.5.0",
+        "eslint-plugin-jest": "27.1.5",
+        "eslint-plugin-prettier": "4.2.1"
+    }
+}
