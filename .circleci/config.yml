@@ -26,7 +26,7 @@ jobs:
                 command: git config --global user.email $PROJECT_USER_EMAIL && git config --global user.name $PROJECT_USER_NAME
             - run:
                 name: "Publish Packages"
-                command: export $GH_TOKEN && npx lerna version --no-private --conventional-commits --create-release github --yes
+                command: export GH_TOKEN=$GH_TOKEN && npx lerna version --no-private --conventional-commits --create-release github --yes
 
 workflows:
     release-packages:
