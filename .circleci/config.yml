@@ -12,7 +12,7 @@ jobs:
             - checkout
             - add_ssh_keys:
                 fingerprints:
-                    - '6e:57:ac:35:af:e6:eb:a8:ca:7b:d2:da:5e:d1:3e:72'
+                    - 'be:9c:81:fc:d9:d0:3f:1f:6c:7c:a1:a8:c7:4a:53:e7'
             - node/install-packages:
                 with-cache: true
                 check-cache: always
