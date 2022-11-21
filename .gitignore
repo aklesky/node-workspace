@@ -1,5 +1,6 @@
 .idea
 .vscode
+.fleet
 *.lock
 node_modules
 build
@@ -7,5 +8,4 @@ build
 dist
 logs
 .DS_Store
-*.pem
 .env

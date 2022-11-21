@@ -1,0 +1,25 @@
+{
+  "name": "@aklesky/eslint-config",
+  "version": "0.0.0",
+  "description": "shareable eslint configuration",
+  "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+  "homepage": "https://github.com/aklesky/bliksy#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aklesky/bliksy.git"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json"
+  },
+  "bugs": {
+    "url": "https://github.com/aklesky/bliksy/issues"
+  }
+}
