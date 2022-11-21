@@ -7,14 +7,18 @@ jobs:
             - image: circleci/node
         resource_class: small
         steps:
+            - node/install:
+                node-version: '18.12.1'
             - checkout
+            - add_ssh_keys:
+                fingerprints:
+                    - '6e:57:ac:35:af:e6:eb:a8:ca:7b:d2:da:5e:d1:3e:72'
             - node/install-packages:
-                  steps:
-                      - add_ssh_keys:
-                            fingerprints:
-                                - '6e:57:ac:35:af:e6:eb:a8:ca:7b:d2:da:5e:d1:3e:72'
-                      - run: npx lerna bootstrap --ci
-                      - run: npx lerna version --no-private --conventional-commits --create-release github --yes
+                with-cache: true
+                check-cache: always
+
+            - run: npx lerna bootstrap --ci
+            - run: npx lerna version --no-private --conventional-commits --create-release github --yes
 
 workflows:
     release-packages:
