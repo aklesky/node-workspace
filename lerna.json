@@ -1,0 +1,23 @@
+{
+    "packages": [
+        "packages/*"
+    ],
+    "command": {
+        "add": {
+            "exact": true
+        },
+        "bootstrap": {
+            "contents": "dist",
+            "hoist": "**",
+            "force-local": true
+        },
+        "link": {
+            "contents": "dist",
+            "force-local": true
+        }
+    },
+    "publishConfig": {
+        "directory": "dist"
+    },
+    "version": "independent"
+}
