@@ -3,6 +3,7 @@
     "private": true,
     "prettier": "./packages/prettier-config/dist/index.js",
     "scripts": {
+        "setup": "npm i && lerna bootstrap && npm run build",
         "build": "lerna run build"
     },
     "devDependencies": {
