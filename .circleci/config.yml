@@ -20,7 +20,7 @@ jobs:
             - run: npx lerna bootstrap --ci
             - run:
                 name: Authenticate with registry
-                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+                command: npm config set registry //registry.npmjs.org/:_authToken=$NPM_TOKEN
             - run:
                 name: Set Repository User
                 command: git config --global user.email $PROJECT_USER_EMAIL && git config --global user.name $PROJECT_USER_NAME
