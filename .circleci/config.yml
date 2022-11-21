@@ -19,7 +19,4 @@ jobs:
 workflows:
     release-packages:
         jobs:
-            - release:
-                  filtters:
-                      branches:
-                          only: master
+            - release
