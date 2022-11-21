@@ -8,7 +8,7 @@ jobs:
         resource_class: small
         steps:
             - checkout
-            - node/with-cache:
+            - node/install-packages:
                   steps:
                       - add_ssh_keys:
                             fingerprints:
