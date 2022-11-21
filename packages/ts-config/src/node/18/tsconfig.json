@@ -1,1 +1,7 @@
-{}
+{
+    "extends": "@tsconfig/node18/tsconfig.json",
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "types": ["node"]
+    }
+}

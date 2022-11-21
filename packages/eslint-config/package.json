@@ -1,25 +1,39 @@
 {
-  "name": "@aklesky/eslint-config",
-  "version": "0.0.0",
-  "description": "shareable eslint configuration",
-  "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
-  "homepage": "https://github.com/aklesky/bliksy#readme",
-  "license": "ISC",
-  "main": "dist/index.js",
-  "directories": {
-    "dist": "dist"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aklesky/bliksy.git"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json"
-  },
-  "bugs": {
-    "url": "https://github.com/aklesky/bliksy/issues"
-  }
+    "name": "@aklesky/eslint-config",
+    "version": "0.0.0",
+    "description": "shareable eslint configuration",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "license": "ISC",
+    "prettier": "@aklesky/prettier-config",
+    "main": "dist/index.js",
+    "directories": {
+        "dist": "dist"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/bliksy.git"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist && tsc --project tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/bliksy/issues"
+    },
+    "devDependencies": {
+        "@aklesky/prettier-config": "0.0.0",
+        "@aklesky/ts-config": "0.0.0",
+        "@types/eslint": "8.4.10"
+    },
+    "dependencies": {
+        "@types/eslint": "8.4.10",
+        "@typescript-eslint/eslint-plugin": "5.43.0",
+        "@typescript-eslint/parser": "5.43.0",
+        "eslint": "8.28.0",
+        "eslint-config-prettier": "8.5.0",
+        "eslint-plugin-prettier": "4.2.1"
+    }
 }

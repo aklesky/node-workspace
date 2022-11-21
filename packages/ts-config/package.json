@@ -1,25 +1,29 @@
 {
-  "name": "@aklesky/ts-config",
-  "version": "0.0.0",
-  "description": "> TODO: description",
-  "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
-  "homepage": "https://github.com/aklesky/bliksy#readme",
-  "license": "ISC",
-  "main": "dist/index.js",
-  "directories": {
-    "dist": "dist"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aklesky/bliksy.git"
-  },
-  "scripts": {
-    "build": "rm -rf ./dist && cp -r ./src ./dist"
-  },
-  "bugs": {
-    "url": "https://github.com/aklesky/bliksy/issues"
-  }
+    "name": "@aklesky/ts-config",
+    "version": "0.0.0",
+    "description": "> TODO: description",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "directories": {
+        "dist": "dist"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/bliksy.git"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist && cp -r ./src ./dist"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/bliksy/issues"
+    },
+    "dependencies": {
+        "@tsconfig/node18": "1.0.1",
+        "@types/node": "18.11.9"
+    }
 }

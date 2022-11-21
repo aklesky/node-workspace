@@ -1,25 +1,33 @@
 {
-  "name": "@aklesky/prettier-config",
-  "version": "0.0.0",
-  "description": "shareable prettier configuration",
-  "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
-  "homepage": "https://github.com/aklesky/bliksy#readme",
-  "license": "ISC",
-  "main": "dist/index.js",
-  "directories": {
-    "dist": "dist"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aklesky/bliksy.git"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json"
-  },
-  "bugs": {
-    "url": "https://github.com/aklesky/bliksy/issues"
-  }
+    "name": "@aklesky/prettier-config",
+    "version": "0.0.0",
+    "description": "shareable prettier configuration",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "prettier": "./dist/index.js",
+    "directories": {
+        "dist": "dist"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/bliksy.git"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist && tsc --project tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/bliksy/issues"
+    },
+    "devDependencies": {
+        "@types/prettier": "2.7.1",
+        "prettier": "2.7.1"
+    },
+    "dependencies": {
+        "@aklesky/ts-config": "0.0.0"
+    }
 }
