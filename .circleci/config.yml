@@ -18,7 +18,9 @@ jobs:
                 check-cache: always
 
             - run: npx lerna bootstrap --ci
-            - run: npx lerna version --no-private --conventional-commits --create-release github --yes
+            - run:
+                name: "Publish Packages"
+                command: export $GH_TOKEN && npx lerna version --no-private --conventional-commits --create-release github --yes 
 
 workflows:
     release-packages:
