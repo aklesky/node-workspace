@@ -31,4 +31,8 @@ jobs:
 workflows:
     release-packages:
         jobs:
-            - release
+            - release:
+                filters:
+                    branches:
+                        only:
+                            - master
