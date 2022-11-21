@@ -1,5 +1,6 @@
 {
     "name": "@aklesky/bliksy",
+    "version": "0.0.0",
     "private": true,
     "prettier": "./packages/prettier-config/dist/index.js",
     "scripts": {
