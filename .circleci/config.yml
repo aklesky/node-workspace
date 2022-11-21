@@ -19,8 +19,14 @@ jobs:
 
             - run: npx lerna bootstrap --ci
             - run:
+                name: Authenticate with registry
+                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+            - run:
+                name: Set Repository User
+                command: git config --global user.email $PROJECT_USER_EMAIL && git config --global user.name $PROJECT_USER_NAME
+            - run:
                 name: "Publish Packages"
-                command: export $GH_TOKEN && npx lerna version --no-private --conventional-commits --create-release github --yes 
+                command: export $GH_TOKEN && npx lerna version --no-private --conventional-commits --create-release github --yes
 
 workflows:
     release-packages:
