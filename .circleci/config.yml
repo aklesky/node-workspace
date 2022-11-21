@@ -13,20 +13,15 @@ jobs:
             - add_ssh_keys:
                 fingerprints:
                     - 'be:9c:81:fc:d9:d0:3f:1f:6c:7c:a1:a8:c7:4a:53:e7'
-            - node/install-packages:
-                with-cache: true
-                check-cache: always
-
+            - node/install-packages
             - run: npx lerna bootstrap --ci
             - run:
-                name: Authenticate with registry
+                name: Add Token for NPM Registry
                 command: npm config set registry //registry.npmjs.org/:_authToken=$NPM_TOKEN
             - run:
                 name: Set Repository User
                 command: git config --global user.email $PROJECT_USER_EMAIL && git config --global user.name $PROJECT_USER_NAME
-            - run:
-                name: "Publish Packages"
-                command: export GH_TOKEN=$GH_TOKEN && npx lerna version --no-private --conventional-commits --create-release github --yes
+            - run: npx lerna version --no-private --conventional-commits --create-release github --yes
 
 workflows:
     release-packages:
