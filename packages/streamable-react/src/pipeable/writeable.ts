@@ -1,6 +1,6 @@
-import { Writable } from 'stream'
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
 import { isString } from '@aklesky/utilities/asserts/strings.js'
+import { Writable } from 'stream'
 
 export class OutputWritable extends Writable {
     constructor(private readonly _writable: Writable, private readonly cb?: () => Promise<string>) {

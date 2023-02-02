@@ -1,11 +1,10 @@
 {
-    "name": "@aklesky/utilities",
+    "name": "@aklesky/vite-react-ssr-plugin",
     "version": "0.0.0",
-    "description": "> TODO: description",
+    "description": "Vite Plugin to handlereact server side rendering.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
-    "prettier": "@aklesky/prettier-config",
     "type": "module",
     "main": "dist/index.js",
     "exports": {
@@ -29,20 +28,22 @@
     "scripts": {
         "clean": "rimraf -rf ./dist",
         "build": "npm run clean && tsc --project ./tsconfig.build.json",
-        "test": "jest"
+        "test": "jest --passWithNoTests"
     },
     "bugs": {
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
-    "dependencies": {
-        "deepmerge-ts": "4.2.2",
-        "rimraf": "4.1.2"
-    },
     "devDependencies": {
         "@aklesky/eslint-config": "0.0.10",
-        "@aklesky/jest-config": "0.0.10",
         "@aklesky/prettier-config": "0.0.9",
         "@aklesky/ts-config": "0.0.9",
-        "supertest": "6.3.3"
+        "@types/rollup": "0.54.0",
+        "@vitejs/plugin-react-swc": "3.0.1",
+        "vite": "4.0.4"
+    },
+    "dependencies": {
+        "@aklesky/streamable-react": "0.0.0",
+        "@aklesky/utilities": "0.0.0",
+        "rimraf": "4.1.2"
     }
 }

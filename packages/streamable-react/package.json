@@ -7,6 +7,9 @@
     "license": "MIT",
     "prettier": "@aklesky/prettier-config",
     "type": "module",
+    "exports": {
+        "./*": "./dist/*"
+    },
     "keywords": [
         "react",
         "ssr",
