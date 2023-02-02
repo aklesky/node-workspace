@@ -8,6 +8,7 @@
     "type": "module",
     "private": true,
     "main": "dist/index.js",
+    "prettier": "@aklesky/prettier-config",
     "exports": {
         "./*": "./dist/*"
     },

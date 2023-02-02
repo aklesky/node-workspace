@@ -6,6 +6,7 @@
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
     "type": "module",
+    "prettier": "@aklesky/prettier-config",
     "main": "dist/index.js",
     "exports": {
         "./*": "./dist/*"
