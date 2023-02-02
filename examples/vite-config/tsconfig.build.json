@@ -1,0 +1,14 @@
+{
+    "extends": "@aklesky/ts-config/node/18/tsconfig.jsx.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "module": "NodeNext",
+        "composite": false,
+        "target": "ES5",
+        "moduleResolution": "NodeNext",
+        "declaration": true,
+        "esModuleInterop": false
+    },
+    "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__", "vite.config.ts"]
+}

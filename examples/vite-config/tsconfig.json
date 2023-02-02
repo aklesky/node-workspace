@@ -1,0 +1,4 @@
+{
+    "extends": "@aklesky/ts-config/node/18/tsconfig.jsx.json",
+    "references": [{ "path": "./tsconfig.node.json" }]
+}

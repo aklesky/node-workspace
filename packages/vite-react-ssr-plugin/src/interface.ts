@@ -4,10 +4,9 @@ import {
     onAbortCallback,
     OnErrorCallback,
     OnReadyCallback,
-    onStreamEndCallback,
+    onStreamEndCallback
 } from '@aklesky/streamable-react/interfaces/types.js'
 import type { IncomingMessage, ServerResponse } from 'http'
-import { UserConfig } from 'vite'
 
 export type GenericHandler<T = unknown> = (req: IncomingMessage, res: ServerResponse) => T
 
@@ -51,15 +50,4 @@ export interface ReactServerMiddlewareConfig extends Omit<ReactServerMiddlewareO
     getEntry: () => Promise<ComponentType>
     getEntryProps?: GenericHandler<Promise<Record<string, unknown>>>
     timeout?: number
-}
-
-export interface ViteUserConfig {
-    /**
-     * @description vite user configuration
-     */
-    vite: UserConfig
-    /**
-     *  @description react server middleware configuration
-     */
-    react?: ReactServerMiddlewareOptions
 }

@@ -1,0 +1,4 @@
+{
+    "extends": "@aklesky/ts-config/node/18/tsconfig.node.json",
+    "include": ["vite.config.ts"]
+}
