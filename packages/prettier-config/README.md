@@ -1,10 +1,27 @@
-# Shareable Prettier Configuration
+# Prettier Configuration
 
-> Prettier Configuration.
+| Name    | Version | Supported          |
+| ------- | ------- | ------------------ |
+| Prettier    | >= 2.8.3 | :white_check_mark: |
 
-## Usage
+> ## [Usage](#usage-for-prettier-preset)
 
-> package.json
+## Preset
+
+> Prettier Configuration enabled by default
+
+```json
+{
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+}
+```
+
+### Usage for Prettier Preset
 
 ```json
 {
