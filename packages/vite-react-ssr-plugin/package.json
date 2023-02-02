@@ -39,7 +39,7 @@
         "@aklesky/ts-config": "0.0.9",
         "@types/rollup": "0.54.0",
         "@vitejs/plugin-react-swc": "3.0.1",
-        "vite": "4.0.4"
+        "vite": "4.1.0"
     },
     "dependencies": {
         "@aklesky/streamable-react": "0.0.0",
