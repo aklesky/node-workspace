@@ -1,18 +1,18 @@
+import { isFunction } from '@aklesky/utilities/asserts/function.js'
+import { isString } from '@aklesky/utilities/asserts/strings.js'
+import { deepmerge } from '@aklesky/utilities/deepmerge.js'
 import { ServerResponse } from 'http'
 import { createElement } from 'react'
 import { renderToPipeableStream } from 'react-dom/server'
-import { deepmerge } from '@aklesky/utilities/deepmerge'
-import { isFunction } from '@aklesky/utilities/asserts/function.js'
-import { isString } from '@aklesky/utilities/asserts/strings.js'
+import { PipeableStreamOptions, StreamableOptions } from '../interfaces/options.js'
 import { defaultOptions } from './config.js'
 import { OutputWritable } from './writeable.js'
-import { PipeableStreamOptions, StreamableOptions } from '../interfaces/options.js'
+import { HttpStatusCodes } from '@aklesky/utilities/http/codes.js'
 
 export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
     const config = deepmerge(defaultOptions, options || {}) as PipeableStreamOptions
     return async (writable: ServerResponse, streamable: StreamableOptions) => {
         try {
-
             const component = streamable.component || config.component
 
             if (!component) {
@@ -40,12 +40,12 @@ export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
                     console.error(error)
                     streamable.onError?.(error)
                     if (!isFunction(streamable.onAllReady)) {
-                        writable.statusCode = 500
+                        writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
                         output.end(`[react.onError]:${(err as Error).stack}`)
                     }
                 },
                 onShellError: async (error: unknown) => {
-                    writable.statusCode = 500
+                    writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
                     streamable.onShellError?.(error)
                     writable.end(`[react.onShellError]:${(error as Error).stack}`)
                 },
