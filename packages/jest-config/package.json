@@ -1,7 +1,7 @@
 {
     "name": "@aklesky/jest-config",
     "version": "0.0.10",
-    "description": "Shareable jest configuration.",
+    "description": "Jest configuration preset.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/bliksy#readme",
     "license": "MIT",
