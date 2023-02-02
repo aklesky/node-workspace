@@ -63,7 +63,7 @@ export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
                     writable.write(string)
                 }
                 if (config.end) {
-                    writable.end(`${string}</body></html>`)
+                    writable.end(`${string || ''}</body></html>`)
                 }
             })
 

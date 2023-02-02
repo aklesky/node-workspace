@@ -10,7 +10,7 @@
         "build": "lerna run build",
         "link": "lerna link"
     },
-    "workspaces": ["packages/*"],
+    "workspaces": ["packages/*", "examples/*"],
     "devDependencies": {
         "lerna": "6.4.1",
         "typescript": "4.9.5"

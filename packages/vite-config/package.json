@@ -1,7 +1,7 @@
 {
-    "name": "@aklesky/vite-react-ssr-plugin",
+    "name": "@aklesky/vite-config",
     "version": "0.0.0",
-    "description": "Vite Plugin to handle react server side rendering.",
+    "description": "List of configurations for vite setup",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
@@ -33,16 +33,16 @@
     "bugs": {
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
+    "dependencies": {
+        "@aklesky/utilities": "0.0.0",
+        "@aklesky/vite-react-ssr-plugin": "0.0.0",
+        "@vitejs/plugin-react-swc": "3.1.0",
+        "rimraf": "4.1.2",
+        "vite": "4.1.0"
+    },
     "devDependencies": {
         "@aklesky/eslint-config": "0.0.10",
         "@aklesky/prettier-config": "0.0.9",
-        "@aklesky/ts-config": "0.0.9",
-        "@types/rollup": "0.54.0",
-        "vite": "4.1.0"
-    },
-    "dependencies": {
-        "@aklesky/streamable-react": "0.0.0",
-        "@aklesky/utilities": "0.0.0",
-        "rimraf": "4.1.2"
+        "@aklesky/ts-config": "0.0.9"
     }
 }
