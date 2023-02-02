@@ -1,10 +1,17 @@
 # Prettier Configuration
 
-| Name    | Version | Supported          |
-| ------- | ------- | ------------------ |
-| Prettier    | >= 2.8.3 | :white_check_mark: |
+- [Prettier Configuration](#prettier-configuration)
+  - [Usage for Prettier Preset](#usage-for-prettier-preset)
+  - [Preset](#preset)
+    - [Supported Prettier versions](#supported-prettier-versions)
 
-> ## [Usage](#usage-for-prettier-preset)
+## Usage for Prettier Preset
+
+```json
+{
+    "prettier": "@aklesky/prettier-config"
+}
+```
 
 ## Preset
 
@@ -21,10 +28,8 @@
 }
 ```
 
-### Usage for Prettier Preset
+### Supported Prettier versions
 
-```json
-{
-    "prettier": "@aklesky/prettier-config"
-}
-```
+| Name    | Version | Supported          |
+| ------- | ------- | ------------------ |
+| Prettier    | >= 2.8.3 | :white_check_mark: |
