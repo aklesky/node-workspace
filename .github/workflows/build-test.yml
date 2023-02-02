@@ -12,10 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: build and test
-      uses: actions/checkout@v3
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        registry-url: https://registry.npmjs.org/
-      run: make ci
+      - uses: actions/checkout@v3
+      - name: Build monorepo and run tests
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: make ci
