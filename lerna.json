@@ -1,5 +1,7 @@
 {
     "packages": ["packages/*"],
+    "npmClient": "yarn",
+    "useWorkspaces": true,
     "publishConfig": {
         "access": "public"
     },
@@ -7,8 +9,9 @@
         "add": {
             "exact": true
         },
-        "bootstrap": {
-            "hoist": "**"
+        "version": {
+            "allowBranch": ["main", "release/*"],
+            "conventionalCommits": true
         }
     },
     "version": "independent"

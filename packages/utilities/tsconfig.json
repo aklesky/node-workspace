@@ -1,0 +1,3 @@
+{
+    "extends": "@aklesky/ts-config/node/18/tsconfig.jest.json"
+}

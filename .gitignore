@@ -11,3 +11,5 @@ logs
 .env
 .npmrc
 bin
+*.tsbuildinfo
+coverage

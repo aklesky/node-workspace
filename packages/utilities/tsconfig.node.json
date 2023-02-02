@@ -1,0 +1,8 @@
+{
+    "extends": "@aklesky/ts-config/node/18/tsconfig.node.json",
+    "compilerOptions": {
+        "module": "NodeNext",
+        "target": "ESNext",
+        "moduleResolution": "NodeNext",
+    }
+}

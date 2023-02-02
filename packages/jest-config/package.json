@@ -6,7 +6,6 @@
     "homepage": "https://github.com/aklesky/bliksy#readme",
     "license": "MIT",
     "main": "dist/index.js",
-    "types": "dist/@types/index.d.ts",
     "type": "commonjs",
     "prettier": "@aklesky/prettier-config",
     "directories": {
@@ -17,12 +16,10 @@
     },
     "exports": {
         ".": {
-            "types": "./@types/index.d.ts",
             "require": "./dist/index.js",
             "import": "./dist/index.js"
         },
         "./config.js": {
-            "types": "./@types/config.d.ts",
             "require": "./dist/config.js",
             "import": "./dist/config.js"
         },
@@ -36,8 +33,8 @@
         "url": "git+https://github.com/aklesky/bliksy.git"
     },
     "scripts": {
-        "clean": "rm -rf ./dist && rm -rf ./@types",
-        "build": "npm run clean && tsc --project tsconfig.build.json"
+        "clean": "rimraf -rf ./dist",
+        "build": "npm run clean && tsc --project ./tsconfig.build.json"
     },
     "bugs": {
         "url": "https://github.com/aklesky/bliksy/issues"
@@ -52,6 +49,7 @@
     },
     "dependencies": {
         "@swc/core": "1.3.32",
-        "@swc/jest": "0.2.24"
+        "@swc/jest": "0.2.24",
+        "rimraf": "4.1.2"
     }
 }
