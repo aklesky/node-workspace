@@ -6,9 +6,11 @@
     "type": "commonjs",
     "prettier": "./packages/prettier-config/dist/config",
     "scripts": {
-        "setup": "npm i && lerna bootstrap && npm run build",
-        "build": "lerna run build"
+        "setup": "yarn && lerna bootstrap --ci",
+        "build": "lerna run build",
+        "link": "lerna link"
     },
+    "workspaces": ["packages/*"],
     "devDependencies": {
         "lerna": "6.4.1",
         "typescript": "4.9.5"

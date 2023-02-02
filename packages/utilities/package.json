@@ -1,0 +1,49 @@
+{
+    "name": "@aklesky/utilities",
+    "version": "0.0.0",
+    "description": "> TODO: description",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "prettier": "@aklesky/prettier-config",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/typings/index.d.ts",
+    "exports": {
+        "./deepmerge": "./dist/deepmerge.js",
+        "./asserts/": "./dist/asserts/"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "directories": {
+        "dist": "dist",
+        "@types": "@types"
+    },
+    "files": [
+        "dist",
+        "@types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf -rf ./dist",
+        "build": "npm run clean && tsc --project ./tsconfig.build.json",
+        "test": "jest"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "dependencies": {
+        "deepmerge-ts": "4.2.2",
+        "rimraf": "4.1.2"
+    },
+    "devDependencies": {
+        "@aklesky/eslint-config": "0.0.10",
+        "@aklesky/jest-config": "0.0.10",
+        "@aklesky/prettier-config": "0.0.9",
+        "@aklesky/ts-config": "0.0.9"
+    }
+}

@@ -5,10 +5,6 @@
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/bliksy#readme",
     "license": "MIT",
-    "engines": {
-        "node": ">=16",
-        "npm": ">=7"
-    },
     "directories": {
         "node": "node"
     },

@@ -1,13 +1,14 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": "./tsconfig.node.json",
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
+        "module": "NodeNext",
         "composite": false,
-        "module": "CommonJS",
         "target": "ES5",
         "moduleResolution": "NodeNext",
         "declaration": true,
-        "esModuleInterop": false,
-    }
+        "esModuleInterop": false
+    },
+    "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__"]
 }
