@@ -22,6 +22,10 @@ const middleware = async (req: http.IncomingMessage, res: http.ServerResponse) =
         component: await component,
         bootstrapModules: isModernBrowser && ['/js/modern.mjs'] || undefined,
         bootstrapScripts: !isModernBrowser && ['/js/outdated.js'] || undefined
+        onShellReady: (cb: () => Writable, append: (chunk: string), error?: Error) {
+            res.statusCode = error && 500 || 200
+            append('some html')
+        }
     })
 }
 
@@ -72,23 +76,57 @@ The React component to render. might be used as a static option to render or as 
 
 ## Event Handlers
 
-onAllReady
+A callback that fires when all rendering is complete, including both the shell and all additional content.
+
+- [Read more about the onAllReady callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering)
 
 ```typescript
- onAllReady?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) => (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onAllReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
 
-onAbort
-onError
-onShellError
-onShellReady
+You can force the server rendering to “give up” after a timeout:
+
+- [Read more about the onAbort callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering)
 
 ```typescript
- onAllReady?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) => (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onAbort?: (error: Error) => Promise<void>
+```
+
+ A callback that fires whenever there is a server error, whether recoverable or not.
+
+- [Read more about the onError callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+
+> To avoid dangling response when onError is fired, res.end is called automatically
+>
+> An additionally, status code ***500*** INTERNAL ERROR is set.
+
+```typescript
+ onError?: (error: Error) => Promise<void>
+```
+
+A callback that fires if there was an error rendering the initial shell. It receives the error as an argument.
+
+- [Read more about the onError callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+
+> An additionally, status code ***500*** INTERNAL ERROR is set.
+
+```typescript
+ onShellError?: (error: Error) => Promise<void>
+```
+
+A callback that fires right after the initial shell has been rendered.
+
+- [Read more about the onShellReady callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+
+```typescript
+ OnShellReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
 
 onStreamEnd
 
+This callback fires before writable.end() is called. It can be used to append additional data to the stream.
+
 ```typescript
- onStreamEnd?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) =>  () => Promise<string>
+
+ onStreamEnd?:  () => Promise<string | void>
 ```

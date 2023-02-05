@@ -13,6 +13,8 @@
 
 ### Static options & usage
 
+- [Read more about useRenderToPipeableStream  options](./wiki/streamable.md)
+
 ```typescript
 import { useRenderToPipeableStream } from '@aklesky/streamable-react/pipeable/render.js'
 
@@ -29,6 +31,8 @@ const render = useRenderToPipeableStream({
 ```
 
 ### Streamable Options within http middleware
+
+- [Read more about useRenderToPipeableStream.callback options](./wiki/streamable.md)
 
 ```typescript
 
