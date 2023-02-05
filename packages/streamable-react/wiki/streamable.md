@@ -69,3 +69,17 @@ The React component to render. might be used as a static option to render or as 
 ```typescript
     component?: ComponentType
 ```
+
+## Event Handlers
+
+onAllReady
+
+```typescript
+ onAllReady?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) => () => Promise<void>
+```
+
+onAbort
+onError
+onShellError
+onShellReady
+onStreamEnd
