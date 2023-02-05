@@ -75,11 +75,20 @@ The React component to render. might be used as a static option to render or as 
 onAllReady
 
 ```typescript
- onAllReady?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) => () => Promise<void>
+ onAllReady?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) => (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
 
 onAbort
 onError
 onShellError
 onShellReady
+
+```typescript
+ onAllReady?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) => (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+```
+
 onStreamEnd
+
+```typescript
+ onStreamEnd?: (http.IncomingMessage, http.ServerResponse, next?: NextFunction) =>  () => Promise<string>
+```
