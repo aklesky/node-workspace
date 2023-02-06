@@ -50,7 +50,7 @@
         "@aklesky/jest-config": "0.0.10",
         "@aklesky/prettier-config": "0.0.9",
         "@aklesky/ts-config": "0.0.9",
-        "@types/express": "4.17.16",
+        "@types/express": "4.17.17",
         "@types/node": "18.11.18",
         "@types/react": "18.0.27",
         "@types/react-dom": "18.0.10",
