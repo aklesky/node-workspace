@@ -9,10 +9,19 @@
         "add": {
             "exact": true
         },
+        "create": {
+            "access": "public",
+            "license": "MIT",
+            "esModule": true
+        },
         "version": {
-            "allowBranch": ["main", "release/*"],
-            "conventionalCommits": true
+            "conventionalCommits": true,
+            "private": false,
+            "exact": true,
+            "ammend": true,
+            "message": "chore(release): publish %s"
         }
     },
+    "ignoreChanges": ["**/__fixtures__/**", "**/__mocks__/**", "**/__tests__/**", "**/*.md"],
     "version": "independent"
 }
