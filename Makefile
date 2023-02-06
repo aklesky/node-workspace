@@ -14,4 +14,4 @@ ci:
 	npx lerna link
 	npx lerna run test
 release:
-	npx lerna version --create-release github --yes
+	npx lerna publish --create-release github --yes
