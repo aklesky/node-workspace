@@ -1,11 +1,36 @@
-# `vite-react-ssr-plugin`
+# Vite React Server Side Plugin
 
-> TODO: description
+A Plugin for Vite to enable Server Side Rendering for React with Pipeable Streams.
+
+## Installation
+
+npm
+
+```shell
+npm install -D @aklesky/vite-react-ssr-plugin
+```
+
+yarn
+
+```shell
+yarn add -D @aklesky/vite-react-ssr-plugin
+```
 
 ## Usage
 
-```
-const viteReactSsrPlugin = require('vite-react-ssr-plugin');
+```typescript
+import plugin from '@aklesky/@aklesky/vite-react-ssr-plugin/plugin.js'
+import { defineConfig } from 'vite'
 
-// TODO: DEMONSTRATE API
+export default defineConfig({
+    // ...
+    root: "src",
+    plugins: [plugin({
+        entry: './entries/server.tsx',
+        bootstrapModules: ['./entries/client.tsx'],
+    })],
+    // ...
+  }
+)
+
 ```
