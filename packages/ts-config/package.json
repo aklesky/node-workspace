@@ -3,7 +3,7 @@
     "version": "0.0.9",
     "description": "Shareable collection of typescript configurations.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
-    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
     "directories": {
         "node": "node"
@@ -16,10 +16,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aklesky/bliksy.git"
+        "url": "git+https://github.com/aklesky/node-workspace.git"
     },
     "bugs": {
-        "url": "https://github.com/aklesky/bliksy/issues"
+        "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
         "@tsconfig/node18": "1.0.1",

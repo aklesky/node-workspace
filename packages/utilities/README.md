@@ -1,11 +1,15 @@
-# `utilities`
+# List of Utilitiels
 
-> TODO: description
+## Installation
 
-## Usage
+npm
 
+```shell
+npm install -D @aklesky/utilities
 ```
-const utilities = require('utilities');
 
-// TODO: DEMONSTRATE API
+yarn
+
+```shell
+yarn add -D @aklesky/utilities
 ```
