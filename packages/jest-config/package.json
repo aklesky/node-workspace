@@ -3,7 +3,7 @@
     "version": "0.0.10",
     "description": "Jest configuration preset.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
-    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
     "main": "dist/index.js",
     "type": "commonjs",
@@ -30,14 +30,14 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aklesky/bliksy.git"
+        "url": "git+https://github.com/aklesky/node-workspace.git"
     },
     "scripts": {
         "clean": "rimraf -rf ./dist",
         "build": "npm run clean && tsc --project ./tsconfig.build.json"
     },
     "bugs": {
-        "url": "https://github.com/aklesky/bliksy/issues"
+        "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "^0.0.10",

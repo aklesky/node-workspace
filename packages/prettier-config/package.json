@@ -3,7 +3,7 @@
     "version": "0.0.9",
     "description": "Shareable prettier configuration.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
-    "homepage": "https://github.com/aklesky/bliksy#readme",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
     "type": "commonjs",
     "main": "dist/index.js",
@@ -30,14 +30,14 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aklesky/bliksy.git"
+        "url": "git+https://github.com/aklesky/node-workspace.git"
     },
     "scripts": {
         "clean": "rimraf -rf ./dist",
         "build": "tsc --project ./tsconfig.build.json"
     },
     "bugs": {
-        "url": "https://github.com/aklesky/bliksy/issues"
+        "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
         "@aklesky/ts-config": "0.0.9",
