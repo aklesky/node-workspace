@@ -2,11 +2,17 @@
 
 The copyright for the documentation of renderToPipeableStream belongs to the React Team, a project of [Facebook/Meta](https://opensource.fb.com/), and is hosted on the official website [reactjs.org](https://reactjs.org).
 
+- [Disclaimer](#disclaimer)
+  - [useRenderToPipeableStream](#userendertopipeablestream)
+  - [Example usage with http middleware](#example-usage-with-http-middleware)
+  - [Options](#options)
+  - [Event Handlers](#event-handlers)
+
 ## useRenderToPipeableStream
 
 The function ***`useRenderToPipeableStream.callback`*** takes two arguments and returns ***{ pipe, abort }*** methods from  ***`react-dom/server.renderToPipeableStream`***.
 
-## Example usage
+## Example usage with http middleware
 
 ```typescript
 import { useRenderToPipeableStream } from '@aklesky/streamable-react/pipeable/render.js'
@@ -80,6 +86,12 @@ A callback that fires when all rendering is complete, including both the shell a
 
 - [Read more about the onAllReady callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering)
 
+The callback receives the three arguments.
+
+- a callback that returns the Writable stream to write to
+- a callback that appends a chunk to the stream
+- an error object if there was an error
+
 ```typescript
  onAllReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
@@ -118,11 +130,15 @@ A callback that fires right after the initial shell has been rendered.
 
 - [Read more about the onShellReady callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
 
+The callback receives the three arguments.
+
+- a callback that returns the Writable stream to write to
+- a callback that appends a chunk to the stream
+- an error object if there was an error
+
 ```typescript
  OnShellReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
-
-onStreamEnd
 
 This callback fires before writable.end() is called. It can be used to append additional data to the stream.
 
