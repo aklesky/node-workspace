@@ -13,3 +13,6 @@ ci:
 	npx lerna run build
 	npx lerna link
 	npx lerna run test
+release:
+	npx lerna version
+	npx lerna publish from-git
