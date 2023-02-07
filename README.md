@@ -14,9 +14,9 @@ I prefer to work with [React](https://reactjs.org/), my main front-end library, 
 
 ### Vite and React Server Side Rendering
 
-* [Example of using react server side rendering with vite server middleware](https://github.com/aklesky/node-workspace/tree/master/examples/vite-config)
-  * [@aklesky/streamable-react](https://github.com/aklesky/node-workspace/tree/master/packages/streamable-react)
-  * [@aklesky/vite-react-ssr-plugin](https://github.com/aklesky/node-workspace/tree/master/packages/vite-react-ssr-plugin)
+* [Example of using react server side rendering with vite server middleware](examples/vite-config/README.md)
+  * [@aklesky/streamable-react](packages/streamable-react/README.md)
+  * [@aklesky/vite-react-ssr-plugin](packages/vite-react-ssr-plugin/README.md)
 
 ## Supported Versions
 
