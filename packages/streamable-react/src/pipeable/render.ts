@@ -84,6 +84,7 @@ export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
                 abort,
             }
         } catch (e) {
+            console.error(e)
             throw e
         }
     }

@@ -1,7 +1,6 @@
 .idea
 .vscode
 .fleet
-*.lock
 node_modules
 build
 *.log

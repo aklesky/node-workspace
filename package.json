@@ -6,11 +6,15 @@
     "type": "commonjs",
     "prettier": "./packages/prettier-config/dist/config",
     "scripts": {
-        "setup": "yarn && lerna bootstrap --ci",
+        "setup": "lerna bootstrap",
+        "setup:ci": "lerna bootstrap --ci",
         "build": "lerna run build",
-        "link": "lerna link"
+        "link:workspace": "lerna link",
+        "lint": "lerna run lint",
+        "release:ci": "lerna publish --create-release github --yes",
+        "test": "lerna run test"
     },
-    "workspaces": ["packages/*", "examples/*"],
+    "workspaces": ["packages/*"],
     "devDependencies": {
         "lerna": "6.4.1",
         "typescript": "4.9.5"

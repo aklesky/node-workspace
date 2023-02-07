@@ -27,6 +27,7 @@
         "url": "git+https://github.com/aklesky/node-workspace.git"
     },
     "scripts": {
+        "lint": "eslint --ext .ts ./src",
         "clean": "rimraf -rf ./dist",
         "build": "npm run clean && tsc --project ./tsconfig.build.json",
         "test": "jest --passWithNoTests"
@@ -38,7 +39,6 @@
         "@aklesky/eslint-config": "0.1.0",
         "@aklesky/prettier-config": "0.1.0",
         "@aklesky/ts-config": "0.1.0",
-        "@types/rollup": "0.54.0",
         "vite": "4.1.1"
     },
     "dependencies": {

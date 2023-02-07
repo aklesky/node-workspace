@@ -1,17 +1,22 @@
 bootstrap:
-	npx lerna bootstrap
-	npx lerna run build
-	npx lerna run link
+	yarn install
+	yarn setup
+	yarn build
+	yarn link:workspace
 build:
-	npx lerna run build
+	yarn build
 link:
-	npx lerna link
+	yarn workspace
 test:
-	npx lerna run test
+	yarn test
+lint:
+	yarn lint
 ci:
-	npx lerna bootstrap --ci
-	npx lerna run build
-	npx lerna link
-	npx lerna run test
+	yarn install --frozen-lockfile
+	yarn setup:ci
+	yarn build
+	yarn link:workspace
+	yarn lint
+	yarn test
 release:
-	npx lerna publish --create-release github --yes
+	yarn release:ci

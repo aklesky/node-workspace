@@ -28,6 +28,7 @@
     },
     "scripts": {
         "clean": "rimraf -rf ./dist",
+        "lint": "eslint --ext .ts ./src",
         "build": "npm run clean && tsc --project ./tsconfig.build.json",
         "test": "jest --passWithNoTests"
     },
