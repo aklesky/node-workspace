@@ -5,8 +5,9 @@ const config = {
     ...node,
     env: {
         ...(node.env || {}),
-        'jest/globals': true,
+        jest: true,
     },
+    extends: [...(node.extends || []), 'plugin:jest/recommended'],
     plugins: [...(node.plugins || []), 'jest'],
     rules: {
         ...(node.rules || {}),

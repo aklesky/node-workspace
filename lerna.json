@@ -1,5 +1,5 @@
 {
-    "packages": ["packages/*", "examples/*"],
+    "packages": ["packages/*"],
     "npmClient": "yarn",
     "useWorkspaces": true,
     "publishConfig": {
@@ -19,7 +19,7 @@
             "private": false,
             "exact": true,
             "ammend": true,
-            "message": "chore(release): publish %s"
+            "message": "chore(release): publish"
         }
     },
     "ignoreChanges": ["**/__fixtures__/**", "**/__mocks__/**", "**/__tests__/**", "**/*.md"],

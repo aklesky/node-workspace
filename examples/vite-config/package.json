@@ -30,8 +30,7 @@
     "scripts": {
         "dev": "vite",
         "clean": "rimraf -rf ./dist",
-        "build": "npm run clean && tsc --project ./tsconfig.build.json",
-        "test": "jest --passWithNoTests"
+        "build": "npm run clean && tsc --project ./tsconfig.build.json"
     },
     "bugs": {
         "url": "https://github.com/aklesky/node-workspace/issues"
@@ -42,9 +41,11 @@
         "vite": "4.1.1"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.0.10",
-        "@aklesky/jest-config": "0.0.10",
-        "@aklesky/prettier-config": "0.0.9",
-        "@aklesky/ts-config": "0.0.9"
+        "@aklesky/eslint-config": "0.1.0",
+        "@aklesky/jest-config": "0.1.0",
+        "@aklesky/prettier-config": "0.1.0",
+        "@aklesky/ts-config": "0.1.0",
+        "@types/react": "18.0.27",
+        "@types/react-dom": "18.0.10"
     }
 }

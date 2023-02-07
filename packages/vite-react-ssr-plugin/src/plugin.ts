@@ -7,7 +7,7 @@ import { useReactStreambleMiddleware } from './middleware.js'
 
 const defaultOptions: Partial<ReactServerMiddlewareOptions> = {
     bootstrapModules: ['/@vite/client'],
-    ignoreUrlExpressions: [/\.([^.]*?)(?=\?|#|$)/, /\/\@[.]*?/],
+    ignoreUrlExpressions: [/\.([^.]*?)(?=\?|#|$)/, /\/@[.]*?/],
 }
 
 export const useReactServerMiddlewarePlugin = (options: ReactServerMiddlewareOptions) => {
@@ -38,6 +38,7 @@ export const useReactServerMiddlewarePlugin = (options: ReactServerMiddlewareOpt
                     ),
                 )
             } catch (error: unknown) {
+                console.error(error)
                 throw error
             }
         },

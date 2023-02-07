@@ -52,7 +52,6 @@ app.get('/app-error', async (_, res) => {
             component: mock1,
             bootstrapScriptContent: 'Hello World',
             onAllReady: async (_cb, _, err) => {
-                console.log('error happened ?', err)
                 if (err) {
                     res.status(HttpStatusCodes.INTERNAL_SERVER_ERROR)
                     res.end(`<!-- ${err.message}:${err.stack} -->`)

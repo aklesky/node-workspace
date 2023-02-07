@@ -20,6 +20,10 @@
             "require": "./dist/node.js",
             "import": "./dist/node.js"
         },
+        "./jest": {
+            "require": "./dist/jest.js",
+            "import": "./dist/jest.js"
+        },
         "./jest.js": {
             "require": "./dist/jest.js",
             "import": "./dist/jest.js"

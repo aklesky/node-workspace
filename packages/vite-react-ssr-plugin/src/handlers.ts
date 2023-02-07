@@ -26,7 +26,7 @@ export const onShellReady = (req: IncomingMessage, res: ServerResponse, callable
     }
 }
 
-export const onAbort = (_req: IncomingMessage, res: ServerResponse) => async (callback?: Function) => {
+export const onAbort = (_req: IncomingMessage, res: ServerResponse) => async (callback?: () => void) => {
     if (isFunction(callback)) {
         callback()
     }

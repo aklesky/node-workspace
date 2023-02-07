@@ -27,6 +27,13 @@ jobs:
         needs: [build]
         steps:
             - uses: actions/checkout@v3
+              with:
+                persist-credentials: false
+            - name: Setup Github Credentials
+              run: |
+                  git config --global user.name "${{ github.actor }}"
+                  git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+                  git remote set-url origin https://${{ github.actor }}:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }}
             - name: Create Release
               uses: actions/setup-node@v3
               with:

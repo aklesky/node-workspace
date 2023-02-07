@@ -4,7 +4,7 @@ import {
     onAbortCallback,
     OnErrorCallback,
     OnReadyCallback,
-    onStreamEndCallback
+    onStreamEndCallback,
 } from '@aklesky/streamable-react/interfaces/types.js'
 import type { IncomingMessage, ServerResponse } from 'http'
 

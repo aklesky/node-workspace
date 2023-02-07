@@ -1,11 +1,29 @@
-# `examples`
+# example of usage @aklesky/vite-config
 
-> TODO: description
+## Installation
+
+npm
+
+```bash
+ npm i
+```
+
+yarn
+
+```bash
+ yarn
+```
 
 ## Usage
 
-```
-const examples = require('examples');
+npm
 
-// TODO: DEMONSTRATE API
+```bash
+npm run dev
+```
+
+yarn
+
+```bash
+yarn dev
 ```
