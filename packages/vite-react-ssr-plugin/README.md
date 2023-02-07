@@ -1,6 +1,6 @@
 # Vite React Server Side Plugin
 
-A Plugin for Vite to enable Server Side Rendering for React with Pipeable Streams.
+A Plugin for Vite to enable Server Side Rendering for React with Pipeable Stream.
 
 ## Installation
 

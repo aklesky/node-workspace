@@ -1,16 +1,39 @@
-# Disclaimer
-
-The copyright for the documentation of renderToPipeableStream belongs to the React Team, a project of [Facebook/Meta](https://opensource.fb.com/), and is hosted on the official website [reactjs.org](https://reactjs.org).
-
-- [Disclaimer](#disclaimer)
-  - [useRenderToPipeableStream](#userendertopipeablestream)
-  - [Example usage with http middleware](#example-usage-with-http-middleware)
-  - [Options](#options)
-  - [Event Handlers](#event-handlers)
-
-## useRenderToPipeableStream
+# useRenderToPipeableStream
 
 The function ***`useRenderToPipeableStream.callback`*** takes two arguments and returns ***{ pipe, abort }*** methods from  ***`react-dom/server.renderToPipeableStream`***.
+
+> options and callback are optional and used to configure [renderToPipeableStream](https://reactjs.org/docs/react-dom-server.html#rendertopipeablestream)
+
+- [useRenderToPipeableStream](#userendertopipeablestream)
+  - [Installation](#installation)
+  - [Example usage with http middleware](#example-usage-with-http-middleware)
+  - [Options](#options)
+    - [nonce](#nonce)
+    - [*bootstrapScripts*](#bootstrapscripts)
+    - [*bootstrapModules*](#bootstrapmodules)
+    - [*bootstrapScriptContent*](#bootstrapscriptcontent)
+    - [*component*](#component)
+  - [Event Handlers](#event-handlers)
+    - [*onAllReady*](#onallready)
+    - [*onAbort*](#onabort)
+    - [*onError*](#onerror)
+    - [*onShellError*](#onshellerror)
+    - [*onShellReady*](#onshellready)
+    - [*onStreamEnd*](#onstreamend)
+
+## Installation
+
+- npm
+
+```bash
+npm i @aklesky/streamable-react
+```
+
+- yarn
+
+```bash
+yarn add @aklesky/streamable-react
+```
 
 ## Example usage with http middleware
 
@@ -39,7 +62,9 @@ const middleware = async (req: http.IncomingMessage, res: http.ServerResponse) =
 
 ## Options
 
-A nonce string to allow scripts for script-src Content-Security-Policy.
+### nonce
+
+A nonce string to allow scripts for script-src Content-Security-Policy
 
 ```typescript
     nonce?: string
@@ -48,6 +73,8 @@ A nonce string to allow scripts for script-src Content-Security-Policy.
 - [Read more about the nonce parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
 - [Read more about the Content-Security-Policy.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
 
+### *bootstrapScripts*
+
 An array of string URLs for the \<script\> tags to emit on the page.
 Use this to include the \<script type="module\"\> that calls hydrateRoot.
 
@@ -55,7 +82,9 @@ Use this to include the \<script type="module\"\> that calls hydrateRoot.
     bootstrapScripts?: string[]
 ```
 
-[Read more about the bootstrapScriptContent](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+[Read more about the bootstrapScripts](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+
+### *bootstrapModules*
 
 An array of string URLs for the \<script type="module"\> tags to emit on the page.
 Like boostrapScripts.
@@ -64,7 +93,9 @@ Like boostrapScripts.
     bootstrapModules?: string[]
 ```
 
-[Read more about the bootstrapScriptContent](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+[Read more about the bootstrapModules](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
+
+### *bootstrapScriptContent*
 
 If specified, this string will be placed in an inline script tag.
 
@@ -74,6 +105,8 @@ If specified, this string will be placed in an inline script tag.
 
 [Read more about the bootstrapScriptContent](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
 
+### *component*
+
 The React component to render. might be used as a static option to render or as a fallback if no component is provided within the streamable options.
 
 ```typescript
@@ -81,6 +114,8 @@ The React component to render. might be used as a static option to render or as 
 ```
 
 ## Event Handlers
+
+### *onAllReady*
 
 A callback that fires when all rendering is complete, including both the shell and all additional content.
 
@@ -96,6 +131,8 @@ The callback receives the three arguments.
  onAllReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
 
+### *onAbort*
+
 You can force the server rendering to “give up” after a timeout:
 
 - [Read more about the onAbort callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering)
@@ -103,6 +140,8 @@ You can force the server rendering to “give up” after a timeout:
 ```typescript
  onAbort?: (error: Error) => Promise<void>
 ```
+
+### *onError*
 
  A callback that fires whenever there is a server error, whether recoverable or not.
 
@@ -116,6 +155,8 @@ You can force the server rendering to “give up” after a timeout:
  onError?: (error: Error) => Promise<void>
 ```
 
+### *onShellError*
+
 A callback that fires if there was an error rendering the initial shell. It receives the error as an argument.
 
 - [Read more about the onError callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters)
@@ -125,6 +166,8 @@ A callback that fires if there was an error rendering the initial shell. It rece
 ```typescript
  onShellError?: (error: Error) => Promise<void>
 ```
+
+### *onShellReady*
 
 A callback that fires right after the initial shell has been rendered.
 
@@ -137,8 +180,10 @@ The callback receives the three arguments.
 - an error object if there was an error
 
 ```typescript
- OnShellReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onShellReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
 ```
+
+### *onStreamEnd*
 
 This callback fires before writable.end() is called. It can be used to append additional data to the stream.
 

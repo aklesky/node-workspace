@@ -1,10 +1,25 @@
 # Easy React streaming wrap functionality (Node.js Stream)
 
 - [Easy React streaming wrap functionality (Node.js Stream)](#easy-react-streaming-wrap-functionality-nodejs-stream)
+  - [Installation](#installation)
   - [Configuration](#configuration)
     - [Static options \& usage](#static-options--usage)
     - [Streamable Options within http middleware](#streamable-options-within-http-middleware)
   - [Supported Versions](#supported-versions)
+
+## Installation
+
+- npm
+
+```bash
+npm i @aklesky/streamable-react
+```
+
+- yarn
+
+```bash
+yarn add @aklesky/streamable-react
+```
 
 ## Configuration
 
@@ -13,7 +28,7 @@
 
 ### Static options & usage
 
-- [Read more about useRenderToPipeableStream  options](./wiki/streamable.md)
+- [Read more about useRenderToPipeableStream  options](wiki/streamable.md)
 
 ```typescript
 import { useRenderToPipeableStream } from '@aklesky/streamable-react/pipeable/render.js'
@@ -32,7 +47,7 @@ const render = useRenderToPipeableStream({
 
 ### Streamable Options within http middleware
 
-- [Read more about useRenderToPipeableStream.callback options](./wiki/streamable.md)
+- [Read more about useRenderToPipeableStream.callback options](wiki/streamable.md)
 
 ```typescript
 
