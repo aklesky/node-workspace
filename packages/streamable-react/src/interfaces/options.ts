@@ -1,4 +1,4 @@
-import { ComponentType, onAbortCallback, OnErrorCallback, OnReadyCallback, onStreamEndCallback } from './types.js'
+import { ComponentType, OnTimeoutHandler, OnErrorHandler, OnReadyHandler, OnFinishEventHandler } from './types.js'
 
 export interface NonceOptions {
     /**
@@ -52,7 +52,7 @@ export interface PipeableStreamOptions extends BootstrapOptions, NonceOptions {
      * @example Writable.end('</body></html>')
      * @default true
      */
-    addHtmlBodyTag?: boolean
+    addClosingHtmlBodyTag?: boolean
 }
 
 export interface EventHandlers {
@@ -61,36 +61,36 @@ export interface EventHandlers {
      *
      * @see {@link https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters Read more about the onAllReady callback.}
      */
-    onAllReady?: OnReadyCallback
+    onAllReadyHandler?: OnReadyHandler
     /**
      * A callback will be fired if provided within onShellReady implementation before the stream is piped.
      *
      * @see {@link https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters Read more about the onShellReady callback.}
      */
-    onShellReady?: OnReadyCallback
+    onShellReadyHandler?: OnReadyHandler
     /**
      * A callback that fires if there was an error rendering the initial shell.
      *
      * @see {@link https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters Read more about the onShellError callback.}
      */
-    onShellError?: OnErrorCallback
+    onShellErrorHandler?: OnErrorHandler
     /**
      * A callback that fires whenever there is a server error, whether recoverable or not. By default, this only calls console.error.
      *
      * @see {@link https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#parameters Read more about the onError callback.}
      */
-    onError?: OnErrorCallback
+    onErrorHandler?: OnErrorHandler
     /**
      * A callback that fires when the stream is finished.
      * @returns A promise that resolves to a string to be written to the stream.
      */
-    onStreamEnd?: onStreamEndCallback
+    onFinishEventHandler?: OnFinishEventHandler
     /**
      * A callback that fires when the stream is aborted.
      * @param callback
      * @returns
      */
-    onAbort?: onAbortCallback
+    onTimeoutEventHandler?: OnTimeoutHandler
 }
 
 export interface BootstrapOptions {

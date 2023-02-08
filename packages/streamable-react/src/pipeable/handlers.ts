@@ -2,39 +2,45 @@ import { isFunction } from '@aklesky/utilities/asserts/function.js'
 import { isString } from '@aklesky/utilities/asserts/strings.js'
 import { Writable } from 'stream'
 import { PipeableStreamOptions } from '../interfaces/options.js'
-import { onAbortCallback, onStreamEndCallback } from '../interfaces/types.js'
+import { OnTimeoutHandler, OnFinishEventHandler } from '../interfaces/types.js'
 
-export const handleOnError = (error: Error) => {
+export const onErrorHandler = (error: Error) => {
     console.error(error)
 }
 
-export const handleOnShellError = (error: Error, writable: Writable) => {
+export const onShellErrorHandler = (error: Error, writable: Writable) => {
     writable.end(`[react.onShellError]:${error?.stack}`)
 }
 
-export const handleOnFinishEvent =
-    (config: PipeableStreamOptions, writeable: Writable, cb?: onStreamEndCallback) => async () => {
+export const onFinishEventHandler =
+    (config: PipeableStreamOptions, writeable: Writable, cb?: OnFinishEventHandler) => async () => {
         const string = await cb?.()
         if (isString(string)) {
-            writeable.end(string)
+            writeable.write(string)
         }
 
-        if (config.addHtmlBodyTag) {
-            writeable.end('</body></html>')
+        if (config.addClosingHtmlBodyTag) {
+            writeable.write('</body></html>')
         }
+        writeable.end()
     }
 
-export const handleOnTimeoutEvent = (timeout = 10000, abort: () => void, writeable: Writable, cb?: onAbortCallback) => {
+export const onTimeoutEventHandler = (
+    timeout = 10000,
+    abort: () => void,
+    writeable: Writable,
+    cb?: OnTimeoutHandler,
+) => {
     setTimeout(async () => {
         try {
             if (isFunction(cb)) {
                 await cb(abort)
                 return
             }
-            writeable.write('<!-- onAbort event has been fired -->')
+            writeable.write('<!-- timeout event has been fired -->')
             abort()
         } catch (e: unknown) {
-            console.error('[react.onAbort]: abort timeout error:', (e as Error).message)
+            console.error('[react.onTimeoutEventHandler]: abort timeout error:', (e as Error).message)
         }
     }, timeout)
 }

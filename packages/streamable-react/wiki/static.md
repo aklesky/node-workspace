@@ -18,7 +18,7 @@
     - [*component*](#component)
     - [*enableTimeout*](#enabletimeout)
     - [*timeout*](#timeout)
-    - [*addHtmlBodyTag*](#addhtmlbodytag)
+    - [*addClosingHtmlBodyTag*](#addclosinghtmlbodytag)
 
 > The function ***`useRenderToPipeableStream`*** takes an object as an argument and returns an asynchronous wrapper around ***`react-dom/server.renderToPipeableStream`***.
 
@@ -129,6 +129,8 @@ The React component to render. might be used as a static option to render or as 
 
 Enable the server rendering to “give up” after a timeout
 
+> default false
+
 ```typescript
     enableTimeout?: boolean
 ```
@@ -145,12 +147,12 @@ Force the server rendering to “give up” after a timeout
 
 - [Read more about aborting server rendering](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering )
 
-### *addHtmlBodyTag*
+### *addClosingHtmlBodyTag*
 
 Write closing body and html tags to the end of the stream and end it.
 
 ```typescript
-    addHtmlBodyTag?: boolean
+    addClosingHtmlBodyTag?: boolean
 ```
 
 > default true

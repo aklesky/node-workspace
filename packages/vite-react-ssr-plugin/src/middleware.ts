@@ -2,7 +2,7 @@ import { useRenderToPipeableStream } from '@aklesky/streamable-react/pipeable/re
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
 import type { NextFunction } from '@aklesky/utilities/http/interfaces/types.js'
 import type { IncomingMessage, ServerResponse } from 'http'
-import { handleOnAbort, handleOnShellReady } from './handlers.js'
+import { onTimeoutHandler, onShellReadyHandler, onFinishEventHandler } from './handlers.js'
 import { ReactServerMiddlewareConfig, ReactServerMiddlewareOptions } from './interface.js'
 
 export const useReactStreambleMiddleware = (
@@ -17,6 +17,8 @@ export const useReactStreambleMiddleware = (
         progressiveChunkSize: config.progressiveChunkSize,
         bootstrapModules: config.bootstrapModules,
         bootstrapScripts: config.bootstrapScripts,
+        enableTimeout: config.enableTimeout,
+        addClosingHtmlBodyTag: config.addClosingHtmlBodyTag,
     })
     return async (req: IncomingMessage, res: ServerResponse, next?: NextFunction) => {
         try {
@@ -25,12 +27,12 @@ export const useReactStreambleMiddleware = (
             await render(res, {
                 component,
                 props,
-                onAbort: config.onAbort?.(req, res) || handleOnAbort(req, res),
-                onAllReady: config.onAllReady?.(req, res),
-                onError: config.onError?.(req, res),
-                onStreamEnd: config.onStreamEnd?.(req, res),
-                onShellError: config.onShellError?.(req, res),
-                onShellReady: handleOnShellReady(req, res, options, config.onShellReady),
+                onTimeoutEventHandler: config.onTimeoutHandler?.(req, res) || onTimeoutHandler(req, res),
+                onAllReadyHandler: config.onAllReadyHandler?.(req, res),
+                onErrorHandler: config.onErrorHandler?.(req, res),
+                onFinishEventHandler: onFinishEventHandler(req, res, config.onFinishEventHandler),
+                onShellErrorHandler: config.onShellErrorHandler?.(req, res),
+                onShellReadyHandler: onShellReadyHandler(req, res, options, config.onShellReadyHandler),
             })
         } catch (e: unknown) {
             if (isFunction(next)) {

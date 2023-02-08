@@ -6,7 +6,7 @@ import { createElement } from 'react'
 import { renderToPipeableStream } from 'react-dom/server'
 import { PipeableStreamOptions, StreamableOptions } from '../interfaces/options.js'
 import { defaultOptions } from './config.js'
-import { handleOnError, handleOnFinishEvent, handleOnShellError, handleOnTimeoutEvent } from './handlers.js'
+import { onErrorHandler, onFinishEventHandler, onShellErrorHandler, onTimeoutEventHandler } from './handlers.js'
 import { OutputWritable } from './writeable.js'
 
 export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
@@ -29,31 +29,37 @@ export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
                 bootstrapScripts: streamable.bootstrapScripts || config.bootstrapScripts,
                 bootstrapModules: streamable.bootstrapModules || config.bootstrapModules,
                 progressiveChunkSize: config.progressiveChunkSize,
-                onAllReady: async () => streamable.onAllReady?.(() => pipe(output), error),
+                onAllReady: async () => streamable.onAllReadyHandler?.(() => pipe(output), error),
                 onError: (err: unknown) => {
                     error = err as Error
-                    if (isFunction(streamable.onError)) {
-                        streamable.onError(error, output)
+                    if (isFunction(streamable.onErrorHandler)) {
+                        streamable.onErrorHandler(error, output)
                         return
                     }
                     writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
-                    handleOnError(error)
+                    onErrorHandler(error)
                 },
                 onShellError: (error: unknown) => {
-                    if (isFunction(streamable.onShellError)) {
-                        streamable.onShellError?.(error, writable)
+                    if (isFunction(streamable.onShellErrorHandler)) {
+                        streamable.onShellErrorHandler?.(error, writable)
                         return
                     }
                     writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
-                    handleOnShellError(error as Error, writable)
+                    onShellErrorHandler(error as Error, writable)
                 },
-                onShellReady: async () => streamable.onShellReady?.(() => pipe(output), error) || pipe(output),
+                onShellReady: async () => {
+                    if (!isFunction(streamable.onShellReadyHandler) && !isFunction(streamable.onAllReadyHandler)) {
+                        pipe(output)
+                        return
+                    }
+                    await streamable.onShellReadyHandler?.(() => pipe(output), error)
+                },
             })
 
-            output.on('finish', handleOnFinishEvent(config, writable, streamable.onStreamEnd))
+            output.on('finish', onFinishEventHandler(config, writable, streamable.onFinishEventHandler))
 
             if (config.enableTimeout) {
-                handleOnTimeoutEvent(config.timeout, abort, writable, streamable.onAbort)
+                onTimeoutEventHandler(config.timeout, abort, writable, streamable.onTimeoutEventHandler)
             }
 
             return {

@@ -5,6 +5,8 @@ export const defaultOptions: Partial<ReactServerMiddlewareOptions> = {
     ignoreUrlExpressions: [/\.([^.]*?)(?=\?|#|$)/, /\/@[.]*?/],
     enableDoctypeHeader: true,
     title: 'Vite.js React Server Side Plugin',
+    addClosingHtmlBodyTag: true,
+    enableTimeout: true,
 }
 
 export default defaultOptions
