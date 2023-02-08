@@ -34,6 +34,12 @@ export interface PipeableStreamOptions extends BootstrapOptions, NonceOptions {
      * @default 12800
      */
     progressiveChunkSize?: number
+
+    /**
+     * Enable server rendering to “give up” after a timeout.
+     * @default false
+     */
+    enableTimeout?: boolean
     /**
      * Force the server rendering to “give up” after a timeout
      *
@@ -46,7 +52,7 @@ export interface PipeableStreamOptions extends BootstrapOptions, NonceOptions {
      * @example Writable.end('</body></html>')
      * @default true
      */
-    end?: boolean
+    addHtmlBodyTag?: boolean
 }
 
 export interface EventHandlers {

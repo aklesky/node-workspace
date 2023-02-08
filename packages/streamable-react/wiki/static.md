@@ -16,8 +16,9 @@
     - [*bootstrapModules*](#bootstrapmodules)
     - [*bootstrapScriptContent*](#bootstrapscriptcontent)
     - [*component*](#component)
+    - [*enableTimeout*](#enabletimeout)
     - [*timeout*](#timeout)
-    - [*end*](#end)
+    - [*addHtmlBodyTag*](#addhtmlbodytag)
 
 > The function ***`useRenderToPipeableStream`*** takes an object as an argument and returns an asynchronous wrapper around ***`react-dom/server.renderToPipeableStream`***.
 
@@ -124,6 +125,14 @@ The React component to render. might be used as a static option to render or as 
     component?: ComponentType
 ```
 
+### *enableTimeout*
+
+Enable the server rendering to “give up” after a timeout
+
+```typescript
+    enableTimeout?: boolean
+```
+
 ### *timeout*
 
 Force the server rendering to “give up” after a timeout
@@ -136,12 +145,12 @@ Force the server rendering to “give up” after a timeout
 
 - [Read more about aborting server rendering](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering )
 
-### *end*
+### *addHtmlBodyTag*
 
 Write closing body and html tags to the end of the stream and end it.
 
 ```typescript
-    end?: boolean
+    addHtmlBodyTag?: boolean
 ```
 
 > default true

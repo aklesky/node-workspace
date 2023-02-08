@@ -44,6 +44,15 @@ export interface ReactServerMiddlewareOptions extends ReactServerMiddlewareEvent
      * [/\.([^.]*?)(?=\?|#|$)/, /\/\@[.]*?/]
      */
     ignoreUrlExpressions?: RegExp[]
+    /**
+     * @description Enabling this will add a \<!DOCTYPE html\> to the response
+     * @default true
+     */
+    enableDoctypeHeader?: boolean
+    /**
+     * @default <title>Vite.js React Server Side Plugin</title>
+     */
+    title?: string
 }
 
 export interface ReactServerMiddlewareConfig extends Omit<ReactServerMiddlewareOptions, 'entry'> {

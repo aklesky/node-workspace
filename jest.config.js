@@ -6,4 +6,5 @@ const defineConfig = require('./packages/jest-config/dist/config')
 
 module.exports = {
     ...defineConfig,
+    testTimeout: 30000,
 }

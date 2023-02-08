@@ -124,11 +124,10 @@ A callback that fires when all rendering is complete, including both the shell a
 The callback receives the three arguments.
 
 - a callback that returns the Writable stream to write to
-- a callback that appends a chunk to the stream
 - an error object if there was an error
 
 ```typescript
- onAllReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onAllReady?: (pipe: () => Writable, error?: Error) => Promise<void>
 ```
 
 ### *onAbort*
@@ -176,11 +175,10 @@ A callback that fires right after the initial shell has been rendered.
 The callback receives the three arguments.
 
 - a callback that returns the Writable stream to write to
-- a callback that appends a chunk to the stream
 - an error object if there was an error
 
 ```typescript
- onShellReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onShellReady?: (pipe: () => Writable, error?: Error) => Promise<void>
 ```
 
 ### *onStreamEnd*

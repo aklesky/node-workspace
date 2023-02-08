@@ -4,6 +4,9 @@ import request from 'supertest'
 import useRenderToPipeableStream from '../pipeable/render.js'
 import mock1 from './mocks/mock.js'
 import mock2 from './mocks/mock2.js'
+import mock3 from './mocks/mock3.js'
+import mock4 from './mocks/mock4.js'
+
 const app = express()
 
 app.get('/hello-world', (_, res) => {
@@ -11,9 +14,10 @@ app.get('/hello-world', (_, res) => {
 })
 
 const middleware = useRenderToPipeableStream({
+    enableTimeout: true,
     bootstrapScriptContent: 'Hi',
-    timeout: 1000,
-    end: false,
+    timeout: 5000,
+    addHtmlBodyTag: false,
 })
 
 app.get('/app', async (_, res) => {
@@ -51,7 +55,7 @@ app.get('/app-error', async (_, res) => {
         await middleware(res, {
             component: mock1,
             bootstrapScriptContent: 'Hello World',
-            onAllReady: async (_cb, _, err) => {
+            onAllReady: async (_cb, err) => {
                 if (err) {
                     res.status(HttpStatusCodes.INTERNAL_SERVER_ERROR)
                     res.end(`<!-- ${err.message}:${err.stack} -->`)
@@ -70,6 +74,36 @@ app.get('/app-error-shell', async (_, res) => {
     try {
         await middleware(res, {
             component: mock2,
+            bootstrapScriptContent: 'Hello World',
+            onStreamEnd: async () => {
+                res.end()
+            },
+        })
+    } catch (e: unknown) {
+        res.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
+        res.end((e as Error).message)
+    }
+})
+
+app.get('/app-timeout', async (_, res) => {
+    try {
+        await middleware(res, {
+            component: mock3,
+            bootstrapScriptContent: 'Hello World',
+            onStreamEnd: async () => {
+                res.end()
+            },
+        })
+    } catch (e: unknown) {
+        res.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
+        res.end((e as Error).message)
+    }
+})
+
+app.get('/app-no-timeout', async (_, res) => {
+    try {
+        await middleware(res, {
+            component: mock4,
             bootstrapScriptContent: 'Hello World',
             onStreamEnd: async () => {
                 res.end()
@@ -102,5 +136,16 @@ describe('React Rendering Test Suite: Error Handling', () => {
         const response = await request(app).get('/app-error-shell').expect(HttpStatusCodes.INTERNAL_SERVER_ERROR)
 
         expect(response.text).toContain('Cannot read properties of undefined')
+    })
+
+    it('should abort the stream and write the output', async () => {
+        const response = await request(app).get('/app-timeout').expect(HttpStatusCodes.OK)
+
+        expect(response.text).toContain('<!-- onAbort event has been fired -->')
+    })
+    it('should not fire abort the stream', async () => {
+        const response = await request(app).get('/app-no-timeout').expect(HttpStatusCodes.OK)
+
+        expect(response.text).not.toContain('<!-- onAbort event has been fired -->')
     })
 })
