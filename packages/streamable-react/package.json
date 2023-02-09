@@ -19,9 +19,6 @@
         "rendering"
     ],
     "main": "lib/react-server-middleware.js",
-    "engines": {
-        "node": ">=18.13.0"
-    },
     "publishConfig": {
         "access": "public"
     },

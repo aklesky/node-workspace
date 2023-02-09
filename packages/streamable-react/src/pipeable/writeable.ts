@@ -1,5 +1,4 @@
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
-import { isString } from '@aklesky/utilities/asserts/strings.js'
 import { Writable } from 'stream'
 
 export class OutputWritable extends Writable {
@@ -18,12 +17,6 @@ export class OutputWritable extends Writable {
             return
         }
         this._writable.write(chunk, encoding, callback)
-    }
-
-    public append(chunk?: string): void {
-        if (isString(chunk)) {
-            this.write(chunk)
-        }
     }
 
     public static New(writable: Writable, cb?: () => Promise<string>): OutputWritable {

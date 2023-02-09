@@ -1,19 +1,18 @@
-name: Build and Test monorepo
+name: Test Renovate[bot] PRs
 
 on:
   pull_request:
     types:
       - opened
     branches:
-      - 'feat/**'
-      - 'features/**'
+      - 'renovate/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [16.x, 18.x]
     steps:
       - uses: actions/checkout@v3
       - name: Build monorepo and run tests with Node ${{ matrix.node-version }}

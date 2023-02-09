@@ -2,36 +2,41 @@ import { useRenderToPipeableStream } from '@aklesky/streamable-react/pipeable/re
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
 import type { NextFunction } from '@aklesky/utilities/http/interfaces/types.js'
 import type { IncomingMessage, ServerResponse } from 'http'
-import { onAbort, onShellReady } from './handlers.js'
-import { ReactServerMiddlewareConfig } from './interface.js'
+import { onTimeoutHandler, onShellReadyHandler, onFinishEventHandler } from './handlers.js'
+import { ReactServerMiddlewareConfig, ReactServerMiddlewareOptions } from './interface.js'
 
-export const useReactStreambleMiddleware = (options: ReactServerMiddlewareConfig) => {
+export const useReactStreambleMiddleware = (
+    config: ReactServerMiddlewareConfig,
+    options: ReactServerMiddlewareOptions,
+) => {
     const render = useRenderToPipeableStream({
-        timeout: options.timeout,
-        identifierPrefix: options.identifierPrefix,
-        namespaceURI: options.namespaceURI,
-        nonce: options.nonce,
-        progressiveChunkSize: options.progressiveChunkSize,
-        bootstrapModules: options.bootstrapModules,
-        bootstrapScripts: options.bootstrapScripts,
+        timeout: config.timeout,
+        identifierPrefix: config.identifierPrefix,
+        namespaceURI: config.namespaceURI,
+        nonce: config.nonce,
+        progressiveChunkSize: config.progressiveChunkSize,
+        bootstrapModules: config.bootstrapModules,
+        bootstrapScripts: config.bootstrapScripts,
+        enableTimeout: config.enableTimeout,
+        addClosingHtmlBodyTag: config.addClosingHtmlBodyTag,
     })
     return async (req: IncomingMessage, res: ServerResponse, next?: NextFunction) => {
         try {
-            const component = await options.getEntry()
-            const props = await options?.getEntryProps?.(req, res)
+            const component = await config.getEntry()
+            const props = await config?.getEntryProps?.(req, res)
             await render(res, {
                 component,
                 props,
-                onAbort: options.onAbort?.(req, res) || onAbort(req, res),
-                onAllReady: options.onAllReady?.(req, res),
-                onError: options.onError?.(req, res),
-                onStreamEnd: options.onStreamEnd?.(req, res),
-                onShellError: options.onShellError?.(req, res),
-                onShellReady: onShellReady(req, res, options.onShellReady),
+                onTimeoutEventHandler: config.onTimeoutHandler?.(req, res) || onTimeoutHandler(req, res),
+                onAllReadyHandler: config.onAllReadyHandler?.(req, res),
+                onErrorHandler: config.onErrorHandler?.(req, res),
+                onFinishEventHandler: onFinishEventHandler(req, res, config.onFinishEventHandler),
+                onShellErrorHandler: config.onShellErrorHandler?.(req, res),
+                onShellReadyHandler: onShellReadyHandler(req, res, options, config.onShellReadyHandler),
             })
         } catch (e: unknown) {
             if (isFunction(next)) {
-                return next?.(e)
+                return next(e)
             }
             res.end()
         }
