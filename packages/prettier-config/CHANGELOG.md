@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/aklesky/node-workspace/compare/@aklesky/prettier-config@0.1.1...@aklesky/prettier-config@0.2.0) (2023-02-09)
+
+
+* feature!: extend Vite SSR plugin (#57) (#58) ([6080880](https://github.com/aklesky/node-workspace/commit/60808805a402cbcd09b36f7a7ef12113727f581b)), closes [#57](https://github.com/aklesky/node-workspace/issues/57) [#58](https://github.com/aklesky/node-workspace/issues/58)
+
+
+### BREAKING CHANGES
+
+* - @aklesky/streamable-react event handlers are renamed.
+	- onAllReady renamed to onAllReadyHandler
+	- onShellReady renamed to onShellReadyHandler
+	- onError renamed to onErrorHandler
+	- onShellError  renamed to onShellErrorHandler
+	- onStreamEnd renamed to onFinishEventHandler
+	- onAbort renamed to onTimeoutEventHandler
+
+@aklesky/vite-react-ssr-plugin event handlers are renamed according to
+@aklesky/streamable-react event handlers
+
+append method as a receiver callback has been removed from onShellReady and onAllReady events
+
+
+
+
+
 ## [0.1.1](https://github.com/aklesky/node-workspace/compare/@aklesky/prettier-config@0.1.0...@aklesky/prettier-config@0.1.1) (2023-02-07)
 
 **Note:** Version bump only for package @aklesky/prettier-config
