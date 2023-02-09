@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/streamable-react",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "React Server Side Streamable Rendering",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
