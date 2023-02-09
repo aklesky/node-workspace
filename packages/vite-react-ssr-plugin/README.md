@@ -142,7 +142,7 @@ The number of bytes in a chunk.
 
 - [Read more about the default heuristic.](https://github.com/facebook/react/blob/14c2be8dac2d5482fda8a0906a31d239df8551fc/packages/react-server/src/ReactFizzServer.js#L210-L225)
 
-> `*default*` 12800
+> *`default`* 12800
 
 ### *namespaceURI*
 
@@ -179,7 +179,7 @@ An array of string URLs for the \<script type="module"\> tags to emit on the pag
 
 Enable the server rendering to “give up” after a timeout
 
-> `*default*` false
+> *`default`* false
 
 ```typescript
     enableTimeout?: boolean
@@ -193,7 +193,7 @@ Force the server rendering to “give up” after a timeout
     timeout?: number
 ```
 
-> `*default*` 10000 ms
+> *`default`* 10000 ms
 
 - [Read more about aborting server rendering](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering )
 

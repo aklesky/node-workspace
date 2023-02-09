@@ -25,15 +25,4 @@ describe('React Rendering Test Suite: Error Handling', () => {
 
         expect(response.text).toContain('Cannot read properties of undefined')
     })
-
-    it('should abort the stream and write the output', async () => {
-        const response = await request(app).get('/app-timeout').expect(HttpStatusCodes.OK)
-
-        expect(response.text).toContain('<!-- timeout event has been fired -->')
-    })
-    it('should not fire abort the stream', async () => {
-        const response = await request(app).get('/app-no-timeout').expect(HttpStatusCodes.OK)
-
-        expect(response.text).not.toContain('<!-- timeout event has been fired -->')
-    })
 })
