@@ -10,7 +10,9 @@ import type { IncomingMessage, ServerResponse } from 'http'
 
 export type GenericHandler<T = unknown> = (req: IncomingMessage, res: ServerResponse) => T
 
-export interface ReactServerMiddlewareEvents extends PipeableStreamOptions, Omit<BootstrapOptions, 'bootstrapModules'> {
+export interface ReactServerMiddlewareEvents
+    extends Omit<PipeableStreamOptions, 'component'>,
+        Omit<BootstrapOptions, 'bootstrapModules'> {
     onAllReadyHandler?: GenericHandler<OnReadyHandler>
     onShellReadyHandler?: GenericHandler<OnReadyHandler>
     onShellErrorHandler?: GenericHandler<OnErrorHandler>

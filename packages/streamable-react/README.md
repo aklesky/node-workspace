@@ -28,7 +28,7 @@ yarn add @aklesky/streamable-react
 
 ### Static options & usage
 
-- [Read more about useRenderToPipeableStream  options](wiki/streamable.md)
+- [Read more about useRenderToPipeableStream  options](https://github.com/aklesky/node-workspace/blob/next/packages/streamable-react/wiki/static.md)
 
 ```typescript
 import { useRenderToPipeableStream } from '@aklesky/streamable-react/pipeable/render.js'
@@ -47,7 +47,7 @@ const render = useRenderToPipeableStream({
 
 ### Streamable Options within http middleware
 
-- [Read more about useRenderToPipeableStream.callback options](wiki/streamable.md)
+- [Read more about useRenderToPipeableStream.callback options](https://github.com/aklesky/node-workspace/blob/next/packages/streamable-react/wiki/streamable.md)
 
 ```typescript
 
