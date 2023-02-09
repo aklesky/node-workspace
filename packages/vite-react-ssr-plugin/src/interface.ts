@@ -1,22 +1,24 @@
 import { BootstrapOptions, PipeableStreamOptions } from '@aklesky/streamable-react/interfaces/options.js'
 import {
     ComponentType,
-    onAbortCallback,
-    OnErrorCallback,
-    OnReadyCallback,
-    onStreamEndCallback,
+    OnTimeoutHandler,
+    OnErrorHandler,
+    OnReadyHandler,
+    OnFinishEventHandler,
 } from '@aklesky/streamable-react/interfaces/types.js'
 import type { IncomingMessage, ServerResponse } from 'http'
 
 export type GenericHandler<T = unknown> = (req: IncomingMessage, res: ServerResponse) => T
 
-export interface ReactServerMiddlewareEvents extends PipeableStreamOptions, Omit<BootstrapOptions, 'bootstrapModules'> {
-    onAllReady?: GenericHandler<OnReadyCallback>
-    onShellReady?: GenericHandler<OnReadyCallback>
-    onShellError?: GenericHandler<OnErrorCallback>
-    onError?: GenericHandler<OnErrorCallback>
-    onStreamEnd?: GenericHandler<onStreamEndCallback>
-    onAbort?: GenericHandler<onAbortCallback>
+export interface ReactServerMiddlewareEvents
+    extends Omit<PipeableStreamOptions, 'component'>,
+        Omit<BootstrapOptions, 'bootstrapModules'> {
+    onAllReadyHandler?: GenericHandler<OnReadyHandler>
+    onShellReadyHandler?: GenericHandler<OnReadyHandler>
+    onShellErrorHandler?: GenericHandler<OnErrorHandler>
+    onErrorHandler?: GenericHandler<OnErrorHandler>
+    onFinishEventHandler?: GenericHandler<OnFinishEventHandler>
+    onTimeoutHandler?: GenericHandler<OnTimeoutHandler>
 }
 
 export interface ReactServerMiddlewareOptions extends ReactServerMiddlewareEvents {
@@ -44,10 +46,20 @@ export interface ReactServerMiddlewareOptions extends ReactServerMiddlewareEvent
      * [/\.([^.]*?)(?=\?|#|$)/, /\/\@[.]*?/]
      */
     ignoreUrlExpressions?: RegExp[]
+    /**
+     * @description Enabling this will add a \<!DOCTYPE html\> to the response
+     * @default true
+     */
+    enableDoctypeHeader?: boolean
+    /**
+     * @default <title>Vite.js React Server Side Plugin</title>
+     */
+    title?: string
 }
 
-export interface ReactServerMiddlewareConfig extends Omit<ReactServerMiddlewareOptions, 'entry'> {
+export interface ReactServerMiddlewareConfig
+    extends Omit<ReactServerMiddlewareOptions, 'entry'>,
+        Pick<PipeableStreamOptions, 'enableTimeout' | 'timeout' | 'addClosingHtmlBodyTag'> {
     getEntry: () => Promise<ComponentType>
     getEntryProps?: GenericHandler<Promise<Record<string, unknown>>>
-    timeout?: number
 }

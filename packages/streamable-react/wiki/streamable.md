@@ -14,12 +14,12 @@ The function ***`useRenderToPipeableStream.callback`*** takes two arguments and 
     - [*bootstrapScriptContent*](#bootstrapscriptcontent)
     - [*component*](#component)
   - [Event Handlers](#event-handlers)
-    - [*onAllReady*](#onallready)
-    - [*onAbort*](#onabort)
-    - [*onError*](#onerror)
-    - [*onShellError*](#onshellerror)
-    - [*onShellReady*](#onshellready)
-    - [*onStreamEnd*](#onstreamend)
+    - [*onAllReadyHandler*](#onallreadyhandler)
+    - [*onTimeoutEventHandler*](#ontimeouteventhandler)
+    - [*onErrorHandler*](#onerrorhandler)
+    - [*onShellErrorHandler*](#onshellerrorhandler)
+    - [*onShellReadyHandler*](#onshellreadyhandler)
+    - [*onFinishEventHandler*](#onfinisheventhandler)
 
 ## Installation
 
@@ -51,7 +51,7 @@ const middleware = async (req: http.IncomingMessage, res: http.ServerResponse) =
         component: await component,
         bootstrapModules: isModernBrowser && ['/js/modern.mjs'] || undefined,
         bootstrapScripts: !isModernBrowser && ['/js/outdated.js'] || undefined
-        onShellReady: (cb: () => Writable, append: (chunk: string), error?: Error) {
+        onShellReadyHandler: (cb: () => Writable, append: (chunk: string), error?: Error) {
             res.statusCode = error && 500 || 200
             append('some html')
         }
@@ -115,7 +115,7 @@ The React component to render. might be used as a static option to render or as 
 
 ## Event Handlers
 
-### *onAllReady*
+### *onAllReadyHandler*
 
 A callback that fires when all rendering is complete, including both the shell and all additional content.
 
@@ -124,24 +124,23 @@ A callback that fires when all rendering is complete, including both the shell a
 The callback receives the three arguments.
 
 - a callback that returns the Writable stream to write to
-- a callback that appends a chunk to the stream
 - an error object if there was an error
 
 ```typescript
- onAllReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onAllReadyHandler?: (pipe: () => Writable, error?: Error) => Promise<void>
 ```
 
-### *onAbort*
+### *onTimeoutEventHandler*
 
 You can force the server rendering to “give up” after a timeout:
 
 - [Read more about the onAbort callback parameter.](https://beta.reactjs.org/reference/react-dom/server/renderToPipeableStream#aborting-server-rendering)
 
 ```typescript
- onAbort?: (error: Error) => Promise<void>
+ onTimeoutEventHandler?: (error: Error) => Promise<void>
 ```
 
-### *onError*
+### *onErrorHandler*
 
  A callback that fires whenever there is a server error, whether recoverable or not.
 
@@ -152,10 +151,10 @@ You can force the server rendering to “give up” after a timeout:
 > An additionally, status code ***500*** INTERNAL ERROR is set.
 
 ```typescript
- onError?: (error: Error) => Promise<void>
+ onErrorHandler?: (error: Error) => Promise<void>
 ```
 
-### *onShellError*
+### *onShellErrorHandler*
 
 A callback that fires if there was an error rendering the initial shell. It receives the error as an argument.
 
@@ -164,10 +163,10 @@ A callback that fires if there was an error rendering the initial shell. It rece
 > An additionally, status code ***500*** INTERNAL ERROR is set.
 
 ```typescript
- onShellError?: (error: Error) => Promise<void>
+ onShellErrorHandler?: (error: Error) => Promise<void>
 ```
 
-### *onShellReady*
+### *onShellReadyHandler*
 
 A callback that fires right after the initial shell has been rendered.
 
@@ -176,18 +175,17 @@ A callback that fires right after the initial shell has been rendered.
 The callback receives the three arguments.
 
 - a callback that returns the Writable stream to write to
-- a callback that appends a chunk to the stream
 - an error object if there was an error
 
 ```typescript
- onShellReady?: (cb: () => Writable,  append: (chunk?: string) => void, error?: Error) => Promise<void>
+ onShellReadyHandler?: (pipe: () => Writable, error?: Error) => Promise<void>
 ```
 
-### *onStreamEnd*
+### *onFinishEventHandler*
 
 This callback fires before writable.end() is called. It can be used to append additional data to the stream.
 
 ```typescript
 
- onStreamEnd?:  () => Promise<string | void>
+ onFinishEventHandler?:  () => Promise<string | void>
 ```

@@ -1,13 +1,13 @@
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
-import { isString } from '@aklesky/utilities/asserts/strings.js'
 import { deepmerge } from '@aklesky/utilities/deepmerge.js'
+import { HttpStatusCodes } from '@aklesky/utilities/http/codes.js'
 import { ServerResponse } from 'http'
 import { createElement } from 'react'
 import { renderToPipeableStream } from 'react-dom/server'
 import { PipeableStreamOptions, StreamableOptions } from '../interfaces/options.js'
 import { defaultOptions } from './config.js'
+import { onErrorHandler, onFinishEventHandler, onShellErrorHandler, onTimeoutEventHandler } from './handlers.js'
 import { OutputWritable } from './writeable.js'
-import { HttpStatusCodes } from '@aklesky/utilities/http/codes.js'
 
 export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
     const config = deepmerge(defaultOptions, options || {}) as PipeableStreamOptions
@@ -29,55 +29,38 @@ export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
                 bootstrapScripts: streamable.bootstrapScripts || config.bootstrapScripts,
                 bootstrapModules: streamable.bootstrapModules || config.bootstrapModules,
                 progressiveChunkSize: config.progressiveChunkSize,
-                onAllReady: async () =>
-                    streamable.onAllReady?.(
-                        () => pipe(output),
-                        (chunk?: string) => output.append(chunk),
-                        error,
-                    ),
+                onAllReady: async () => streamable.onAllReadyHandler?.(() => pipe(output), error),
                 onError: (err: unknown) => {
                     error = err as Error
-                    console.error(error)
-                    streamable.onError?.(error)
-                    if (!isFunction(streamable.onAllReady)) {
-                        writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
-                        output.end(`[react.onError]:${(err as Error).stack}`)
-                    }
-                },
-                onShellError: async (error: unknown) => {
-                    writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
-                    streamable.onShellError?.(error)
-                    writable.end(`[react.onShellError]:${(error as Error).stack}`)
-                },
-                onShellReady: async () =>
-                    streamable.onShellReady?.(
-                        () => pipe(output),
-                        (chunk?: string) => output.append(chunk),
-                        error,
-                    ) || pipe(output),
-            })
-
-            output.on('finish', async () => {
-                const string = await streamable.onStreamEnd?.()
-                if (!config.end && isString(string)) {
-                    writable.write(string)
-                }
-                if (config.end) {
-                    writable.end(`${string || ''}</body></html>`)
-                }
-            })
-
-            setTimeout(async () => {
-                try {
-                    if (isFunction(streamable.onAbort)) {
-                        await streamable.onAbort(abort)
+                    if (isFunction(streamable.onErrorHandler)) {
+                        streamable.onErrorHandler(error, output)
                         return
                     }
-                    abort()
-                } catch (e: unknown) {
-                    console.error('[react.onAbort]: abort timeout error:', (e as Error).message)
-                }
-            }, config.timeout || 10000)
+                    writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
+                    onErrorHandler(error)
+                },
+                onShellError: (error: unknown) => {
+                    if (isFunction(streamable.onShellErrorHandler)) {
+                        streamable.onShellErrorHandler?.(error, writable)
+                        return
+                    }
+                    writable.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
+                    onShellErrorHandler(error as Error, writable)
+                },
+                onShellReady: async () => {
+                    if (!isFunction(streamable.onShellReadyHandler) && !isFunction(streamable.onAllReadyHandler)) {
+                        pipe(output)
+                        return
+                    }
+                    await streamable.onShellReadyHandler?.(() => pipe(output), error)
+                },
+            })
+
+            output.on('finish', onFinishEventHandler(config, writable, streamable.onFinishEventHandler))
+
+            if (config.enableTimeout) {
+                onTimeoutEventHandler(config.timeout, abort, writable, streamable.onTimeoutEventHandler)
+            }
 
             return {
                 pipe,

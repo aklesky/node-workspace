@@ -1,6 +1,6 @@
 import deepmerge from '@aklesky/utilities/deepmerge.js'
 import ssr from '@aklesky/vite-react-ssr-plugin/plugin.js'
-import { ConfigEnv, UserConfig, UserConfigExport } from 'vite'
+import { UserConfig, UserConfigExport } from 'vite'
 import { react } from '../react.js'
 import { ViteUserConfig } from './interfaces.js'
 
@@ -16,7 +16,7 @@ export const defineConfig = (options: ViteUserConfig): UserConfigExport => {
         const { vite, react: plugin } = options
 
         const config = deepmerge(defaultOptions, vite)
-        return (_: ConfigEnv) => {
+        return () => {
             return {
                 ...config,
                 plugins: [...(config.plugins || []), react(), ssr(plugin)],
