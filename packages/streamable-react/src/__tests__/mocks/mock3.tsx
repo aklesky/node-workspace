@@ -1,4 +1,4 @@
-const arr = new Array(3000000).fill(0)
+const arr = new Array(550000).fill(0)
 export default () => {
     return (
         <div>

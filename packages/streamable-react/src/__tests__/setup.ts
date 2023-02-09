@@ -15,7 +15,7 @@ app.get('/hello-world', (_, res) => {
 const middleware = useRenderToPipeableStream({
     enableTimeout: true,
     bootstrapScriptContent: 'Hi',
-    timeout: 5000,
+    timeout: 500,
     addClosingHtmlBodyTag: false,
 })
 
