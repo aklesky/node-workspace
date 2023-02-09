@@ -14,7 +14,7 @@ lint:
 ci:
 	yarn install --frozen-lockfile
 	npx lerna bootstrap --ci
-	npx lerna build
+	npx lerna run build
 	npx lerna link
 	npx lerna run lint
 	npx lerna run test

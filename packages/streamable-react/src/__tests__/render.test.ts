@@ -18,6 +18,7 @@ describe('React Rendering Test Suite: Error Handling', () => {
         const response = await request(app).get('/app-null').expect(HttpStatusCodes.OK)
 
         expect(response.text).toContain('<script>Hello World</script>')
+        expect(response.text).not.toContain('</body></html>')
     })
     it('should return status code 500 and Cannot read properties of undefined', async () => {
         const response = await request(app).get('/app-error-shell').expect(HttpStatusCodes.INTERNAL_SERVER_ERROR)

@@ -39,9 +39,6 @@ app.get('/app-null', async (_, res) => {
         await middleware(res, {
             component: () => null,
             bootstrapScriptContent: 'Hello World',
-            onFinishEventHandler: async () => {
-                res.end()
-            },
         })
     } catch (e: unknown) {
         res.statusCode = HttpStatusCodes.INTERNAL_SERVER_ERROR
