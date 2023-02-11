@@ -1,3 +1,10 @@
+import styles from '../styles/main.scss?inline'
+
 export default () => {
-    return <h1>Hello World Example</h1>
+    return (
+        <>
+            <style>{styles}</style>
+            <h1>Hello World Example</h1>
+        </>
+    )
 }

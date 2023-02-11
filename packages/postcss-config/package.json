@@ -1,14 +1,12 @@
 {
-    "name": "@aklesky/vite-config-example",
-    "version": "0.0.0",
-    "description": "Example of the vite config setup",
+    "name": "@aklesky/postcss-config",
+    "version": "0.6.1",
+    "description": "Postcss config presets",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
-    "type": "module",
-    "private": true,
-    "main": "dist/index.js",
     "prettier": "@aklesky/prettier-config",
+    "main": "dist/index.js",
     "exports": {
         "./*": "./dist/*"
     },
@@ -28,24 +26,24 @@
         "url": "git+https://github.com/aklesky/node-workspace.git"
     },
     "scripts": {
-        "dev": "vite",
         "clean": "rimraf -rf ./dist",
-        "build": "npm run clean && tsc --project ./tsconfig.build.json"
+        "lint": "eslint --ext .ts ./src",
+        "build": "npm run clean && tsc --project ./tsconfig.build.json",
+        "test": "jest --passWithNoTests"
     },
     "bugs": {
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "@aklesky/postcss-config": "0.6.1",
-        "@aklesky/tailwind-config": "0.6.1",
-        "@aklesky/utilities": "0.0.0",
-        "@aklesky/vite-config": "0.0.0",
+        "autoprefixer": "10.4.13",
+        "cssnano": "5.1.14",
+        "postcss": "8.4.21",
         "postcss-load-config": "4.0.1",
-        "vite": "4.1.1"
+        "postcss-nesting": "11.1.0",
+        "rimraf": "4.1.2"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.6.0",
-        "@aklesky/jest-config": "0.6.0",
         "@aklesky/prettier-config": "0.6.0",
         "@aklesky/ts-config": "0.6.0"
     }

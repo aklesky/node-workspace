@@ -54,12 +54,12 @@ const render = useRenderToPipeableStream({
 await render(http.ServerResponse, {
     component: React.ComponentType,
     props: {},
-    onTimeoutEventHandler: options.onAbort?.(req, res),
-    onAllReadyHandler: options.onAllReady?.(req, res),
-    onErrorHandler: options.onError?.(req, res),
-    onFinishEventHandler: options.onStreamEnd?.(req, res),
-    onShellErrorHandler: options.onShellError?.(req, res),
-    onShellReadyHandler: options.onShellReady?.(req, res),
+    onTimeoutEventHandler: options.onTimeoutEventHandler?.(req, res),
+    onAllReadyHandler: options.onAllReadyHandler?.(req, res),
+    onErrorHandler: options.onErrorHandler?.(req, res),
+    onFinishEventHandler: options.onFinishEventHandler?.(req, res),
+    onShellErrorHandler: options.onShellErrorHandler?.(req, res),
+    onShellReadyHandler: options.onShellReadyHandler?.(req, res),
 })
 ```
 

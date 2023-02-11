@@ -16,6 +16,10 @@
             "require": "./dist/index.js",
             "import": "./dist/index.js"
         },
+        "./node": {
+            "require": "./dist/node.js",
+            "import": "./dist/node.js"
+        },
         "./node.js": {
             "require": "./dist/node.js",
             "import": "./dist/node.js"
