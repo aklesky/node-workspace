@@ -36,16 +36,17 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
+        "@aklesky/postcss-config": "0.6.1",
+        "@aklesky/tailwind-config": "0.6.1",
         "@aklesky/utilities": "0.0.0",
         "@aklesky/vite-config": "0.0.0",
+        "postcss-load-config": "4.0.1",
         "vite": "4.1.1"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.1.0",
-        "@aklesky/jest-config": "0.1.0",
-        "@aklesky/prettier-config": "0.1.0",
-        "@aklesky/ts-config": "0.1.0",
-        "@types/react": "18.0.27",
-        "@types/react-dom": "18.0.10"
+        "@aklesky/eslint-config": "0.6.0",
+        "@aklesky/jest-config": "0.6.0",
+        "@aklesky/prettier-config": "0.6.0",
+        "@aklesky/ts-config": "0.6.0"
     }
 }

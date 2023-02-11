@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$primaryColor: red;
+
+body {
+    background-color: $primaryColor;
+}

@@ -3,12 +3,12 @@
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "module": "NodeNext",
+        "module": "CommonJS",
         "composite": false,
         "target": "ES5",
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "Node",
         "declaration": true,
-        "esModuleInterop": false
+        "esModuleInterop": true
     },
     "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__"]
 }

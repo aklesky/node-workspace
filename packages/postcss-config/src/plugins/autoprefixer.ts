@@ -1,6 +1,6 @@
-import autoprefixer, { Options } from 'autoprefixer'
+import autoprefixer from 'autoprefixer'
+import { AutoPrefixOptions } from './types'
 
-export type AutoprefixerOptions = Options
-export default (options?: Options) => {
+export default (options?: AutoPrefixOptions) => {
     return autoprefixer(options)
 }

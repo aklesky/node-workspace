@@ -1,9 +1,7 @@
-import { AutoprefixerOptions } from './plugins/autoprefixer.js'
-import { CssNanoOptions } from './plugins/cssnano.js'
-import { NestingOptions } from './plugins/nesting.js'
+import { CssNanoOptions, NestingOptions, AutoPrefixOptions } from './plugins/types'
 
 export interface PostCssConfig {
     cssnano?: CssNanoOptions
     nesting?: NestingOptions
-    autoprefixer?: AutoprefixerOptions
+    autoprefixer?: AutoPrefixOptions
 }

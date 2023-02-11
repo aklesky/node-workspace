@@ -1,9 +1,9 @@
-import { PostCssConfig } from './interfaces.js'
-import autoprefixer from './plugins/autoprefixer.js'
-import cssnano from './plugins/cssnano.js'
-import nesting from './plugins/nesting.js'
+import { PostCssConfig } from './interfaces'
+import autoprefixer from './plugins/autoprefixer'
+import cssnano from './plugins/cssnano'
+import nesting from './plugins/nesting'
 
-export const getPostCssConfig = (config: PostCssConfig) => {
+const getPostCssConfig = (config: PostCssConfig) => {
     return {
         plugins: [
             nesting(config.nesting),
@@ -13,4 +13,4 @@ export const getPostCssConfig = (config: PostCssConfig) => {
     }
 }
 
-export default getPostCssConfig
+export = getPostCssConfig

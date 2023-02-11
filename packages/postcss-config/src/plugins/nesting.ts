@@ -1,8 +1,6 @@
-import nesting, { pluginOptions } from 'postcss-nesting'
+import nesting from 'postcss-nesting'
+import { NestingOptions } from './types'
 
-export type NestingOptions = pluginOptions
-
-export default (options?: pluginOptions) => {
-    const _default = nesting.default || nesting
-    return _default(options)
+export default (options?: NestingOptions) => {
+    return nesting(options)
 }

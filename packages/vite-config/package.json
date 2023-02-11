@@ -37,12 +37,12 @@
     },
     "dependencies": {
         "@aklesky/postcss-config": "0.6.1",
+        "@aklesky/tailwind-config": "0.6.1",
         "@aklesky/utilities": "0.6.0",
         "@aklesky/vite-react-ssr-plugin": "0.6.1",
         "@vitejs/plugin-react-swc": "3.1.0",
         "rimraf": "4.1.2",
         "sass": "1.58.0",
-        "tailwindcss": "3.2.6",
         "vite": "4.1.1"
     },
     "devDependencies": {

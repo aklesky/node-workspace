@@ -7,15 +7,18 @@ import lineClamp from '@tailwindcss/line-clamp'
 
 const defaultPath = './src/**/*.{ts,tsx}'
 
-export const getTailwindConfig = (config: Config, options?: TailwindOptions): Config => {
-    const content = (Array.isArray(config.content) && [...config.content, defaultPath]) || {
-        ...config.content,
-        files: [...(config.content as FileType).files, defaultPath],
+const getTailwindConfig = (config: Config, options?: TailwindOptions): Config => {
+    let content
+    if (config.content) {
+        content = (Array.isArray(config.content) && [...config.content, defaultPath]) || {
+            ...config.content,
+            files: [...(config.content as FileType).files, defaultPath],
+        }
     }
 
     return {
         ...config,
-        content,
+        content: content || [defaultPath],
         plugins: [
             (options?.typography && typography) || undefined,
             (options?.forms && forms) || undefined,
@@ -25,4 +28,4 @@ export const getTailwindConfig = (config: Config, options?: TailwindOptions): Co
     }
 }
 
-export default getTailwindConfig
+export = getTailwindConfig

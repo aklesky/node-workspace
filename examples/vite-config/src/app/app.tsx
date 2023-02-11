@@ -1,3 +1,11 @@
+import styles from '../styles/main.scss'
+
 export default () => {
-    return <h1>Hello World Example</h1>
+    console.log(styles)
+    return (
+        <>
+            <style>{styles}</style>
+            <h1>Hello World Example</h1>
+        </>
+    )
 }

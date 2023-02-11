@@ -1,6 +1,6 @@
-import cssnano, { Options } from 'cssnano'
+import cssnano from 'cssnano'
+import { CssNanoOptions } from './types'
 
-export type CssNanoOptions = Options
 export default (options?: CssNanoOptions) => {
     return cssnano(options)
 }
