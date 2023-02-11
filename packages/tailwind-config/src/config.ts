@@ -7,9 +7,9 @@ import lineClamp from '@tailwindcss/line-clamp'
 
 const defaultPath = './src/**/*.{ts,tsx}'
 
-const getTailwindConfig = (config: Config, options?: TailwindOptions): Config => {
+const getTailwindConfig = (config?: Config, options?: TailwindOptions): Config => {
     let content
-    if (config.content) {
+    if (config?.content) {
         content = (Array.isArray(config.content) && [...config.content, defaultPath]) || {
             ...config.content,
             files: [...(config.content as FileType).files, defaultPath],

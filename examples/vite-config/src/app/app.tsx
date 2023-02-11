@@ -1,7 +1,6 @@
-import styles from '../styles/main.scss'
+import styles from '../styles/main.scss?inline'
 
 export default () => {
-    console.log(styles)
     return (
         <>
             <style>{styles}</style>

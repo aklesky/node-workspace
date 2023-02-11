@@ -1,8 +1,8 @@
-import {  defineConfig } from '@aklesky/vite-config/server/config.js'
+import { defineConfig } from '@aklesky/vite-config/server/config.js'
 
 export default defineConfig({
     vite: {
-        root: "./src"
+        root: './src',
     },
     react: {
         entry: './entries/server.tsx',

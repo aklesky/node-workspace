@@ -36,8 +36,6 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "@aklesky/postcss-config": "0.6.1",
-        "@aklesky/tailwind-config": "0.6.1",
         "@aklesky/utilities": "0.6.0",
         "@aklesky/vite-react-ssr-plugin": "0.6.1",
         "@vitejs/plugin-react-swc": "3.1.0",
