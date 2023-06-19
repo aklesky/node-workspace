@@ -40,7 +40,7 @@
         "postcss": "8.4.24",
         "postcss-load-config": "4.0.1",
         "postcss-nesting": "11.2.1",
-        "rimraf": "4.4.0"
+        "rimraf": "4.4.1"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.6.2",
