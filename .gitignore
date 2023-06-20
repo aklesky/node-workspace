@@ -8,7 +8,6 @@ dist
 logs
 .DS_Store
 .env
-.npmrc
 bin
 *.tsbuildinfo
 coverage
