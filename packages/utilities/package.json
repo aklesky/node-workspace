@@ -36,7 +36,7 @@
     },
     "dependencies": {
         "deepmerge-ts": "5.1.0",
-        "rimraf": "4.4.0"
+        "rimraf": "5.0.1"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.6.2",
