@@ -8,9 +8,6 @@
         "access": "public"
     },
     "command": {
-        "add": {
-            "exact": true
-        },
         "create": {
             "access": "public",
             "license": "MIT",
@@ -28,6 +25,7 @@
         "**/__fixtures__/**",
         "**/__mocks__/**",
         "**/__tests__/**",
-        "**/*.md"
+        "**/*.md",
+        ".vscode/*.json"
     ]
 }
