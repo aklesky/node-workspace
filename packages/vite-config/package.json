@@ -39,7 +39,7 @@
         "@aklesky/utilities": "0.6.2",
         "@aklesky/vite-react-ssr-plugin": "0.6.2",
         "@vitejs/plugin-react-swc": "3.3.2",
-        "rimraf": "4.4.0",
+        "rimraf": "5.0.1",
         "sass": "1.63.4",
         "vite": "4.3.9"
     },
