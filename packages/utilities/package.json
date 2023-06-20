@@ -35,14 +35,14 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "deepmerge-ts": "5.1.0",
-        "rimraf": "5.0.1"
+        "deepmerge-ts": "5.1.0"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.6.2",
         "@aklesky/jest-config": "0.6.2",
         "@aklesky/prettier-config": "0.6.2",
         "@aklesky/ts-config": "0.6.2",
-        "supertest": "6.3.3"
+        "supertest": "6.3.3",
+        "rimraf": "5.0.1"
     }
 }
