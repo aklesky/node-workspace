@@ -22,7 +22,5 @@ export type Options = {
 }
 
 export const react = (options?: Options) => {
-    const _default = plugin.default || plugin
-
-    return _default(options)
+    return plugin(options)
 }

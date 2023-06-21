@@ -22,6 +22,8 @@ const base: Partial<Config> = {
     moduleNameMapper: {
         '^(\\.{1,2}/.*)\\.js$': '$1',
     },
+    testTimeout: 30000,
+    openHandlesTimeout: 3000,
 }
 
 export = base

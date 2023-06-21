@@ -1,0 +1,4 @@
+{
+    "githubPullRequests.ignoredPullRequestBranches": ["master"],
+    "jest.jestCommandLine": "node_modules/.bin/jest --detectOpenHandles"
+}
