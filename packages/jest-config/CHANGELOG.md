@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/aklesky/node-workspace/compare/v0.6.2...v0.6.3) (2023-06-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @swc/core to v1.3.37 ([#65](https://github.com/aklesky/node-workspace/issues/65)) ([c648268](https://github.com/aklesky/node-workspace/commit/c648268794ab7047c7cac3c8903d7abe12ad7dc1))
+* **deps:** update dependency @swc/core to v1.3.39 ([#81](https://github.com/aklesky/node-workspace/issues/81)) ([067233f](https://github.com/aklesky/node-workspace/commit/067233f009e2a0bf3e72179f5469cdfc9fd95cb5))
+* **deps:** update dependency @swc/core to v1.3.66 ([#119](https://github.com/aklesky/node-workspace/issues/119)) ([dab94a4](https://github.com/aklesky/node-workspace/commit/dab94a46d53e964b26d6794e03aae5b3c0e124a0))
+* **deps:** update dependency rimraf to v4.3.0 ([#80](https://github.com/aklesky/node-workspace/issues/80)) ([344d932](https://github.com/aklesky/node-workspace/commit/344d93248e0e859b527ff147c035abb5d4756e52))
+* **deps:** update dependency rimraf to v4.4.0 ([#83](https://github.com/aklesky/node-workspace/issues/83)) ([c38fb92](https://github.com/aklesky/node-workspace/commit/c38fb92be45f5d57c9567c455c40cd7217f8d71b))
+* **deps:** update dependency rimraf to v5 ([#118](https://github.com/aklesky/node-workspace/issues/118)) ([2f92b20](https://github.com/aklesky/node-workspace/commit/2f92b20c86e95d54d8227da9d0ffd997aecb0bcf))
+* **deps:** update swc monorepo ([#107](https://github.com/aklesky/node-workspace/issues/107)) ([093c56b](https://github.com/aklesky/node-workspace/commit/093c56bd47575ba17eaed68c0b732529d6ac97c7))
+
+
+
+
+
 ## [0.6.2](https://github.com/aklesky/node-workspace/compare/v0.6.1...v0.6.2) (2023-02-11)
 
 **Note:** Version bump only for package @aklesky/jest-config

@@ -1,31 +1,31 @@
 {
-    "packages": [
-        "packages/*"
-    ],
-    "version": "0.6.2",
-    "npmClient": "yarn",
-    "publishConfig": {
-        "access": "public"
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.6.3",
+  "npmClient": "yarn",
+  "publishConfig": {
+    "access": "public"
+  },
+  "command": {
+    "create": {
+      "access": "public",
+      "license": "MIT",
+      "esModule": true
     },
-    "command": {
-        "create": {
-            "access": "public",
-            "license": "MIT",
-            "esModule": true
-        },
-        "version": {
-            "conventionalCommits": true,
-            "private": false,
-            "exact": true,
-            "ammend": true,
-            "message": "chore(release): publish"
-        }
-    },
-    "ignoreChanges": [
-        "**/__fixtures__/**",
-        "**/__mocks__/**",
-        "**/__tests__/**",
-        "**/*.md",
-        ".vscode/*.json"
-    ]
+    "version": {
+      "conventionalCommits": true,
+      "private": false,
+      "exact": true,
+      "ammend": true,
+      "message": "chore(release): publish"
+    }
+  },
+  "ignoreChanges": [
+    "**/__fixtures__/**",
+    "**/__mocks__/**",
+    "**/__tests__/**",
+    "**/*.md",
+    ".vscode/*.json"
+  ]
 }

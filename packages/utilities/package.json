@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/utilities",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "description": "> TODO: description",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -38,11 +38,11 @@
         "deepmerge-ts": "5.1.0"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.6.2",
-        "@aklesky/jest-config": "0.6.2",
-        "@aklesky/prettier-config": "0.6.2",
-        "@aklesky/ts-config": "0.6.2",
-        "supertest": "6.3.3",
-        "rimraf": "5.0.1"
+        "@aklesky/eslint-config": "0.6.3",
+        "@aklesky/jest-config": "0.6.3",
+        "@aklesky/prettier-config": "0.6.3",
+        "@aklesky/ts-config": "0.6.3",
+        "rimraf": "5.0.1",
+        "supertest": "6.3.3"
     }
 }

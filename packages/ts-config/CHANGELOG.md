@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/aklesky/node-workspace/compare/v0.6.2...v0.6.3) (2023-06-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tsconfig/node18 to v1.0.3 ([#103](https://github.com/aklesky/node-workspace/issues/103)) ([cec24cd](https://github.com/aklesky/node-workspace/commit/cec24cdf53fb76859a0df62ba56883ab07608566))
+* **deps:** update dependency @tsconfig/node18 to v2 ([#116](https://github.com/aklesky/node-workspace/issues/116)) ([8e20b87](https://github.com/aklesky/node-workspace/commit/8e20b8745fcb94d8cd1d3b69d2e0746e15186df2))
+
+
+
+
+
 ## [0.6.2](https://github.com/aklesky/node-workspace/compare/v0.6.1...v0.6.2) (2023-02-11)
 
 **Note:** Version bump only for package @aklesky/ts-config

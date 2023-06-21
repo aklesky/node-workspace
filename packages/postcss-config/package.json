@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/postcss-config",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "description": "Postcss config presets",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -42,9 +42,9 @@
         "postcss-nesting": "11.3.0"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.6.2",
-        "@aklesky/prettier-config": "0.6.2",
-        "@aklesky/ts-config": "0.6.2",
+        "@aklesky/eslint-config": "0.6.3",
+        "@aklesky/prettier-config": "0.6.3",
+        "@aklesky/ts-config": "0.6.3",
         "rimraf": "5.0.1"
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/vite-config",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "description": "List of configurations for vite setup",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -36,16 +36,16 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "@aklesky/utilities": "0.6.2",
-        "@aklesky/vite-react-ssr-plugin": "0.6.2",
+        "@aklesky/utilities": "0.6.3",
+        "@aklesky/vite-react-ssr-plugin": "0.6.3",
         "@vitejs/plugin-react-swc": "3.3.2",
         "sass": "1.63.4",
         "vite": "4.3.9"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.6.2",
-        "@aklesky/prettier-config": "0.6.2",
-        "@aklesky/ts-config": "0.6.2",
+        "@aklesky/eslint-config": "0.6.3",
+        "@aklesky/prettier-config": "0.6.3",
+        "@aklesky/ts-config": "0.6.3",
         "rimraf": "5.0.1"
     }
 }
