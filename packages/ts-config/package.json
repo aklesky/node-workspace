@@ -22,7 +22,7 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "@tsconfig/node18": "2.0.1",
+        "@tsconfig/node18": "18.2.0",
         "@types/node": "20.5.1",
         "ts-node": "10.9.1"
     },
