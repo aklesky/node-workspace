@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/jest-config",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "description": "Jest configuration preset.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -40,9 +40,9 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.6.4",
-        "@aklesky/prettier-config": "0.6.4",
-        "@aklesky/ts-config": "0.6.4",
+        "@aklesky/eslint-config": "0.6.5",
+        "@aklesky/prettier-config": "0.6.5",
+        "@aklesky/ts-config": "0.6.5",
         "rimraf": "5.0.1",
         "typescript": "5.1.3"
     },

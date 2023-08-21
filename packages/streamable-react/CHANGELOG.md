@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v20.5.1 ([#126](https://github.com/aklesky/node-workspace/issues/126)) ([4717545](https://github.com/aklesky/node-workspace/commit/47175458121747aa0a0dd9f8e9d21e6f45e8a37a))
+
+
+
+
+
 ## [0.6.4](https://github.com/aklesky/node-workspace/compare/v0.6.3...v0.6.4) (2023-08-21)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/vite-react-ssr-plugin",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "description": "Vite Plugin to handle react server side rendering.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -36,14 +36,14 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.6.4",
-        "@aklesky/prettier-config": "0.6.4",
-        "@aklesky/ts-config": "0.6.4",
+        "@aklesky/eslint-config": "0.6.5",
+        "@aklesky/prettier-config": "0.6.5",
+        "@aklesky/ts-config": "0.6.5",
         "rimraf": "5.0.1",
         "vite": "4.3.9"
     },
     "dependencies": {
-        "@aklesky/streamable-react": "0.6.4",
-        "@aklesky/utilities": "0.6.4"
+        "@aklesky/streamable-react": "0.6.5",
+        "@aklesky/utilities": "0.6.5"
     }
 }

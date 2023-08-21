@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/prettier-config",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "description": "Shareable prettier configuration.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -40,7 +40,7 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/ts-config": "0.6.4",
+        "@aklesky/ts-config": "0.6.5",
         "rimraf": "5.0.1",
         "typescript": "5.1.3"
     },
