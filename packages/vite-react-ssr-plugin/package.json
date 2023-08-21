@@ -40,7 +40,7 @@
         "@aklesky/prettier-config": "0.6.5",
         "@aklesky/ts-config": "0.6.5",
         "rimraf": "5.0.1",
-        "vite": "4.3.9"
+        "vite": "4.4.9"
     },
     "dependencies": {
         "@aklesky/streamable-react": "0.6.5",
