@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/aklesky/node-workspace/compare/v0.6.3...v0.6.4) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update react monorepo ([#123](https://github.com/aklesky/node-workspace/issues/123)) ([2574c1b](https://github.com/aklesky/node-workspace/commit/2574c1b8ef0d0647ce84adbcdca1bf8a486b07c5))
+
+
+
+
+
 ## [0.6.3](https://github.com/aklesky/node-workspace/compare/v0.6.2...v0.6.3) (2023-06-21)
 
 

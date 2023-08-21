@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/aklesky/node-workspace/compare/v0.6.3...v0.6.4) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sass to v1.66.1 ([#121](https://github.com/aklesky/node-workspace/issues/121)) ([16dc061](https://github.com/aklesky/node-workspace/commit/16dc06135d70b7b2108c65a89fbf2d361fd5343f))
+* **deps:** update react monorepo ([#123](https://github.com/aklesky/node-workspace/issues/123)) ([2574c1b](https://github.com/aklesky/node-workspace/commit/2574c1b8ef0d0647ce84adbcdca1bf8a486b07c5))
+* **deps:** update typescript-eslint monorepo to v5.62.0 ([#124](https://github.com/aklesky/node-workspace/issues/124)) ([be70846](https://github.com/aklesky/node-workspace/commit/be70846b7856f330cf93e9d72a5e3c5756906a14))
+
+
+
+
+
 ## [0.6.3](https://github.com/aklesky/node-workspace/compare/v0.6.2...v0.6.3) (2023-06-21)
 
 
