@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/aklesky/node-workspace/compare/v0.6.5...v0.6.6) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency autoprefixer to v10.4.15 ([#132](https://github.com/aklesky/node-workspace/issues/132)) ([0662bc9](https://github.com/aklesky/node-workspace/commit/0662bc9dc174bed24f78137af42af220d8faf359))
+* **deps:** update dependency postcss to v8.4.28 ([#134](https://github.com/aklesky/node-workspace/issues/134)) ([3bb5ee9](https://github.com/aklesky/node-workspace/commit/3bb5ee93d12623433b7be4f04bb45e7df5487c82))
+* **deps:** update dependency postcss-nesting to v12 ([#141](https://github.com/aklesky/node-workspace/issues/141)) ([f152faf](https://github.com/aklesky/node-workspace/commit/f152faf6922b54200bf8ca5b8a2c58d448d3105e))
+
+
+
+
+
 ## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
 
 **Note:** Version bump only for package @aklesky/postcss-config

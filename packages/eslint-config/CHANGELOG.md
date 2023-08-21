@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/aklesky/node-workspace/compare/v0.6.5...v0.6.6) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.47.0 ([#130](https://github.com/aklesky/node-workspace/issues/130)) ([2a35cf8](https://github.com/aklesky/node-workspace/commit/2a35cf8a40aff0214d332860e45b569e081384a4))
+* **deps:** update dependency eslint-config-prettier to v8.10.0 ([#138](https://github.com/aklesky/node-workspace/issues/138)) ([7c10096](https://github.com/aklesky/node-workspace/commit/7c10096dc842c6a00c1c2532fbca6ffe4e70f18a))
+* **deps:** update dependency eslint-config-prettier to v9 ([#139](https://github.com/aklesky/node-workspace/issues/139)) ([0ce87ea](https://github.com/aklesky/node-workspace/commit/0ce87ea0aec8beb08ba99da2065131149364988d))
+* **deps:** update dependency eslint-plugin-jest to v27.2.3 ([#133](https://github.com/aklesky/node-workspace/issues/133)) ([790c7b7](https://github.com/aklesky/node-workspace/commit/790c7b7e92cccb91857aed44900d2b2300eb573e))
+* **deps:** update dependency eslint-plugin-prettier to v5 ([#140](https://github.com/aklesky/node-workspace/issues/140)) ([6a222e7](https://github.com/aklesky/node-workspace/commit/6a222e7356f70ac4a85bb7319ecdfc2bc5deb6e5))
+* **deps:** update dependency prettier to v3 ([#142](https://github.com/aklesky/node-workspace/issues/142)) ([f975c4f](https://github.com/aklesky/node-workspace/commit/f975c4fc1e43c4b201fe602e64a0fbb14158751e))
+* **deps:** update typescript-eslint monorepo to v6 (major) ([#143](https://github.com/aklesky/node-workspace/issues/143)) ([189c59e](https://github.com/aklesky/node-workspace/commit/189c59ed46301088a9c987288215fb8110f606e7))
+
+
+
+
+
 ## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
 
 **Note:** Version bump only for package @aklesky/eslint-config

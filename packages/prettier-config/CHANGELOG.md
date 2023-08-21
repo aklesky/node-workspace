@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/aklesky/node-workspace/compare/v0.6.5...v0.6.6) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v3 ([#142](https://github.com/aklesky/node-workspace/issues/142)) ([f975c4f](https://github.com/aklesky/node-workspace/commit/f975c4fc1e43c4b201fe602e64a0fbb14158751e))
+
+
+
+
+
 ## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
 
 **Note:** Version bump only for package @aklesky/prettier-config

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/aklesky/node-workspace/compare/v0.6.5...v0.6.6) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update jest monorepo ([#136](https://github.com/aklesky/node-workspace/issues/136)) ([b829f68](https://github.com/aklesky/node-workspace/commit/b829f6883e0fc1e479a7c0f525ea752c06479b5e))
+* **deps:** update swc monorepo ([#129](https://github.com/aklesky/node-workspace/issues/129)) ([f573df6](https://github.com/aklesky/node-workspace/commit/f573df61a1c08752611767759ecbf82e862c4e2b))
+
+
+
+
+
 ## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
 
 **Note:** Version bump only for package @aklesky/jest-config
