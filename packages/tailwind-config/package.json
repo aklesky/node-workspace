@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/tailwind-config",
-    "version": "0.6.6",
+    "version": "0.6.7",
     "description": "Tailwind Css configuration presets",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -42,9 +42,9 @@
         "tailwindcss": "3.3.3"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.6.6",
-        "@aklesky/prettier-config": "0.6.6",
-        "@aklesky/ts-config": "0.6.6",
+        "@aklesky/eslint-config": "0.6.7",
+        "@aklesky/prettier-config": "0.6.7",
+        "@aklesky/ts-config": "0.6.7",
         "rimraf": "5.0.1"
     }
 }
