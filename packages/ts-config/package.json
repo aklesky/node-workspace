@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "@tsconfig/node18": "18.2.2",
-        "@types/node": "20.5.1",
+        "@types/node": "20.6.3",
         "ts-node": "10.9.1"
     },
     "devDependencies": {
