@@ -17,6 +17,6 @@
     "workspaces": ["packages/*"],
     "devDependencies": {
         "lerna": "7.1.5",
-        "typescript": "5.1.6"
+        "typescript": "5.2.2"
     }
 }
