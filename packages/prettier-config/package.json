@@ -46,6 +46,6 @@
     },
     "dependencies": {
         "@types/prettier": "2.7.3",
-        "prettier": "3.0.2"
+        "prettier": "3.0.3"
     }
 }
