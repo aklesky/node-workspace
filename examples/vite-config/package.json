@@ -41,7 +41,7 @@
         "@aklesky/utilities": "0.0.0",
         "@aklesky/vite-config": "0.0.0",
         "postcss-load-config": "4.0.1",
-        "vite": "4.1.1"
+        "vite": "4.1.5"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.6.0",
