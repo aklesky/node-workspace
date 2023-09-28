@@ -18,3 +18,6 @@ check-outdated:
 	npx ncu -ws --root
 update:
 	npx ncu -ws --root -u
+clean-build: clear build
+clear:
+	npx lerna run clean

@@ -6,13 +6,15 @@
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
     "directories": {
-        "node": "node"
+        "node": "node",
+        "common": "common"
     },
     "publishConfig": {
         "access": "public"
     },
     "files": [
-        "node"
+        "node",
+        "common"
     ],
     "repository": {
         "type": "git",
@@ -22,9 +24,7 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "@tsconfig/node18": "18.2.2",
-        "@types/node": "20.6.3",
-        "ts-node": "10.9.1"
+        "@types/node": "20.6.3"
     },
     "devDependencies": {
         "typescript": "5.2.2"

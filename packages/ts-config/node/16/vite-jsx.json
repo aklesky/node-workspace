@@ -1,0 +1,6 @@
+{
+    "extends": "./jsx.json",
+    "compilerOptions": {
+        "isolatedModules": true
+    }
+}

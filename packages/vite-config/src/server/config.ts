@@ -1,7 +1,7 @@
-import deepmerge from '@aklesky/utilities/deepmerge.js'
-import ssr from '@aklesky/vite-react-ssr-plugin/plugin.js'
+// import deepmerge from '@aklesky/utilities/deepmerge.js'
+// import ssr from '@aklesky/vite-react-ssr-plugin/plugin.js'
 import { UserConfig, UserConfigExport } from 'vite'
-import { react } from '../react.js'
+// import { react } from '../react.js'
 import { ViteUserConfig } from './interfaces.js'
 
 const defaultOptions: UserConfig = {
@@ -13,13 +13,14 @@ const defaultOptions: UserConfig = {
 
 export const defineConfig = (options: ViteUserConfig): UserConfigExport => {
     try {
-        const { vite, react: plugin } = options
+        // const { vite, react: plugin } = options
 
-        const config = deepmerge(defaultOptions, vite)
+        // const config = deepmerge(defaultOptions, vite)
         return () => {
             return {
-                ...config,
-                plugins: [...(config.plugins || []), react(), ssr(plugin)],
+                ...defaultOptions,
+                // ...config,
+                // plugins: [...(config.plugins || []), react(), ssr(plugin)],
             }
         }
     } catch (error: unknown) {

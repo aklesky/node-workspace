@@ -1,0 +1,14 @@
+{
+    "extends": "../../common/node.json",
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "types": ["node"]
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build",
+        "jest",
+        "logs"
+    ]
+}

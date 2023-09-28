@@ -1,4 +1,4 @@
-import { ReactServerMiddlewareOptions } from '@aklesky/vite-react-ssr-plugin/interface.js'
+// import { ReactServerMiddlewareOptions } from '@aklesky/vite-react-ssr-plugin/interface.js'
 import { UserConfig } from 'vite'
 
 export interface ViteUserConfig {
@@ -9,5 +9,5 @@ export interface ViteUserConfig {
     /**
      *  @description react server middleware configuration
      */
-    react: ReactServerMiddlewareOptions
+    // react: ReactServerMiddlewareOptions
 }

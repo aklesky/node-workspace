@@ -3,10 +3,6 @@
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "composite": false,
-        "module": "CommonJS",
-        "target": "ES5",
-        "moduleResolution": "NodeNext",
         "declaration": true,
         "esModuleInterop": false,
     }

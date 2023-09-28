@@ -1,5 +1,5 @@
 {
-    "extends": "./packages/ts-config/node/18/tsconfig.node.json",
+    "extends": "./packages/ts-config/node/18/node.json",
     "compilerOptions": {
         "paths": {
             "@aklesky/jest-config/*": ["./packages/jest-config/src/*"],
