@@ -3,12 +3,8 @@
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "module": "CommonJS",
         "composite": false,
-        "target": "ES5",
-        "moduleResolution": "NodeNext",
         "declaration": true,
-        "esModuleInterop": true
     },
-    "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__"]
+    "exclude": ["node_modules", "dist"]
 }

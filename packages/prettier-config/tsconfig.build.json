@@ -1,13 +1,8 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": "@aklesky/ts-config/node/16/build.json",
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "composite": false,
-        "module": "CommonJS",
-        "target": "ES5",
-        "moduleResolution": "NodeNext",
-        "declaration": true,
-        "esModuleInterop": false,
-    }
+    },
+    "exclude": ["node_modules", "dist"]
 }

@@ -40,9 +40,7 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/ts-config": "0.6.7",
-        "rimraf": "5.0.1",
-        "typescript": "5.2.2"
+        "@aklesky/ts-config": "0.6.7"
     },
     "dependencies": {
         "@types/prettier": "2.7.3",
