@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sass to v1.68.0 ([#164](https://github.com/aklesky/node-workspace/issues/164)) ([198f15e](https://github.com/aklesky/node-workspace/commit/198f15ebbe7ec8d4c4ce7b77b9577cc629a724e0))
+
+
+
+
+
 # [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
 
 

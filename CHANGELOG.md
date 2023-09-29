@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.50.0 ([#163](https://github.com/aklesky/node-workspace/issues/163)) ([c90f05e](https://github.com/aklesky/node-workspace/commit/c90f05eafedb071aae7b21fd2ae233fa1589b9a9))
+* **deps:** update dependency eslint-plugin-jest to v27.4.0 ([#162](https://github.com/aklesky/node-workspace/issues/162)) ([40bf980](https://github.com/aklesky/node-workspace/commit/40bf980c971e2c7cc44cca9b44877434c160a496))
+* **deps:** update dependency postcss to v8.4.31 ([#159](https://github.com/aklesky/node-workspace/issues/159)) ([1e3cb3f](https://github.com/aklesky/node-workspace/commit/1e3cb3fc08435f8d549c7dbf4dd127e7397e4c8e))
+* **deps:** update dependency sass to v1.68.0 ([#164](https://github.com/aklesky/node-workspace/issues/164)) ([198f15e](https://github.com/aklesky/node-workspace/commit/198f15ebbe7ec8d4c4ce7b77b9577cc629a724e0))
+
+
+
+
+
 # [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
 
 
