@@ -1,14 +1,8 @@
 {
-    "extends": "../../common/node.json",
+    "extends": "../../shared/node.json",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
+        "target": "ESNext",
         "types": ["node"]
-    },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "build",
-        "jest",
-        "logs"
-    ]
+    }
 }

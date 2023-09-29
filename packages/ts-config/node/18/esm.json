@@ -2,8 +2,7 @@
     "extends": "./node.json",
     "compilerOptions": {
         "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "NodeNext",
-        "verbatimModuleSyntax": true
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext"
     }
 }

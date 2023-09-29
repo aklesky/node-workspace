@@ -12,15 +12,11 @@
         "access": "public"
     },
     "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.js"
+        "./common": {
+            "require": "./dist/common.js",
+            "import": "./dist/common.js"
         },
         "./node": {
-            "require": "./dist/node.js",
-            "import": "./dist/node.js"
-        },
-        "./node.js": {
             "require": "./dist/node.js",
             "import": "./dist/node.js"
         },
@@ -28,19 +24,13 @@
             "require": "./dist/jest.js",
             "import": "./dist/jest.js"
         },
-        "./jest.js": {
-            "require": "./dist/jest.js",
-            "import": "./dist/jest.js"
-        },
         "./package.json": "./package.json"
     },
     "directories": {
-        "dist": "dist",
-        "@types": "@types"
+        "dist": "dist"
     },
     "files": [
-        "dist",
-        "@types"
+        "dist"
     ],
     "repository": {
         "type": "git",
@@ -55,9 +45,7 @@
     },
     "devDependencies": {
         "@aklesky/ts-config": "0.6.7",
-        "prettier": "3.0.3",
-        "rimraf": "5.0.1",
-        "typescript": "5.2.2"
+        "prettier": "3.0.3"
     },
     "dependencies": {
         "@aklesky/prettier-config": "0.6.7",

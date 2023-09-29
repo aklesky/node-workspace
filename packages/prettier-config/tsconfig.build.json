@@ -1,9 +1,8 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": "@aklesky/ts-config/node/16/build.json",
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "declaration": true,
-        "esModuleInterop": false,
-    }
+    },
+    "exclude": ["node_modules", "dist"]
 }

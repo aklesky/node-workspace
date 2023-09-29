@@ -44,7 +44,6 @@
     "devDependencies": {
         "@aklesky/eslint-config": "0.6.7",
         "@aklesky/prettier-config": "0.6.7",
-        "@aklesky/ts-config": "0.6.7",
-        "rimraf": "5.0.1"
+        "@aklesky/ts-config": "0.6.7"
     }
 }

@@ -1,15 +1,8 @@
 {
-    "extends": "../../common/node.json",
+    "extends": "../../shared/node.json",
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "types": ["node"],
         "target": "es2015"
-    },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "build",
-        "jest",
-        "logs"
-    ]
+    }
 }

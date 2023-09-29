@@ -4,19 +4,22 @@
     "license": "MIT",
     "private": true,
     "type": "commonjs",
-    "prettier": "./packages/prettier-config/dist/config",
+    "prettier": "@aklesky/prettier-config",
     "scripts": {
         "setup": "lerna bootstrap",
         "setup:ci": "lerna bootstrap --ci",
         "build": "lerna run build",
-        "link:workspace": "lerna link",
         "lint": "lerna run lint",
         "release:ci": "lerna publish --create-release github --yes",
         "test": "lerna run test"
     },
-    "workspaces": ["packages/*"],
+    "workspaces": [
+        "packages/*"
+    ],
     "devDependencies": {
         "lerna": "7.1.5",
+        "rimraf": "5.0.5",
+        "ts-node": "10.9.1",
         "typescript": "5.2.2"
     }
 }

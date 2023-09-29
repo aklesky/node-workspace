@@ -1,5 +1,5 @@
 {
-    "extends": "../../common/jsx.json",
+    "extends": "../../shared/jsx.json",
     "compilerOptions": {
         "target": "ES2015"
     }

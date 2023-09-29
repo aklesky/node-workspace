@@ -1,4 +1,4 @@
-bootstrap:
+up: clear
 	yarn install
 	npx lerna run build
 build:
@@ -20,4 +20,5 @@ update:
 	npx ncu -ws --root -u
 clean-build: clear build
 clear:
-	npx lerna run clean
+	npx -y rimraf node_modules
+	npx -y lerna run clean

@@ -1,5 +1,5 @@
 import { ESLint } from 'eslint'
-import * as node from './node.js'
+import node from './node.js'
 
 const config = {
     ...node,

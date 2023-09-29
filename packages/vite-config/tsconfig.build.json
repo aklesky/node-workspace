@@ -4,8 +4,6 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "composite": false,
-        "declaration": true,
-        "esModuleInterop": false
-    },
-    "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__"]
+        "declaration": true
+    }
 }

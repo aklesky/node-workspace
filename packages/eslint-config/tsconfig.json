@@ -1,6 +1,4 @@
 {
-  "extends": "@aklesky/ts-config/node/16/node.json",
-  "compilerOptions": {
-    "esModuleInterop": true,
-  }
+    "extends": "@aklesky/ts-config/node/18/esm.json",
+    "exclude": ["node_modules", "dist"]
 }
