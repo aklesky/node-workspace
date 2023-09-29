@@ -7,14 +7,14 @@
     "license": "MIT",
     "directories": {
         "node": "node",
-        "common": "common"
+        "shared": "shared"
     },
     "publishConfig": {
         "access": "public"
     },
     "files": [
         "node",
-        "common"
+        "shared"
     ],
     "repository": {
         "type": "git",
