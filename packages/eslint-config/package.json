@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/eslint-config",
-    "version": "0.6.7",
+    "version": "0.7.0",
     "description": "Shareable collection of eslint configurations.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -44,11 +44,11 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/ts-config": "0.6.7",
+        "@aklesky/ts-config": "0.7.0",
         "prettier": "3.0.3"
     },
     "dependencies": {
-        "@aklesky/prettier-config": "0.6.7",
+        "@aklesky/prettier-config": "0.7.0",
         "@types/eslint": "8.44.2",
         "@typescript-eslint/eslint-plugin": "6.7.2",
         "@typescript-eslint/parser": "6.7.2",

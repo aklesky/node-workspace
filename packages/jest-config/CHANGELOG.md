@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @swc/core to v1.3.87 ([#154](https://github.com/aklesky/node-workspace/issues/154)) ([b678d11](https://github.com/aklesky/node-workspace/commit/b678d11aa0903186fe318dba5871c7fd5ef2a596))
+* **deps:** update jest monorepo ([#150](https://github.com/aklesky/node-workspace/issues/150)) ([8efd8b9](https://github.com/aklesky/node-workspace/commit/8efd8b9d3566d37eae638f6c7768c11dfb546804))
+* **ts-config:** Ensure typescript configuration is up to date ([#170](https://github.com/aklesky/node-workspace/issues/170)) ([2bded0d](https://github.com/aklesky/node-workspace/commit/2bded0ddc662cdab05e2dfd1f8d8980c8d13bbe5))
+
+
+### BREAKING CHANGES
+
+* **ts-config:** removed @aklesky/utilities from monorepo
+removed @aklesky/vite-react-ssr-plugin from monorepo
+removed @aklesky/streamable-react from Monroe
+
+
+
+
+
 ## [0.6.7](https://github.com/aklesky/node-workspace/compare/v0.6.6...v0.6.7) (2023-09-22)
 
 **Note:** Version bump only for package @aklesky/jest-config

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @swc/core to v1.3.87 ([#154](https://github.com/aklesky/node-workspace/issues/154)) ([b678d11](https://github.com/aklesky/node-workspace/commit/b678d11aa0903186fe318dba5871c7fd5ef2a596))
+* **deps:** update dependency @tailwindcss/forms to v0.5.6 ([#152](https://github.com/aklesky/node-workspace/issues/152)) ([0a045f1](https://github.com/aklesky/node-workspace/commit/0a045f1ec8e5e5bec89aaa4634ce56f11c595c53))
+* **deps:** update dependency @tailwindcss/typography to v0.5.10 ([#157](https://github.com/aklesky/node-workspace/issues/157)) ([25a09ac](https://github.com/aklesky/node-workspace/commit/25a09acbe88d51d19a1ddacc33569813f183015e))
+* **deps:** update dependency @types/node to v20.6.3 ([#149](https://github.com/aklesky/node-workspace/issues/149)) ([f63b166](https://github.com/aklesky/node-workspace/commit/f63b166a0b5d2759c3a3000a60731c6785bb4d87))
+* **deps:** update dependency @types/react to v18.2.22 ([#151](https://github.com/aklesky/node-workspace/issues/151)) ([9042e34](https://github.com/aklesky/node-workspace/commit/9042e34665c5be9cba92f8a507efda8953f102e8))
+* **deps:** update dependency autoprefixer to v10.4.16 ([#158](https://github.com/aklesky/node-workspace/issues/158)) ([2ba00b0](https://github.com/aklesky/node-workspace/commit/2ba00b0c1d1cfd7a6f29ac0c7ea9d948de12b5d0))
+* **deps:** update dependency eslint to v8.49.0 ([#155](https://github.com/aklesky/node-workspace/issues/155)) ([e9a2df0](https://github.com/aklesky/node-workspace/commit/e9a2df07773b9a4f2e924db60516ab697099e117))
+* **deps:** update dependency prettier to v3.0.3 ([#156](https://github.com/aklesky/node-workspace/issues/156)) ([f1a6983](https://github.com/aklesky/node-workspace/commit/f1a69837d3a142ca086d412aad2a6008664e6849))
+* **deps:** update jest monorepo ([#150](https://github.com/aklesky/node-workspace/issues/150)) ([8efd8b9](https://github.com/aklesky/node-workspace/commit/8efd8b9d3566d37eae638f6c7768c11dfb546804))
+* **ts-config:** Ensure typescript configuration is up to date ([#170](https://github.com/aklesky/node-workspace/issues/170)) ([2bded0d](https://github.com/aklesky/node-workspace/commit/2bded0ddc662cdab05e2dfd1f8d8980c8d13bbe5))
+
+
+### BREAKING CHANGES
+
+* **ts-config:** removed @aklesky/utilities from monorepo
+removed @aklesky/vite-react-ssr-plugin from monorepo
+removed @aklesky/streamable-react from Monroe
+
+
+
+
+
 ## [0.6.7](https://github.com/aklesky/node-workspace/compare/v0.6.6...v0.6.7) (2023-09-22)
 
 

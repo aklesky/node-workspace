@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tailwindcss/forms to v0.5.6 ([#152](https://github.com/aklesky/node-workspace/issues/152)) ([0a045f1](https://github.com/aklesky/node-workspace/commit/0a045f1ec8e5e5bec89aaa4634ce56f11c595c53))
+* **deps:** update dependency @tailwindcss/typography to v0.5.10 ([#157](https://github.com/aklesky/node-workspace/issues/157)) ([25a09ac](https://github.com/aklesky/node-workspace/commit/25a09acbe88d51d19a1ddacc33569813f183015e))
+* **ts-config:** Ensure typescript configuration is up to date ([#170](https://github.com/aklesky/node-workspace/issues/170)) ([2bded0d](https://github.com/aklesky/node-workspace/commit/2bded0ddc662cdab05e2dfd1f8d8980c8d13bbe5))
+
+
+### BREAKING CHANGES
+
+* **ts-config:** removed @aklesky/utilities from monorepo
+removed @aklesky/vite-react-ssr-plugin from monorepo
+removed @aklesky/streamable-react from Monroe
+
+
+
+
+
 ## [0.6.7](https://github.com/aklesky/node-workspace/compare/v0.6.6...v0.6.7) (2023-09-22)
 
 **Note:** Version bump only for package @aklesky/tailwind-config

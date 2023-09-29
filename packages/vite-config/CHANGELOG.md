@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* **ts-config:** Ensure typescript configuration is up to date ([#170](https://github.com/aklesky/node-workspace/issues/170)) ([2bded0d](https://github.com/aklesky/node-workspace/commit/2bded0ddc662cdab05e2dfd1f8d8980c8d13bbe5))
+
+
+### BREAKING CHANGES
+
+* **ts-config:** removed @aklesky/utilities from monorepo
+removed @aklesky/vite-react-ssr-plugin from monorepo
+removed @aklesky/streamable-react from Monroe
+
+
+
+
+
 ## [0.6.7](https://github.com/aklesky/node-workspace/compare/v0.6.6...v0.6.7) (2023-09-22)
 
 **Note:** Version bump only for package @aklesky/vite-config
