@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
+
+
+### Bug Fixes
+
+* **@aklesky/ts-config:** Ensure all typescript config files are provided ([#173](https://github.com/aklesky/node-workspace/issues/173)) ([baf4c97](https://github.com/aklesky/node-workspace/commit/baf4c97407b276913d821fd705df8ab993996778))
+
+
+
+
+
 ## [0.7.2](https://github.com/aklesky/node-workspace/compare/v0.7.1...v0.7.2) (2023-09-29)
 
 
