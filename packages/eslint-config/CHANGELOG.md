@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/aklesky/node-workspace/compare/v0.7.1...v0.7.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to v6.7.3 ([#171](https://github.com/aklesky/node-workspace/issues/171)) ([efc4857](https://github.com/aklesky/node-workspace/commit/efc485782b4fd765409e2cd727d8715c191f1d03))
+
+
+
+
+
 ## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
 
 

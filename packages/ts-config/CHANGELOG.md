@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/aklesky/node-workspace/compare/v0.7.1...v0.7.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v20.7.1 ([#168](https://github.com/aklesky/node-workspace/issues/168)) ([48fe1bf](https://github.com/aklesky/node-workspace/commit/48fe1bfacf053debfc092c5c98a84e5bbbd45d33))
+
+
+
+
+
 ## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/ts-config

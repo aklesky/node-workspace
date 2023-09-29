@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/aklesky/node-workspace/compare/v0.7.1...v0.7.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @swc/core to v1.3.90 ([#169](https://github.com/aklesky/node-workspace/issues/169)) ([dcab993](https://github.com/aklesky/node-workspace/commit/dcab99383f1b161421000f6eb18700204ae1bb91))
+* **deps:** update dependency @types/node to v20.7.1 ([#168](https://github.com/aklesky/node-workspace/issues/168)) ([48fe1bf](https://github.com/aklesky/node-workspace/commit/48fe1bfacf053debfc092c5c98a84e5bbbd45d33))
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.4.0 ([#172](https://github.com/aklesky/node-workspace/issues/172)) ([7bd7eea](https://github.com/aklesky/node-workspace/commit/7bd7eea13b86dcc0a2a747d357a1046c0bd147c2))
+* **deps:** update typescript-eslint monorepo to v6.7.3 ([#171](https://github.com/aklesky/node-workspace/issues/171)) ([efc4857](https://github.com/aklesky/node-workspace/commit/efc485782b4fd765409e2cd727d8715c191f1d03))
+
+
+
+
+
 ## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
 
 
