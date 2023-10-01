@@ -20,5 +20,5 @@ update:
 	npx ncu -ws --root -u
 clean-build: clear build
 clear:
-	npx -y rimraf node_modules
+	npx -y rimraf -rf node_modules
 	npx -y lerna run clean
