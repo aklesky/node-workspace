@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/aklesky/node-workspace/compare/v0.7.3...v0.7.4) (2023-10-01)
+
+
+### Bug Fixes
+
+* **jest-config:** Removing @swc/core from dependencies ([#177](https://github.com/aklesky/node-workspace/issues/177)) ([cf86f39](https://github.com/aklesky/node-workspace/commit/cf86f397161f307d939b4cbc2c8660fd7b6ca41a))
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/jest-config

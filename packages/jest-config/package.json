@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/jest-config",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "description": "Jest configuration preset.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
