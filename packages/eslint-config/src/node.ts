@@ -1,5 +1,5 @@
 import { ESLint } from 'eslint'
-import * as common from './common.js'
+import common from './common.js'
 
 const node = {
     ...common,

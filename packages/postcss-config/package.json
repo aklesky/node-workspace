@@ -1,0 +1,49 @@
+{
+    "name": "@aklesky/postcss-config",
+    "version": "0.7.3",
+    "description": "Postcss config presets",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "prettier": "@aklesky/prettier-config",
+    "main": "dist/index.js",
+    "exports": {
+        "./*": "./dist/*"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "directories": {
+        "dist": "dist",
+        "@types": "@types"
+    },
+    "files": [
+        "dist",
+        "@types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf -rf ./dist",
+        "lint": "eslint --ext .ts ./src",
+        "build": "npm run clean && tsc --project ./tsconfig.build.json",
+        "test": "jest --passWithNoTests"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "dependencies": {
+        "autoprefixer": "10.4.16",
+        "cssnano": "6.0.1",
+        "postcss": "8.4.31",
+        "postcss-load-config": "4.0.1",
+        "postcss-nesting": "12.0.1"
+    },
+    "devDependencies": {
+        "@aklesky/eslint-config": "0.7.3",
+        "@aklesky/prettier-config": "0.7.3",
+        "@aklesky/ts-config": "0.7.3"
+    }
+}

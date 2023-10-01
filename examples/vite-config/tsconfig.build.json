@@ -10,5 +10,5 @@
         "declaration": true,
         "esModuleInterop": false
     },
-    "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__", "vite.config.ts"]
+    "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__", "vite.config.ts", "postcss.config.ts"]
 }

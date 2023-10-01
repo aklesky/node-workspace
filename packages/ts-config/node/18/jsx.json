@@ -1,0 +1,7 @@
+{
+    "extends": "../../shared/jsx.json",
+    "compilerOptions": {
+        "target": "ESNext"
+    }
+}
+

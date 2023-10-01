@@ -1,5 +1,5 @@
 import { ESLint } from 'eslint'
-import * as prettier from '@aklesky/prettier-config/config.js'
+import prettier from '@aklesky/prettier-config'
 
 const common = {
     root: true,

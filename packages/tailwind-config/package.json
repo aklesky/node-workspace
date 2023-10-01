@@ -1,0 +1,49 @@
+{
+    "name": "@aklesky/tailwind-config",
+    "version": "0.7.3",
+    "description": "Tailwind Css configuration presets",
+    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "prettier": "@aklesky/prettier-config",
+    "exports": {
+        "./*": "./dist/*"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "directories": {
+        "dist": "dist",
+        "@types": "@types"
+    },
+    "files": [
+        "dist",
+        "@types"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf -rf ./dist",
+        "lint": "eslint --ext .ts ./src",
+        "build": "npm run clean && tsc --project ./tsconfig.build.json",
+        "test": "jest --passWithNoTests"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "dependencies": {
+        "@tailwindcss/aspect-ratio": "0.4.2",
+        "@tailwindcss/forms": "0.5.6",
+        "@tailwindcss/line-clamp": "0.4.4",
+        "@tailwindcss/typography": "0.5.10",
+        "tailwindcss": "3.3.3"
+    },
+    "devDependencies": {
+        "@aklesky/eslint-config": "0.7.3",
+        "@aklesky/prettier-config": "0.7.3",
+        "@aklesky/ts-config": "0.7.3"
+    }
+}

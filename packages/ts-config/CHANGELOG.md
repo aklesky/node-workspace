@@ -3,6 +3,116 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
+
+
+### Bug Fixes
+
+* **@aklesky/ts-config:** Ensure all typescript config files are provided ([#173](https://github.com/aklesky/node-workspace/issues/173)) ([baf4c97](https://github.com/aklesky/node-workspace/commit/baf4c97407b276913d821fd705df8ab993996778))
+
+
+
+
+
+## [0.7.2](https://github.com/aklesky/node-workspace/compare/v0.7.1...v0.7.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v20.7.1 ([#168](https://github.com/aklesky/node-workspace/issues/168)) ([48fe1bf](https://github.com/aklesky/node-workspace/commit/48fe1bfacf053debfc092c5c98a84e5bbbd45d33))
+
+
+
+
+
+## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
+
+**Note:** Version bump only for package @aklesky/ts-config
+
+
+
+
+
+# [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v20.6.3 ([#149](https://github.com/aklesky/node-workspace/issues/149)) ([f63b166](https://github.com/aklesky/node-workspace/commit/f63b166a0b5d2759c3a3000a60731c6785bb4d87))
+* **ts-config:** Ensure typescript configuration is up to date ([#170](https://github.com/aklesky/node-workspace/issues/170)) ([2bded0d](https://github.com/aklesky/node-workspace/commit/2bded0ddc662cdab05e2dfd1f8d8980c8d13bbe5))
+
+
+### BREAKING CHANGES
+
+* **ts-config:** removed @aklesky/utilities from monorepo
+removed @aklesky/vite-react-ssr-plugin from monorepo
+removed @aklesky/streamable-react from Monroe
+
+
+
+
+
+## [0.6.7](https://github.com/aklesky/node-workspace/compare/v0.6.6...v0.6.7) (2023-09-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tsconfig/node18 to v18.2.2 ([#148](https://github.com/aklesky/node-workspace/issues/148)) ([55e49d3](https://github.com/aklesky/node-workspace/commit/55e49d358b578fa5f7d48d41ed7b5fe5247a4538))
+
+
+
+
+
+## [0.6.6](https://github.com/aklesky/node-workspace/compare/v0.6.5...v0.6.6) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tsconfig/node18 to v18 ([#128](https://github.com/aklesky/node-workspace/issues/128)) ([140ad42](https://github.com/aklesky/node-workspace/commit/140ad421f111c57e00d4be3d2af0e7b92edef93b))
+
+
+
+
+
+## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v20.5.1 ([#126](https://github.com/aklesky/node-workspace/issues/126)) ([4717545](https://github.com/aklesky/node-workspace/commit/47175458121747aa0a0dd9f8e9d21e6f45e8a37a))
+
+
+
+
+
+## [0.6.4](https://github.com/aklesky/node-workspace/compare/v0.6.3...v0.6.4) (2023-08-21)
+
+**Note:** Version bump only for package @aklesky/ts-config
+
+
+
+
+
+## [0.6.3](https://github.com/aklesky/node-workspace/compare/v0.6.2...v0.6.3) (2023-06-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tsconfig/node18 to v1.0.3 ([#103](https://github.com/aklesky/node-workspace/issues/103)) ([cec24cd](https://github.com/aklesky/node-workspace/commit/cec24cdf53fb76859a0df62ba56883ab07608566))
+* **deps:** update dependency @tsconfig/node18 to v2 ([#116](https://github.com/aklesky/node-workspace/issues/116)) ([8e20b87](https://github.com/aklesky/node-workspace/commit/8e20b8745fcb94d8cd1d3b69d2e0746e15186df2))
+
+
+
+
+
+## [0.6.2](https://github.com/aklesky/node-workspace/compare/v0.6.1...v0.6.2) (2023-02-11)
+
+**Note:** Version bump only for package @aklesky/ts-config
+
+
+
+
+
 # 0.6.0 (2023-02-09)
 
 

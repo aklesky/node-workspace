@@ -1,27 +1,11 @@
-import { Config } from 'jest'
+import type { Config } from 'jest'
+import base from './base'
 
-const base: Partial<Config> = {
-    collectCoverage: true,
-    testEnvironment: 'node',
-    extensionsToTreatAsEsm: ['.ts', '.tsx'],
-    testMatch: ['**/__tests__/**/?(*.)+(spec|test).[jt]s?(x)'],
-    transform: {
-        '^.+\\.(t|j)sx?$': [
-            '@swc/jest',
-            {
-                jsc: {
-                    transform: {
-                        react: {
-                            runtime: 'automatic',
-                        },
-                    },
-                },
-            },
-        ],
-    },
-    moduleNameMapper: {
-        '^(\\.{1,2}/.*)\\.js$': '$1',
-    },
+export const defineConfig = (config: Partial<Config>): Partial<Config> => {
+    return {
+        ...base,
+        ...(config || {}),
+    }
 }
 
-export = base
+export default defineConfig

@@ -1,3 +1,3 @@
-import * as config from './config.js'
+import config from './config'
 
 export = config

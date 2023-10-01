@@ -3,6 +3,115 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.7.2](https://github.com/aklesky/node-workspace/compare/v0.7.1...v0.7.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.4.0 ([#172](https://github.com/aklesky/node-workspace/issues/172)) ([7bd7eea](https://github.com/aklesky/node-workspace/commit/7bd7eea13b86dcc0a2a747d357a1046c0bd147c2))
+
+
+
+
+
+## [0.7.1](https://github.com/aklesky/node-workspace/compare/v0.7.0...v0.7.1) (2023-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sass to v1.68.0 ([#164](https://github.com/aklesky/node-workspace/issues/164)) ([198f15e](https://github.com/aklesky/node-workspace/commit/198f15ebbe7ec8d4c4ce7b77b9577cc629a724e0))
+
+
+
+
+
+# [0.7.0](https://github.com/aklesky/node-workspace/compare/v0.6.7...v0.7.0) (2023-09-29)
+
+
+### Bug Fixes
+
+* **ts-config:** Ensure typescript configuration is up to date ([#170](https://github.com/aklesky/node-workspace/issues/170)) ([2bded0d](https://github.com/aklesky/node-workspace/commit/2bded0ddc662cdab05e2dfd1f8d8980c8d13bbe5))
+
+
+### BREAKING CHANGES
+
+* **ts-config:** removed @aklesky/utilities from monorepo
+removed @aklesky/vite-react-ssr-plugin from monorepo
+removed @aklesky/streamable-react from Monroe
+
+
+
+
+
+## [0.6.7](https://github.com/aklesky/node-workspace/compare/v0.6.6...v0.6.7) (2023-09-22)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.6.6](https://github.com/aklesky/node-workspace/compare/v0.6.5...v0.6.6) (2023-08-21)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.6.5](https://github.com/aklesky/node-workspace/compare/v0.6.4...v0.6.5) (2023-08-21)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.6.4](https://github.com/aklesky/node-workspace/compare/v0.6.3...v0.6.4) (2023-08-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sass to v1.66.1 ([#121](https://github.com/aklesky/node-workspace/issues/121)) ([16dc061](https://github.com/aklesky/node-workspace/commit/16dc06135d70b7b2108c65a89fbf2d361fd5343f))
+
+
+
+
+
+## [0.6.3](https://github.com/aklesky/node-workspace/compare/v0.6.2...v0.6.3) (2023-06-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.2.0 ([#79](https://github.com/aklesky/node-workspace/issues/79)) ([cc985a9](https://github.com/aklesky/node-workspace/commit/cc985a9759ceaa5ebdb943394da0db902208f6a3))
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.3.2 ([#110](https://github.com/aklesky/node-workspace/issues/110)) ([c7c7ff0](https://github.com/aklesky/node-workspace/commit/c7c7ff0709fde90307aeec2921dfdbc8d6f5c93c))
+* **deps:** update dependency rimraf to v4.3.0 ([#80](https://github.com/aklesky/node-workspace/issues/80)) ([344d932](https://github.com/aklesky/node-workspace/commit/344d93248e0e859b527ff147c035abb5d4756e52))
+* **deps:** update dependency rimraf to v4.4.0 ([#83](https://github.com/aklesky/node-workspace/issues/83)) ([c38fb92](https://github.com/aklesky/node-workspace/commit/c38fb92be45f5d57c9567c455c40cd7217f8d71b))
+* **deps:** update dependency rimraf to v5 ([#118](https://github.com/aklesky/node-workspace/issues/118)) ([2f92b20](https://github.com/aklesky/node-workspace/commit/2f92b20c86e95d54d8227da9d0ffd997aecb0bcf))
+* **deps:** update dependency sass to v1.58.3 ([#72](https://github.com/aklesky/node-workspace/issues/72)) ([d2c01bd](https://github.com/aklesky/node-workspace/commit/d2c01bde2ca3b26e6ffdcd7996dc014360c82726))
+* **deps:** update dependency sass to v1.59.2 ([#89](https://github.com/aklesky/node-workspace/issues/89)) ([412e0f8](https://github.com/aklesky/node-workspace/commit/412e0f82522a7056d146e091949069e2d11855a8))
+* **deps:** update dependency sass to v1.63.4 ([#95](https://github.com/aklesky/node-workspace/issues/95)) ([2b45899](https://github.com/aklesky/node-workspace/commit/2b458990b1accadb666b1ecd042cf7d2ede01fb3))
+
+
+
+
+
+## [0.6.2](https://github.com/aklesky/node-workspace/compare/v0.6.1...v0.6.2) (2023-02-11)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
 ## [0.6.1](https://github.com/aklesky/node-workspace/compare/v0.6.0...v0.6.1) (2023-02-09)
 
 **Note:** Version bump only for package @aklesky/vite-config
