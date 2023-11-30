@@ -43,7 +43,7 @@
         "@aklesky/eslint-config": "0.7.3",
         "@aklesky/prettier-config": "0.7.3",
         "@aklesky/ts-config": "0.7.3",
-        "@swc/core": "1.3.82",
+        "@swc/core": "1.3.100",
         "@types/jest": "29.5.5"
     },
     "peerDependencies": {
