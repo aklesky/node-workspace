@@ -38,7 +38,7 @@
     "dependencies": {
         "@aklesky/utilities": "0.6.7",
         "@aklesky/vite-react-ssr-plugin": "0.6.7",
-        "@vitejs/plugin-react-swc": "3.4.0",
+        "@vitejs/plugin-react-swc": "3.5.0",
         "sass": "1.69.5",
         "vite": "4.4.9"
     },
