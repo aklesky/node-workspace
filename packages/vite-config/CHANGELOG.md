@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sass to v1.69.5 ([#180](https://github.com/aklesky/node-workspace/issues/180)) ([beffcb4](https://github.com/aklesky/node-workspace/commit/beffcb48b1dbc96fb579252e6afdb186dc117b60))
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/vite-config

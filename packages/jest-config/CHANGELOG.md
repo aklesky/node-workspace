@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/jest-config
+
+
+
+
+
 ## [0.7.4](https://github.com/aklesky/node-workspace/compare/v0.7.3...v0.7.4) (2023-10-01)
 
 

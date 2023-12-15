@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest to v27.6.0 ([#175](https://github.com/aklesky/node-workspace/issues/175)) ([162ca2b](https://github.com/aklesky/node-workspace/commit/162ca2b6224c71d2c21ec74094f36e5a8ebaa0d8))
+* **deps:** update typescript-eslint monorepo to v6.14.0 ([#178](https://github.com/aklesky/node-workspace/issues/178)) ([51650f6](https://github.com/aklesky/node-workspace/commit/51650f6827752b878e29bd6e9241f07adb2e69e1))
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/eslint-config
