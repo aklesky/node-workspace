@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwindcss to v3.3.6 ([#192](https://github.com/aklesky/node-workspace/issues/192)) ([e60dd3f](https://github.com/aklesky/node-workspace/commit/e60dd3f1da63f7c8ae548734d4c07cae43779479))
+
+
+
+
+
 ## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
 
 

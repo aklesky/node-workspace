@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss to v8.4.32 ([#190](https://github.com/aklesky/node-workspace/issues/190)) ([68e4bd0](https://github.com/aklesky/node-workspace/commit/68e4bd01dba6d8760e196e9e3439a9dfa69483fc))
+
+
+
+
+
 ## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
 
 

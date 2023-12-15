@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to v9.1.0 ([#195](https://github.com/aklesky/node-workspace/issues/195)) ([05f9aaa](https://github.com/aklesky/node-workspace/commit/05f9aaa0c4d972154f871678a68b1fcd970f3b46))
+
+
+
+
+
 ## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
 
 

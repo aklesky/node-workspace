@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.5.0 ([#194](https://github.com/aklesky/node-workspace/issues/194)) ([bb6b509](https://github.com/aklesky/node-workspace/commit/bb6b509d958a3b3e4dd38b13ee52e15d2bde88fc))
+* **deps:** update dependency eslint-config-prettier to v9.1.0 ([#195](https://github.com/aklesky/node-workspace/issues/195)) ([05f9aaa](https://github.com/aklesky/node-workspace/commit/05f9aaa0c4d972154f871678a68b1fcd970f3b46))
+* **deps:** update dependency postcss to v8.4.32 ([#190](https://github.com/aklesky/node-workspace/issues/190)) ([68e4bd0](https://github.com/aklesky/node-workspace/commit/68e4bd01dba6d8760e196e9e3439a9dfa69483fc))
+* **deps:** update dependency tailwindcss to v3.3.6 ([#192](https://github.com/aklesky/node-workspace/issues/192)) ([e60dd3f](https://github.com/aklesky/node-workspace/commit/e60dd3f1da63f7c8ae548734d4c07cae43779479))
+* **deps:** update dependency vite to v4.5.1 ([#200](https://github.com/aklesky/node-workspace/issues/200)) ([d93aecc](https://github.com/aklesky/node-workspace/commit/d93aecc3ed5f95334c14e52c1091b4b6cb4c98a5))
+
+
+
+
+
 ## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
 
 
