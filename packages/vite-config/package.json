@@ -40,7 +40,7 @@
         "@aklesky/vite-react-ssr-plugin": "0.6.7",
         "@vitejs/plugin-react-swc": "3.4.0",
         "sass": "1.69.5",
-        "vite": "4.4.12"
+        "vite": "4.5.1"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.7.6",
