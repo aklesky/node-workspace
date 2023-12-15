@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.9](https://github.com/aklesky/node-workspace/compare/v0.7.8...v0.7.9) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss-load-config to v5 ([#199](https://github.com/aklesky/node-workspace/issues/199)) ([518df10](https://github.com/aklesky/node-workspace/commit/518df10968ed9dd96393c436cba707b4475732c0))
+* **deps:** update dependency vite to v5 ([#201](https://github.com/aklesky/node-workspace/issues/201)) ([9a41d52](https://github.com/aklesky/node-workspace/commit/9a41d52288fe6e16961adc8590b2b8397f201b80))
+
+
+
+
+
 ## [0.7.8](https://github.com/aklesky/node-workspace/compare/v0.7.7...v0.7.8) (2023-12-15)
 
 

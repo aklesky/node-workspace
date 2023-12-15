@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/postcss-config",
-    "version": "0.7.8",
+    "version": "0.7.9",
     "description": "Postcss config presets",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
