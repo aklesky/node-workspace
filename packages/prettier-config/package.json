@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/prettier-config",
-    "version": "0.7.8",
+    "version": "0.7.10",
     "description": "Shareable prettier configuration.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/postcss-config
+
+
+
+
+
 ## [0.7.9](https://github.com/aklesky/node-workspace/compare/v0.7.8...v0.7.9) (2023-12-15)
 
 

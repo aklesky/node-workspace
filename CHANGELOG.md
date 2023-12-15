@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v3.1.1 ([#196](https://github.com/aklesky/node-workspace/issues/196)) ([3d21c5d](https://github.com/aklesky/node-workspace/commit/3d21c5d2cad2143f279527af2c0942cf36e06837))
+
+
+
+
+
 ## [0.7.9](https://github.com/aklesky/node-workspace/compare/v0.7.8...v0.7.9) (2023-12-15)
 
 
