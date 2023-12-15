@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.55.0 ([#181](https://github.com/aklesky/node-workspace/issues/181)) ([ac59cc2](https://github.com/aklesky/node-workspace/commit/ac59cc21654b452c554a8e144aa7b02a6d604089))
+* **deps:** update dependency eslint-plugin-prettier to v5.0.1 ([#184](https://github.com/aklesky/node-workspace/issues/184)) ([7febe2a](https://github.com/aklesky/node-workspace/commit/7febe2a56c71aaa016c44297e57542f7dabad606))
+
+
+
+
+
 ## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
 
 

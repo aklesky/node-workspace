@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v4.4.12 [security] ([#185](https://github.com/aklesky/node-workspace/issues/185)) ([ea89919](https://github.com/aklesky/node-workspace/commit/ea89919556a826a732664ee6adb948acbe1fcf2f))
+
+
+
+
+
 ## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
 
 
