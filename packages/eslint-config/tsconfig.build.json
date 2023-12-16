@@ -1,5 +1,5 @@
 {
-    "extends": "@aklesky/ts-config/node/16/build.json",
+    "extends": "@aklesky/ts-config/node/18/build.json",
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
