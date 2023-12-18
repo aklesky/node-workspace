@@ -27,7 +27,7 @@ describe('Deepmerge config merge', () => {
             }),
         )
     })
-    it('should combine the two objects with default value', () => {
+    it('should combine the two or more objects with default value', () => {
         const result = deepmerge(
             defaultConfig,
             {
@@ -53,7 +53,7 @@ describe('Deepmerge config merge', () => {
         const result = deepmerge(['somevalue', 'somevalue1'], ['somevalue2'])
         expect(result).toEqual(['somevalue', 'somevalue1', 'somevalue2'])
     })
-    it('should combine the two objects with default value', () => {
+    it('should combine multiple objects with default value', () => {
         const result = deepmerge(
             defaultConfig,
             {

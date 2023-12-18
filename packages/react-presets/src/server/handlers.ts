@@ -1,8 +1,8 @@
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
 import { isString } from '@aklesky/utilities/asserts/strings.js'
 import { Writable } from 'stream'
-import { PipeableStreamOptions } from '../interfaces/options.js'
-import { OnTimeoutHandler, OnFinishEventHandler } from '../interfaces/types.js'
+import { PipeableOptions } from '../interfaces/options.js'
+import { OnFinishEventHandler, OnTimeoutHandler } from '../interfaces/types.js'
 
 export const onErrorHandler = (error: Error) => {
     console.error(error)
@@ -13,7 +13,7 @@ export const onShellErrorHandler = (error: Error, writable: Writable) => {
 }
 
 export const onFinishEventHandler =
-    (config: PipeableStreamOptions, writeable: Writable, cb?: OnFinishEventHandler) => async () => {
+    (config: PipeableOptions, writeable: Writable, cb?: OnFinishEventHandler) => async () => {
         const string = await cb?.()
         if (isString(string)) {
             writeable.write(string)

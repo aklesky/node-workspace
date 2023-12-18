@@ -1,6 +1,6 @@
-import { PipeableStreamOptions } from '../interfaces/options.js'
+import { PipeableOptions } from '../interfaces/options.js'
 
-export const defaultOptions: PipeableStreamOptions = {
+export const defaultOptions: PipeableOptions = {
     enableTimeout: false,
     timeout: 10000,
     addClosingHtmlBodyTag: true,

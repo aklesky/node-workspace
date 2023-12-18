@@ -4,62 +4,63 @@ import { StatusCodes } from '@aklesky/utilities/http/codes.js'
 import { ServerResponse } from 'http'
 import { createElement } from 'react'
 import { renderToPipeableStream } from 'react-dom/server'
-import { PipeableStreamOptions, StreamableOptions } from '../interfaces/options.js'
+import { PipeableOptions, StreamableOptions } from '../interfaces/options.js'
+import { isValidReactComponent } from '../utils/element.js'
 import { defaultOptions } from './config.js'
 import { onErrorHandler, onFinishEventHandler, onShellErrorHandler, onTimeoutEventHandler } from './handlers.js'
 import { OutputWritable } from './writeable.js'
 
-export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
-    const config = deepmerge(defaultOptions, options || {}) as PipeableStreamOptions
-    return async (writable: ServerResponse, streamable: StreamableOptions) => {
+export const withRenderToPipeableStream = (options: PipeableOptions) => {
+    const config = deepmerge(defaultOptions, options || {}) satisfies PipeableOptions
+    return async (writable: ServerResponse, opts: StreamableOptions) => {
         try {
-            const component = streamable.component || config.component
+            const component = opts.component || config.component
 
-            if (!component) {
+            if (!isValidReactComponent(component)) {
                 throw new Error('react component is required, nothing to render.')
             }
             const output = OutputWritable.New(writable)
-            let error: Error | undefined = undefined
+            let error: Error | undefined
 
-            const { pipe, abort } = renderToPipeableStream(createElement(component, streamable?.props), {
+            const { pipe, abort } = renderToPipeableStream(createElement(component, opts?.props), {
                 identifierPrefix: config.identifierPrefix,
                 namespaceURI: config.namespaceURI,
-                nonce: streamable.nonce || config.nonce,
-                bootstrapScriptContent: streamable.bootstrapScriptContent || config.bootstrapScriptContent,
-                bootstrapScripts: streamable.bootstrapScripts || config.bootstrapScripts,
-                bootstrapModules: streamable.bootstrapModules || config.bootstrapModules,
+                nonce: opts.nonce || config.nonce,
+                bootstrapScriptContent: opts.bootstrapScriptContent || config.bootstrapScriptContent,
+                bootstrapScripts: opts.bootstrapScripts || config.bootstrapScripts,
+                bootstrapModules: opts.bootstrapModules || config.bootstrapModules,
                 progressiveChunkSize: config.progressiveChunkSize,
-                onAllReady: async () => streamable.onAllReadyHandler?.(() => pipe(output), error),
+                onAllReady: async () => opts.onAllReadyHandler?.(() => pipe(output), error),
                 onError: (err: unknown) => {
                     error = err as Error
-                    if (isFunction(streamable.onErrorHandler)) {
-                        streamable.onErrorHandler(error, output)
+                    if (isFunction(opts.onErrorHandler)) {
+                        opts.onErrorHandler(error, output)
                         return
                     }
                     writable.statusCode = StatusCodes.INTERNAL_SERVER_ERROR
                     onErrorHandler(error)
                 },
-                onShellError: (error: unknown) => {
-                    if (isFunction(streamable.onShellErrorHandler)) {
-                        streamable.onShellErrorHandler?.(error, writable)
+                onShellError: (err: unknown) => {
+                    if (isFunction(opts.onShellErrorHandler)) {
+                        opts.onShellErrorHandler?.(err, writable)
                         return
                     }
                     writable.statusCode = StatusCodes.INTERNAL_SERVER_ERROR
                     onShellErrorHandler(error as Error, writable)
                 },
                 onShellReady: async () => {
-                    if (!isFunction(streamable.onShellReadyHandler) && !isFunction(streamable.onAllReadyHandler)) {
+                    if (!isFunction(opts.onShellReadyHandler) && !isFunction(opts.onAllReadyHandler)) {
                         pipe(output)
                         return
                     }
-                    await streamable.onShellReadyHandler?.(() => pipe(output), error)
+                    await opts.onShellReadyHandler?.(() => pipe(output), error)
                 },
             })
 
-            output.on('finish', onFinishEventHandler(config, writable, streamable.onFinishEventHandler))
+            output.on('finish', onFinishEventHandler(config, writable, opts.onFinishEventHandler))
 
             if (config.enableTimeout) {
-                onTimeoutEventHandler(config.timeout, abort, writable, streamable.onTimeoutEventHandler)
+                onTimeoutEventHandler(config.timeout, abort, writable, opts.onTimeoutEventHandler)
             }
 
             return {
@@ -73,4 +74,4 @@ export const useRenderToPipeableStream = (options: PipeableStreamOptions) => {
     }
 }
 
-export default useRenderToPipeableStream
+export default withRenderToPipeableStream

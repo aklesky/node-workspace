@@ -9,8 +9,8 @@ export function match(regex: RegExp[] | RegExp) {
         if (!expression || !url) {
             return false
         }
-        const match = url.match(expression)
-        return (match && true) || false
+        const matched = url.match(expression)
+        return (matched && true) || false
     }
 }
 

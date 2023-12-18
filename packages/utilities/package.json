@@ -15,12 +15,10 @@
         "access": "public"
     },
     "directories": {
-        "dist": "dist",
-        "@types": "@types"
+        "dist": "dist"
     },
     "files": [
-        "dist",
-        "@types"
+        "dist"
     ],
     "repository": {
         "type": "git",

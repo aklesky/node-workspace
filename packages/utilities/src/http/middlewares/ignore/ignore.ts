@@ -3,7 +3,7 @@ import { isFunction } from '../../../asserts/function.js'
 import { NextMiddleware } from '../../interfaces/types.js'
 import matcher from './match.js'
 
-export const useIgnoreMatchMiddleware = (fn: NextMiddleware, expressions: RegExp[]): NextMiddleware => {
+export const withIgnoreMatchMiddleware = (fn: NextMiddleware, expressions: RegExp[]): NextMiddleware => {
     const match = matcher(expressions)
     return async (req, res, next) => {
         try {
@@ -26,4 +26,4 @@ export const useIgnoreMatchMiddleware = (fn: NextMiddleware, expressions: RegExp
     }
 }
 
-export default useIgnoreMatchMiddleware
+export default withIgnoreMatchMiddleware

@@ -1,20 +1,20 @@
 import deepmerge from '@aklesky/utilities/deepmerge.js'
-import { useIgnoreMatchMiddleware } from '@aklesky/utilities/http/middlewares/ignore/ignore.js'
+import { withIgnoreMatchMiddleware } from '@aklesky/utilities/http/middlewares/ignore/ignore.js'
 import { ComponentType } from 'react'
 import type { PluginOption, ViteDevServer } from 'vite'
-import { ReactServerMiddlewareOptions } from './interface.js'
-import { useReactStreambleMiddleware } from './middleware.js'
+import { ReactMiddlewareOptions } from '../../interfaces/server.js'
+import { withReactStreamble } from './middleware.js'
 import defaultOptions from './options.js'
 
-export const useReactServerMiddlewarePlugin = (options: ReactServerMiddlewareOptions) => {
-    const config = deepmerge(defaultOptions, options || {}) as ReactServerMiddlewareOptions
+export const withReactMiddlewarePlugin = (options: ReactMiddlewareOptions) => {
+    const config = deepmerge(defaultOptions, options || {}) satisfies ReactMiddlewareOptions
     return {
         name: 'vite-react-server-rendering',
         configureServer: async (server: ViteDevServer) => {
             try {
                 server.middlewares.use(
-                    useIgnoreMatchMiddleware(
-                        useReactStreambleMiddleware(
+                    withIgnoreMatchMiddleware(
+                        withReactStreamble(
                             {
                                 getEntry: () =>
                                     server.ssrLoadModule(config.entry).then(x => x.default as ComponentType),
@@ -42,7 +42,7 @@ export const useReactServerMiddlewarePlugin = (options: ReactServerMiddlewareOpt
                 throw error
             }
         },
-    } as PluginOption
+    } satisfies PluginOption
 }
 
-export default useReactServerMiddlewarePlugin
+export default withReactMiddlewarePlugin

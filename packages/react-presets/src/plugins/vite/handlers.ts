@@ -1,14 +1,14 @@
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
-import { HttpStatusCodes } from '@aklesky/utilities/http/codes.js'
+import { StatusCodes } from '@aklesky/utilities/http/codes.js'
 import { IncomingMessage, ServerResponse } from 'http'
-import { OnFinishEventHandler, OnReadyHandler, PipeHandler } from '../../interfaces/types.js'
+import { ReactMiddlewareOptions } from '../../interfaces/server.js'
+import { GenericHandler, OnFinishEventHandler, OnReadyHandler, PipeHandler } from '../../interfaces/types.js'
 import { viteHeadOutput } from './constants.js'
-import { GenericHandler, ReactServerMiddlewareOptions } from './interface.js'
 
 export const onShellReadyHandler = (
     req: IncomingMessage,
     res: ServerResponse,
-    options: ReactServerMiddlewareOptions,
+    options: ReactMiddlewareOptions,
     callback?: GenericHandler<OnReadyHandler>,
 ) => {
     const next = callback?.(req, res)
@@ -16,7 +16,7 @@ export const onShellReadyHandler = (
         if (isFunction(next)) {
             return next(pipe, error)
         }
-        res.statusCode = error ? HttpStatusCodes.INTERNAL_SERVER_ERROR : HttpStatusCodes.OK
+        res.statusCode = error ? StatusCodes.INTERNAL_SERVER_ERROR : StatusCodes.OK
         res.setHeader('Content-type', 'text/html; charset=UTF-8')
         res.setHeader('Transfer-Encoding', 'chunked')
         if (options.enableDoctypeHeader) {

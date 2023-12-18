@@ -1,15 +1,12 @@
-import { useRenderToPipeableStream } from '../../server/render.js'
 import { isFunction } from '@aklesky/utilities/asserts/function.js'
 import type { NextFunction } from '@aklesky/utilities/http/interfaces/types.js'
 import type { IncomingMessage, ServerResponse } from 'http'
-import { onTimeoutHandler, onShellReadyHandler, onFinishEventHandler } from './handlers.js'
-import { ReactServerMiddlewareConfig, ReactServerMiddlewareOptions } from './interface.js'
+import { ReactMiddlewareConfig, ReactMiddlewareOptions } from '../../interfaces/server.js'
+import { withRenderToPipeableStream } from '../../server/render.js'
+import { onFinishEventHandler, onShellReadyHandler, onTimeoutHandler } from './handlers.js'
 
-export const useReactStreambleMiddleware = (
-    config: ReactServerMiddlewareConfig,
-    options: ReactServerMiddlewareOptions,
-) => {
-    const render = useRenderToPipeableStream({
+export const withReactStreamble = (config: ReactMiddlewareConfig, options: ReactMiddlewareOptions) => {
+    const render = withRenderToPipeableStream({
         timeout: config.timeout,
         identifierPrefix: config.identifierPrefix,
         namespaceURI: config.namespaceURI,
@@ -43,4 +40,4 @@ export const useReactStreambleMiddleware = (
     }
 }
 
-export default useReactStreambleMiddleware
+export default withReactStreamble

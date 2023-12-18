@@ -1,17 +1,15 @@
-import { BootstrapOptions, PipeableStreamOptions } from '@aklesky/streamable-react/interfaces/options.js'
+import { BootstrapOptions, PipeableOptions } from './options.js'
 import {
     ComponentType,
-    OnTimeoutHandler,
+    GenericHandler,
     OnErrorHandler,
-    OnReadyHandler,
     OnFinishEventHandler,
-} from '@aklesky/streamable-react/interfaces/types.js'
-import type { IncomingMessage, ServerResponse } from 'http'
+    OnReadyHandler,
+    OnTimeoutHandler,
+} from './types.js'
 
-export type GenericHandler<T = unknown> = (req: IncomingMessage, res: ServerResponse) => T
-
-export interface ReactServerMiddlewareEvents
-    extends Omit<PipeableStreamOptions, 'component'>,
+export interface ReactMiddlewareEvents
+    extends Omit<PipeableOptions, 'component' | 'props'>,
         Omit<BootstrapOptions, 'bootstrapModules'> {
     onAllReadyHandler?: GenericHandler<OnReadyHandler>
     onShellReadyHandler?: GenericHandler<OnReadyHandler>
@@ -21,7 +19,7 @@ export interface ReactServerMiddlewareEvents
     onTimeoutHandler?: GenericHandler<OnTimeoutHandler>
 }
 
-export interface ReactServerMiddlewareOptions extends ReactServerMiddlewareEvents {
+export interface ReactMiddlewareOptions extends ReactMiddlewareEvents {
     /**
      * Like boostrapScripts.
      *
@@ -57,9 +55,9 @@ export interface ReactServerMiddlewareOptions extends ReactServerMiddlewareEvent
     title?: string
 }
 
-export interface ReactServerMiddlewareConfig
-    extends Omit<ReactServerMiddlewareOptions, 'entry'>,
-        Pick<PipeableStreamOptions, 'enableTimeout' | 'timeout' | 'addClosingHtmlBodyTag'> {
+export interface ReactMiddlewareConfig
+    extends Omit<ReactMiddlewareOptions, 'entry'>,
+        Pick<PipeableOptions, 'enableTimeout' | 'timeout' | 'addClosingHtmlBodyTag'> {
     getEntry: () => Promise<ComponentType>
     getEntryProps?: GenericHandler<Promise<Record<string, unknown>>>
 }

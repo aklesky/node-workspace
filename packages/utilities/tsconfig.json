@@ -1,3 +1,14 @@
 {
-    "extends": "@aklesky/ts-config/node/18/node.json"
+    "ts-node": {
+        "esm": true,
+        "swc": true,
+        "transpileOnly": true
+    },
+    "extends": "@aklesky/ts-config/node/18/jest.json",
+    "compilerOptions": {
+        "composite": true,
+        "rootDir": "./src"
+    },
+    "references": [{ "path": "./tsconfig.jest.json" }],
+    "exclude": ["dist", "node_modules", "coverage"]
 }

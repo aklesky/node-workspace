@@ -24,6 +24,10 @@
             "require": "./dist/jest.js",
             "import": "./dist/jest.js"
         },
+        "./jsx": {
+            "require": "./dist/jsx.js",
+            "import": "./dist/jsx.js"
+        },
         "./package.json": "./package.json"
     },
     "directories": {

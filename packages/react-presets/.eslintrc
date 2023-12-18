@@ -1,3 +1,3 @@
 {
-    "extends": "@aklesky/eslint-config/jest"
+    "extends": "@aklesky/eslint-config/jsx"
 }

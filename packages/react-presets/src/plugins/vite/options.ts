@@ -1,6 +1,6 @@
-import { ReactServerMiddlewareOptions } from './interface.js'
+import { ReactMiddlewareOptions } from '../../interfaces/server.js'
 
-export const defaultOptions: Partial<ReactServerMiddlewareOptions> = {
+export const defaultOptions: Partial<ReactMiddlewareOptions> = {
     bootstrapModules: ['/@vite/client'],
     ignoreUrlExpressions: [/\.([^.]*?)(?=\?|#|$)/, /\/@[.]*?/],
     enableDoctypeHeader: true,
