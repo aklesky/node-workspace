@@ -1,16 +1,18 @@
-import { PostCssConfig } from './interfaces'
-import autoprefixer from './plugins/autoprefixer'
-import cssnano from './plugins/cssnano'
-import nesting from './plugins/nesting'
-
-const getPostCssConfig = (config: PostCssConfig) => {
-    return {
-        plugins: [
-            nesting(config.nesting),
-            autoprefixer(config.autoprefixer),
-            process.env.NODE_ENV === 'production' && cssnano(config.cssnano),
-        ].filter(Boolean),
-    }
+export interface Config {
+    plugins: unknown[]
 }
 
-export = getPostCssConfig
+export type ConfigFn = (config: Config) => Config
+
+export const defineConfig = (...hooks: ConfigFn[]): Config => {
+    const config = hooks.reduce(
+        (acc, hook) => {
+            return hook(acc)
+        },
+        {
+            plugins: [],
+        } as Config,
+    )
+
+    return config
+}

@@ -1,6 +1,7 @@
 {
     "extends": "../../shared/esm.json",
     "compilerOptions": {
-        "types": ["jest", "node"]
+        "declaration": true
     }
 }
+

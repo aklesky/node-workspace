@@ -4,12 +4,10 @@
         "swc": true,
         "transpileOnly": true
     },
-    "extends": "@aklesky/ts-config/node/18/jsx.json",
+    "extends": "@aklesky/ts-config/shared/esm.json",
     "compilerOptions": {
         "composite": true,
-        "rootDir": "./src",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true
+        "rootDir": "./src"
     },
     "exclude": ["node_modules", "dist", "coverage"],
     "references": [{ "path": "./tsconfig.jest.json" }]

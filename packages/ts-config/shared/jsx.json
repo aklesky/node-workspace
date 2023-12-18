@@ -1,13 +1,7 @@
 {
-    "extends": "./node.json",
+    "extends": "./esm.json",
     "compilerOptions": {
-        "resolveJsonModule": true,
-        "noEmit": true,
-        "allowJs": false,
         "jsx": "react-jsx",
-        "module": "ESNext",
-        "lib": ["DOM", "DOM.Iterable", "ESNext"],
-        "moduleResolution": "Bundler",
-        "esModuleInterop": false
+        "lib": ["DOM", "DOM.Iterable", "ESNext"]
     }
 }

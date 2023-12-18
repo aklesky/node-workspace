@@ -1,13 +1,9 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": ["@aklesky/ts-config/node/18/build.esm.json", "@aklesky/ts-config/shared/jsx.json"],
     "compilerOptions": {
         "outDir": "./dist",
-        "noEmit": false,
         "rootDir": "./src",
-        "composite": false,
-        "declaration": true,
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "composite": false
     },
     "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "src/__tests__", "jest.config.ts", "coverage"]
 }
