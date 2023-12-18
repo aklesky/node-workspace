@@ -3,6 +3,75 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.11](https://github.com/aklesky/node-workspace/compare/v0.7.10...v0.7.11) (2023-12-18)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.7.9](https://github.com/aklesky/node-workspace/compare/v0.7.8...v0.7.9) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v5 ([#201](https://github.com/aklesky/node-workspace/issues/201)) ([9a41d52](https://github.com/aklesky/node-workspace/commit/9a41d52288fe6e16961adc8590b2b8397f201b80))
+
+
+
+
+
+## [0.7.8](https://github.com/aklesky/node-workspace/compare/v0.7.7...v0.7.8) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/vite-config
+
+
+
+
+
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.5.0 ([#194](https://github.com/aklesky/node-workspace/issues/194)) ([bb6b509](https://github.com/aklesky/node-workspace/commit/bb6b509d958a3b3e4dd38b13ee52e15d2bde88fc))
+* **deps:** update dependency vite to v4.5.1 ([#200](https://github.com/aklesky/node-workspace/issues/200)) ([d93aecc](https://github.com/aklesky/node-workspace/commit/d93aecc3ed5f95334c14e52c1091b4b6cb4c98a5))
+
+
+
+
+
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v4.4.12 [security] ([#185](https://github.com/aklesky/node-workspace/issues/185)) ([ea89919](https://github.com/aklesky/node-workspace/commit/ea89919556a826a732664ee6adb948acbe1fcf2f))
+
+
+
+
+
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sass to v1.69.5 ([#180](https://github.com/aklesky/node-workspace/issues/180)) ([beffcb4](https://github.com/aklesky/node-workspace/commit/beffcb48b1dbc96fb579252e6afdb186dc117b60))
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/vite-config

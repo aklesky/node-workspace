@@ -18,7 +18,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Build monorepo and run tests
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: 18
             - run: make ci
@@ -36,7 +36,7 @@ jobs:
                   git config --global user.email "${{ github.actor }}@users.noreply.github.com"
                   git remote set-url origin https://${{ github.actor }}:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }}
             - name: Create Release
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                 node-version: 18
                 registry-url: 'https://registry.npmjs.org'

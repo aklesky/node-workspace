@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.11](https://github.com/aklesky/node-workspace/compare/v0.7.10...v0.7.11) (2023-12-18)
+
+**Note:** Version bump only for package @aklesky/eslint-config
+
+
+
+
+
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v3.1.1 ([#196](https://github.com/aklesky/node-workspace/issues/196)) ([3d21c5d](https://github.com/aklesky/node-workspace/commit/3d21c5d2cad2143f279527af2c0942cf36e06837))
+
+
+
+
+
+## [0.7.8](https://github.com/aklesky/node-workspace/compare/v0.7.7...v0.7.8) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/eslint-config
+
+
+
+
+
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to v9.1.0 ([#195](https://github.com/aklesky/node-workspace/issues/195)) ([05f9aaa](https://github.com/aklesky/node-workspace/commit/05f9aaa0c4d972154f871678a68b1fcd970f3b46))
+
+
+
+
+
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v8.55.0 ([#181](https://github.com/aklesky/node-workspace/issues/181)) ([ac59cc2](https://github.com/aklesky/node-workspace/commit/ac59cc21654b452c554a8e144aa7b02a6d604089))
+* **deps:** update dependency eslint-plugin-prettier to v5.0.1 ([#184](https://github.com/aklesky/node-workspace/issues/184)) ([7febe2a](https://github.com/aklesky/node-workspace/commit/7febe2a56c71aaa016c44297e57542f7dabad606))
+
+
+
+
+
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest to v27.6.0 ([#175](https://github.com/aklesky/node-workspace/issues/175)) ([162ca2b](https://github.com/aklesky/node-workspace/commit/162ca2b6224c71d2c21ec74094f36e5a8ebaa0d8))
+* **deps:** update typescript-eslint monorepo to v6.14.0 ([#178](https://github.com/aklesky/node-workspace/issues/178)) ([51650f6](https://github.com/aklesky/node-workspace/commit/51650f6827752b878e29bd6e9241f07adb2e69e1))
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/eslint-config

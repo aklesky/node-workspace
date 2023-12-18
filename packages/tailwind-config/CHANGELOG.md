@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.11](https://github.com/aklesky/node-workspace/compare/v0.7.10...v0.7.11) (2023-12-18)
+
+**Note:** Version bump only for package @aklesky/tailwind-config
+
+
+
+
+
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/tailwind-config
+
+
+
+
+
+## [0.7.8](https://github.com/aklesky/node-workspace/compare/v0.7.7...v0.7.8) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/tailwind-config
+
+
+
+
+
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwindcss to v3.3.6 ([#192](https://github.com/aklesky/node-workspace/issues/192)) ([e60dd3f](https://github.com/aklesky/node-workspace/commit/e60dd3f1da63f7c8ae548734d4c07cae43779479))
+
+
+
+
+
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tailwindcss/forms to v0.5.7 ([#188](https://github.com/aklesky/node-workspace/issues/188)) ([774bde1](https://github.com/aklesky/node-workspace/commit/774bde11c0193c25794371988b3b5063850a15e4))
+
+
+
+
+
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/tailwind-config
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/tailwind-config

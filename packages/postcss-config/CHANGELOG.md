@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.11](https://github.com/aklesky/node-workspace/compare/v0.7.10...v0.7.11) (2023-12-18)
+
+**Note:** Version bump only for package @aklesky/postcss-config
+
+
+
+
+
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/postcss-config
+
+
+
+
+
+## [0.7.9](https://github.com/aklesky/node-workspace/compare/v0.7.8...v0.7.9) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss-load-config to v5 ([#199](https://github.com/aklesky/node-workspace/issues/199)) ([518df10](https://github.com/aklesky/node-workspace/commit/518df10968ed9dd96393c436cba707b4475732c0))
+
+
+
+
+
+## [0.7.8](https://github.com/aklesky/node-workspace/compare/v0.7.7...v0.7.8) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss-load-config to v4.0.2 ([#191](https://github.com/aklesky/node-workspace/issues/191)) ([46ec7cf](https://github.com/aklesky/node-workspace/commit/46ec7cf60a6e5b348e9d24895562e22f3088e0bf))
+
+
+
+
+
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss to v8.4.32 ([#190](https://github.com/aklesky/node-workspace/issues/190)) ([68e4bd0](https://github.com/aklesky/node-workspace/commit/68e4bd01dba6d8760e196e9e3439a9dfa69483fc))
+
+
+
+
+
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cssnano to v6.0.2 ([#189](https://github.com/aklesky/node-workspace/issues/189)) ([33af082](https://github.com/aklesky/node-workspace/commit/33af082c5daffc21cd7e0821129a9aa23d2e0f99))
+
+
+
+
+
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+**Note:** Version bump only for package @aklesky/postcss-config
+
+
+
+
+
 ## [0.7.3](https://github.com/aklesky/node-workspace/compare/v0.7.2...v0.7.3) (2023-09-29)
 
 **Note:** Version bump only for package @aklesky/postcss-config

@@ -3,6 +3,91 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.11](https://github.com/aklesky/node-workspace/compare/v0.7.10...v0.7.11) (2023-12-18)
+
+**Note:** Version bump only for package @aklesky/node-workspace
+
+
+
+
+
+## [0.7.10](https://github.com/aklesky/node-workspace/compare/v0.7.9...v0.7.10) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v3.1.1 ([#196](https://github.com/aklesky/node-workspace/issues/196)) ([3d21c5d](https://github.com/aklesky/node-workspace/commit/3d21c5d2cad2143f279527af2c0942cf36e06837))
+
+
+
+
+
+## [0.7.9](https://github.com/aklesky/node-workspace/compare/v0.7.8...v0.7.9) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss-load-config to v5 ([#199](https://github.com/aklesky/node-workspace/issues/199)) ([518df10](https://github.com/aklesky/node-workspace/commit/518df10968ed9dd96393c436cba707b4475732c0))
+* **deps:** update dependency vite to v5 ([#201](https://github.com/aklesky/node-workspace/issues/201)) ([9a41d52](https://github.com/aklesky/node-workspace/commit/9a41d52288fe6e16961adc8590b2b8397f201b80))
+
+
+
+
+
+## [0.7.8](https://github.com/aklesky/node-workspace/compare/v0.7.7...v0.7.8) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency postcss-load-config to v4.0.2 ([#191](https://github.com/aklesky/node-workspace/issues/191)) ([46ec7cf](https://github.com/aklesky/node-workspace/commit/46ec7cf60a6e5b348e9d24895562e22f3088e0bf))
+
+
+
+
+
+## [0.7.7](https://github.com/aklesky/node-workspace/compare/v0.7.6...v0.7.7) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vitejs/plugin-react-swc to v3.5.0 ([#194](https://github.com/aklesky/node-workspace/issues/194)) ([bb6b509](https://github.com/aklesky/node-workspace/commit/bb6b509d958a3b3e4dd38b13ee52e15d2bde88fc))
+* **deps:** update dependency eslint-config-prettier to v9.1.0 ([#195](https://github.com/aklesky/node-workspace/issues/195)) ([05f9aaa](https://github.com/aklesky/node-workspace/commit/05f9aaa0c4d972154f871678a68b1fcd970f3b46))
+* **deps:** update dependency postcss to v8.4.32 ([#190](https://github.com/aklesky/node-workspace/issues/190)) ([68e4bd0](https://github.com/aklesky/node-workspace/commit/68e4bd01dba6d8760e196e9e3439a9dfa69483fc))
+* **deps:** update dependency tailwindcss to v3.3.6 ([#192](https://github.com/aklesky/node-workspace/issues/192)) ([e60dd3f](https://github.com/aklesky/node-workspace/commit/e60dd3f1da63f7c8ae548734d4c07cae43779479))
+* **deps:** update dependency vite to v4.5.1 ([#200](https://github.com/aklesky/node-workspace/issues/200)) ([d93aecc](https://github.com/aklesky/node-workspace/commit/d93aecc3ed5f95334c14e52c1091b4b6cb4c98a5))
+
+
+
+
+
+## [0.7.6](https://github.com/aklesky/node-workspace/compare/v0.7.5...v0.7.6) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tailwindcss/forms to v0.5.7 ([#188](https://github.com/aklesky/node-workspace/issues/188)) ([774bde1](https://github.com/aklesky/node-workspace/commit/774bde11c0193c25794371988b3b5063850a15e4))
+* **deps:** update dependency cssnano to v6.0.2 ([#189](https://github.com/aklesky/node-workspace/issues/189)) ([33af082](https://github.com/aklesky/node-workspace/commit/33af082c5daffc21cd7e0821129a9aa23d2e0f99))
+* **deps:** update dependency eslint to v8.55.0 ([#181](https://github.com/aklesky/node-workspace/issues/181)) ([ac59cc2](https://github.com/aklesky/node-workspace/commit/ac59cc21654b452c554a8e144aa7b02a6d604089))
+* **deps:** update dependency eslint-plugin-prettier to v5.0.1 ([#184](https://github.com/aklesky/node-workspace/issues/184)) ([7febe2a](https://github.com/aklesky/node-workspace/commit/7febe2a56c71aaa016c44297e57542f7dabad606))
+* **deps:** update dependency vite to v4.4.12 [security] ([#185](https://github.com/aklesky/node-workspace/issues/185)) ([ea89919](https://github.com/aklesky/node-workspace/commit/ea89919556a826a732664ee6adb948acbe1fcf2f))
+
+
+
+
+
+## [0.7.5](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.5) (2023-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest to v27.6.0 ([#175](https://github.com/aklesky/node-workspace/issues/175)) ([162ca2b](https://github.com/aklesky/node-workspace/commit/162ca2b6224c71d2c21ec74094f36e5a8ebaa0d8))
+* **deps:** update dependency sass to v1.69.5 ([#180](https://github.com/aklesky/node-workspace/issues/180)) ([beffcb4](https://github.com/aklesky/node-workspace/commit/beffcb48b1dbc96fb579252e6afdb186dc117b60))
+* **deps:** update typescript-eslint monorepo to v6.14.0 ([#178](https://github.com/aklesky/node-workspace/issues/178)) ([51650f6](https://github.com/aklesky/node-workspace/commit/51650f6827752b878e29bd6e9241f07adb2e69e1))
+
+
+
+
+
 ## [0.7.4](https://github.com/aklesky/node-workspace/compare/v0.7.3...v0.7.4) (2023-10-01)
 
 

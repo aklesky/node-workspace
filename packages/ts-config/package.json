@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/ts-config",
-    "version": "0.7.3",
+    "version": "0.7.11",
     "description": "Shareable collection of typescript configurations.",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -25,8 +25,5 @@
     },
     "dependencies": {
         "@types/node": "20.7.1"
-    },
-    "devDependencies": {
-        "typescript": "5.2.2"
     }
 }

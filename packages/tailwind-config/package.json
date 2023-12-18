@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/tailwind-config",
-    "version": "0.7.3",
+    "version": "0.7.11",
     "description": "Tailwind Css configuration presets",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -14,12 +14,10 @@
         "access": "public"
     },
     "directories": {
-        "dist": "dist",
-        "@types": "@types"
+        "dist": "dist"
     },
     "files": [
-        "dist",
-        "@types"
+        "dist"
     ],
     "repository": {
         "type": "git",
@@ -36,14 +34,14 @@
     },
     "dependencies": {
         "@tailwindcss/aspect-ratio": "0.4.2",
-        "@tailwindcss/forms": "0.5.6",
+        "@tailwindcss/forms": "0.5.7",
         "@tailwindcss/line-clamp": "0.4.4",
         "@tailwindcss/typography": "0.5.10",
-        "tailwindcss": "3.3.3"
+        "tailwindcss": "3.3.6"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.7.3",
-        "@aklesky/prettier-config": "0.7.3",
-        "@aklesky/ts-config": "0.7.3"
+        "@aklesky/eslint-config": "0.7.11",
+        "@aklesky/prettier-config": "0.7.11",
+        "@aklesky/ts-config": "0.7.11"
     }
 }

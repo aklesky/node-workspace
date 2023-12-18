@@ -1,3 +1,4 @@
 {
-    "extends": "@aklesky/ts-config/node/16/jest.json"
+    "extends": "@aklesky/ts-config/node/18/jest.json",
+    "exclude": ["node_modules", "dist"]
 }

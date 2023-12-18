@@ -1,6 +1,9 @@
 {
     "extends": "./node.json",
     "compilerOptions": {
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "types": ["jest", "node"]
     }
 }
