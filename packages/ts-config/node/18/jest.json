@@ -1,5 +1,5 @@
 {
-    "extends": "./node.json",
+    "extends": "../../shared/esm.json",
     "compilerOptions": {
         "target": "ESNext",
         "module": "NodeNext",
