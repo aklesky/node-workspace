@@ -5,7 +5,7 @@
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
-    "main": "dist/index.js",
+    "type": "module",
     "prettier": "@aklesky/prettier-config",
     "exports": {
         "./*": "./dist/*"

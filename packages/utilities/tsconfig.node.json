@@ -1,8 +1,3 @@
 {
-    "extends": "@aklesky/ts-config/node/18/node.json",
-    "compilerOptions": {
-        "module": "NodeNext",
-        "target": "ESNext",
-        "moduleResolution": "NodeNext",
-    }
+    "extends": "@aklesky/ts-config/shared/esm.json"
 }
