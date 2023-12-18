@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/vite-config",
-    "version": "0.7.10",
+    "version": "0.7.11",
     "description": "List of configurations for vite setup",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -40,8 +40,8 @@
         "vite": "5.0.10"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.7.10",
-        "@aklesky/prettier-config": "0.7.10",
-        "@aklesky/ts-config": "0.7.8"
+        "@aklesky/eslint-config": "0.7.11",
+        "@aklesky/prettier-config": "0.7.11",
+        "@aklesky/ts-config": "0.7.11"
     }
 }
