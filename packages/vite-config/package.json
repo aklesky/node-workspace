@@ -7,7 +7,7 @@
     "license": "MIT",
     "prettier": "@aklesky/prettier-config",
     "type": "module",
-    "main": "dist/index.js",
+    "module": "dist/index.js",
     "exports": {
         "./*": "./dist/*"
     },
@@ -15,12 +15,10 @@
         "access": "public"
     },
     "directories": {
-        "dist": "dist",
-        "@types": "@types"
+        "dist": "dist"
     },
     "files": [
-        "dist",
-        "@types"
+        "dist"
     ],
     "repository": {
         "type": "git",
@@ -36,10 +34,9 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "@aklesky/utilities": "0.6.7",
-        "@aklesky/vite-react-ssr-plugin": "0.6.7",
-        "@vitejs/plugin-react-swc": "3.5.0",
+        "@vitejs/plugin-legacy": "5.2.0",
         "sass": "1.69.5",
+        "terser": "5.26.0",
         "vite": "5.0.10"
     },
     "devDependencies": {

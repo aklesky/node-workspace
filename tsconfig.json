@@ -1,8 +1,8 @@
 {
-    "extends": "@aklesky/ts-config/node/18/node.json",
     "compilerOptions": {
+        "noEmit": true,
         "paths": {
-            "@aklesky/jest-config/*": ["./packages/jest-config/src/*"],
+            "@aklesky/jest-config/*": ["./packages/jest-config/src/*"]
         }
     }
 }

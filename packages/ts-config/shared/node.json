@@ -6,6 +6,10 @@
         "skipLibCheck": true,
         "esModuleInterop": true,
         "module": "CommonJS",
-        "moduleResolution": "Node"
-    }
+        "moduleResolution": "Node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "exclude": ["node_modules", "dist"]
 }

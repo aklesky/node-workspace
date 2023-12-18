@@ -13,6 +13,9 @@ const common = {
     ],
     rules: {
         'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
+        'no-nested-ternary': 'error',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': 'error',
         'prettier/prettier': ['error', prettier],
     },
 } as ESLint.ConfigData
