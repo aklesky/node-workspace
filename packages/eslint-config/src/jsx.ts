@@ -8,7 +8,7 @@ const jsx = {
         browser: true,
         es2020: true,
     },
-    extends: [...(common.extends || []), 'plugin:react-hooks/recommended'],
+    extends: [...(common.extends || []), 'plugin:react-hooks/recommended', 'plugin:react/jsx-runtime'],
     plugins: [...(common.plugins || []), 'react-refresh'],
     rules: {
         ...common.rules,
