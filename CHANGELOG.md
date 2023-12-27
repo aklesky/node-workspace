@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/aklesky/node-workspace/compare/v0.7.14...v0.8.0) (2023-12-27)
+
+
+### Features
+
+* **vite:** update configuration ([#217](https://github.com/aklesky/node-workspace/issues/217)) ([65964d5](https://github.com/aklesky/node-workspace/commit/65964d5a15ff40024d1d065f333e345ef30f62f9))
+
+
+
+
+
 ## [0.7.14](https://github.com/aklesky/node-workspace/compare/v0.7.4...v0.7.14) (2023-12-19)
 
 **Note:** Version bump only for package @aklesky/node-workspace

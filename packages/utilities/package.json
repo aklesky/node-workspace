@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/utilities",
-    "version": "0.7.14",
+    "version": "0.8.0",
     "description": "> TODO: description",
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
@@ -37,10 +37,10 @@
         "http-status-codes": "2.3.0"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.7.14",
-        "@aklesky/jest-config": "0.7.14",
-        "@aklesky/prettier-config": "0.7.14",
-        "@aklesky/ts-config": "0.7.14",
+        "@aklesky/eslint-config": "0.8.0",
+        "@aklesky/jest-config": "0.8.0",
+        "@aklesky/prettier-config": "0.8.0",
+        "@aklesky/ts-config": "0.8.0",
         "supertest": "6.3.3"
     }
 }
