@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/aklesky/node-workspace/compare/v0.8.0...v0.9.0) (2023-12-29)
+
+
+### Features
+
+* **react-preset:** add metaAttributes property to middleware config ([#219](https://github.com/aklesky/node-workspace/issues/219)) ([57db93b](https://github.com/aklesky/node-workspace/commit/57db93bfb5a1997374377ba5346ebe0ba30f75d3))
+
+
+
+
+
 # [0.8.0](https://github.com/aklesky/node-workspace/compare/v0.7.14...v0.8.0) (2023-12-27)
 
 **Note:** Version bump only for package @aklesky/jest-config
