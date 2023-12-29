@@ -53,6 +53,10 @@ export interface ReactMiddlewareOptions extends ReactMiddlewareEvents {
      * @default <title>Vite.js React Server Side Plugin</title>
      */
     title?: string
+    /**
+     * @description Meta attributes to add to the \<head\> tag
+     */
+    metaAttributes?: string[]
 }
 
 export interface ReactMiddlewareConfig
