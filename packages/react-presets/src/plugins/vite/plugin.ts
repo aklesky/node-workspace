@@ -5,6 +5,7 @@ import type { PluginOption, ViteDevServer } from 'vite'
 import { ReactMiddlewareOptions } from '../../interfaces/server.js'
 import { withReactStreamble } from './middleware.js'
 import defaultOptions from './options.js'
+import { viteHeadOutput } from './constants.js'
 
 export const withReactMiddlewarePlugin = (options: ReactMiddlewareOptions) => {
     const config = deepmerge(defaultOptions, options || {}) satisfies ReactMiddlewareOptions
@@ -17,7 +18,9 @@ export const withReactMiddlewarePlugin = (options: ReactMiddlewareOptions) => {
                         withReactStreamble(
                             {
                                 getEntry: () =>
-                                    server.ssrLoadModule(config.entry).then(x => x.default as ComponentType),
+                                    server
+                                        .ssrLoadModule(config.entry, { fixStacktrace: true })
+                                        .then(x => x.default as ComponentType),
                                 bootstrapModules: config.bootstrapModules,
                                 bootstrapScripts: config.bootstrapScripts,
                                 identifierPrefix: config.identifierPrefix,
@@ -31,6 +34,7 @@ export const withReactMiddlewarePlugin = (options: ReactMiddlewareOptions) => {
                                 onFinishEventHandler: config.onFinishEventHandler,
                                 onShellErrorHandler: config.onShellErrorHandler,
                                 onShellReadyHandler: config.onShellReadyHandler,
+                                metaAttributes: [...(config.metaAttributes || []), viteHeadOutput],
                             },
                             config,
                         ),

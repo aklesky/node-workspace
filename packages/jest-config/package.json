@@ -50,11 +50,11 @@
     "devDependencies": {
         "@aklesky/eslint-config": "0.8.0",
         "@aklesky/prettier-config": "0.8.0",
-        "@aklesky/ts-config": "0.8.0"
+        "@aklesky/ts-config": "0.8.0",
+        "@types/jest": "29.5.11"
     },
     "dependencies": {
         "@swc/jest": "0.2.29",
-        "@types/jest": "29.5.11",
         "jest": "29.7.0"
     }
 }
