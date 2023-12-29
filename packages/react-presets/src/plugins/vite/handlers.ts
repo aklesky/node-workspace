@@ -3,7 +3,6 @@ import { StatusCodes } from '@aklesky/utilities/http/codes.js'
 import { IncomingMessage, ServerResponse } from 'http'
 import { ReactMiddlewareOptions } from '../../interfaces/server.js'
 import { GenericHandler, OnFinishEventHandler, OnReadyHandler, PipeHandler } from '../../interfaces/types.js'
-import { viteHeadOutput } from './constants.js'
 
 export const onShellReadyHandler = (
     req: IncomingMessage,
@@ -12,6 +11,7 @@ export const onShellReadyHandler = (
     callback?: GenericHandler<OnReadyHandler>,
 ) => {
     const next = callback?.(req, res)
+    const meta = options.metaAttributes?.join('') || ''
     return async (pipe: PipeHandler, error?: Error) => {
         if (isFunction(next)) {
             return next(pipe, error)
@@ -22,7 +22,7 @@ export const onShellReadyHandler = (
         if (options.enableDoctypeHeader) {
             res.write('<!DOCTYPE html>')
         }
-        res.write(`<html><head><title>${options.title || ''}</title>${viteHeadOutput}</head><body>`)
+        res.write(`<html><head><title>${options.title || ''}</title>${meta}</head><body>`)
         pipe()
     }
 }

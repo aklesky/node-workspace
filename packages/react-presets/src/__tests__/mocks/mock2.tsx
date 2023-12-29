@@ -1,5 +1,10 @@
-import { PropsWithChildren } from 'react'
-export default (props: PropsWithChildren<any>) => {
+import { PropsWithChildren, useEffect } from 'react'
+
+const MockComponent2 = (props: PropsWithChildren<any>) => {
+    useEffect(() => {
+        console.info('mocking component mounted')
+    }, [])
+
     return (
         <>
             {props.test.mocking.error}
@@ -7,3 +12,5 @@ export default (props: PropsWithChildren<any>) => {
         </>
     )
 }
+
+export default MockComponent2

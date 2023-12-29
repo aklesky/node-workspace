@@ -40,10 +40,10 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/ts-config": "0.8.0"
+        "@aklesky/ts-config": "0.8.0",
+        "@types/prettier": "2.7.3"
     },
     "dependencies": {
-        "@types/prettier": "2.7.3",
         "prettier": "3.1.1"
     }
 }

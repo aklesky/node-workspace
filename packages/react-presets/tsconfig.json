@@ -4,7 +4,7 @@
         "swc": true,
         "transpileOnly": true
     },
-    "extends": "@aklesky/ts-config/shared/esm.json",
+    "extends": "@aklesky/ts-config/shared/jsx.json",
     "compilerOptions": {
         "composite": true,
         "rootDir": "./src"

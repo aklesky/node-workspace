@@ -20,6 +20,7 @@ export const withReactStreamble = (config: ReactMiddlewareConfig, options: React
     return async (req: IncomingMessage, res: ServerResponse, next?: NextFunction) => {
         try {
             const component = await config.getEntry()
+
             const props = await config?.getEntryProps?.(req, res)
             await render(res, {
                 component,
