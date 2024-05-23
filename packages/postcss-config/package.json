@@ -37,7 +37,7 @@
         "cssnano": "6.0.2",
         "postcss": "8.4.32",
         "postcss-load-config": "5.0.2",
-        "postcss-nesting": "12.0.1"
+        "postcss-nesting": "12.1.5"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.9.0",
