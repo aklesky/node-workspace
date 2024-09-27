@@ -33,7 +33,7 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "dependencies": {
-        "autoprefixer": "10.4.16",
+        "autoprefixer": "10.4.20",
         "cssnano": "6.0.2",
         "postcss": "8.4.32",
         "postcss-load-config": "5.0.2",
