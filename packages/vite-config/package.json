@@ -37,7 +37,7 @@
         "@vitejs/plugin-legacy": "5.2.0",
         "sass": "1.69.5",
         "terser": "5.26.0",
-        "vite": "5.0.10"
+        "vite": "5.1.8"
     },
     "devDependencies": {
         "@aklesky/eslint-config": "0.9.0",
