@@ -48,9 +48,9 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/eslint-config": "0.9.0",
-        "@aklesky/prettier-config": "0.9.0",
-        "@aklesky/ts-config": "0.9.0",
+        "@aklesky/eslint-config": "workspace:*",
+        "@aklesky/prettier-config": "workspace:*",
+        "@aklesky/ts-config": "workspace:*",
         "@types/jest": "29.5.13"
     },
     "dependencies": {
