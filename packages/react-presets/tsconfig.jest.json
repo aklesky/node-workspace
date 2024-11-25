@@ -1,8 +1,0 @@
-{
-    "extends": "@aklesky/ts-config/node/18/jest.json",
-    "compilerOptions": {
-        "composite": true,
-    },
-    "include": ["jest.config.ts"],
-    "exclude": ["node_modules", "dist"]
-}

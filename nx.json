@@ -12,9 +12,9 @@
             "workspaceChangelog": {
                 "createRelease": "github"
             },
-
+            "releaseTagPattern": "release/{version}",
             "git": {
-                "commitMessage": "chore(release): release ${version}",
+                "commitMessage": "chore(release): release {version}",
                 "commit": true,
                 "tag": true
             }
@@ -27,7 +27,7 @@
                 "preserveLocalDependencyProtocols": true
             },
             "git": {
-                "commitMessage": "chore: release ${version}",
+                "commitMessage": "chore: release {version}",
                 "tag": false,
                 "commit": false
             }
