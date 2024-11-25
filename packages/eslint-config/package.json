@@ -5,7 +5,7 @@
     "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
-    "type": "commonjs",
+    "type": "module",
     "main": "dist/index.js",
     "prettier": "@aklesky/prettier-config",
     "publishConfig": {
@@ -19,16 +19,7 @@
         "./node": {
             "require": "./dist/node.js",
             "import": "./dist/node.js"
-        },
-        "./jest": {
-            "require": "./dist/jest.js",
-            "import": "./dist/jest.js"
-        },
-        "./jsx": {
-            "require": "./dist/jsx.js",
-            "import": "./dist/jsx.js"
-        },
-        "./package.json": "./package.json"
+        }
     },
     "directories": {
         "dist": "dist"
@@ -48,23 +39,12 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/ts-config": "workspace:*",
-        "prettier": "3.1.1"
-    },
-    "peerDependencies": {
-        "prettier": "3.1.1"
+        "@aklesky/ts-config": "workspace:*"
     },
     "dependencies": {
-        "@aklesky/prettier-config": "workspace:*",
         "@types/eslint": "8.56.12",
         "@typescript-eslint/eslint-plugin": "6.21.0",
         "@typescript-eslint/parser": "6.21.0",
-        "eslint": "8.55.0",
-        "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-jest": "27.6.0",
-        "eslint-plugin-prettier": "5.2.1",
-        "eslint-plugin-react": "7.33.2",
-        "eslint-plugin-react-hooks": "4.6.2",
-        "eslint-plugin-react-refresh": "0.4.5"
+        "eslint": "8.55.0"
     }
 }
