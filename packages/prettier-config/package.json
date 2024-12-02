@@ -2,12 +2,12 @@
     "name": "@aklesky/prettier-config",
     "version": "0.9.0",
     "description": "Shareable prettier configuration.",
-    "author": "Aleksey Semiglasov <aleksey.semiglasov@gmail.com>",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
     "license": "MIT",
-    "type": "commonjs",
+    "type": "module",
     "main": "dist/index.js",
-    "prettier": "./dist/config.js",
+    "prettier": "./dist/index.js",
     "exports": {
         ".": {
             "require": "./dist/index.js",
@@ -40,10 +40,9 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "devDependencies": {
-        "@aklesky/ts-config": "0.9.0",
-        "@types/prettier": "2.7.3"
+        "@aklesky/ts-config": "workspace:*"
     },
     "dependencies": {
-        "prettier": "3.1.1"
+        "prettier": "3.4.1"
     }
 }

@@ -2,6 +2,7 @@ import type { Config as SWCConfig } from '@swc/core'
 import type { Config as JestConfig } from 'jest'
 import fs from 'node:fs'
 import { resolve } from 'node:path'
+import { transform } from './constants.js'
 
 export const getRootSwc = (): Partial<SWCConfig> => {
     try {
@@ -12,23 +13,23 @@ export const getRootSwc = (): Partial<SWCConfig> => {
         }
         const content = fs.readFileSync(path, 'utf-8')
         return JSON.parse(content) satisfies Partial<SWCConfig>
-    } catch (e) {
+    } catch (_) {
         return {}
     }
 }
 
 export const defineJestTransform = (
     name: string = 'babel-jest',
-    options?: Record<string, unknown>,
+    options?: Record<string, unknown>
 ): Partial<JestConfig> => {
     return {
         transform: {
-            '^.+\\.(t|j)sx?$': [
+            [transform]: [
                 name,
                 {
-                    ...(options || {}),
-                },
-            ],
-        },
+                    ...(options || {})
+                }
+            ]
+        }
     }
 }

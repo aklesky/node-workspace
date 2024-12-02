@@ -1,9 +1,9 @@
 {
-    "extends": "@aklesky/ts-config/node/18/build.esm.json",
+    "extends": "@aklesky/ts-config/node/20.x/build.json",
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
-        "composite": false,
+        "composite": false
     },
     "exclude": ["node_modules", "dist"]
 }

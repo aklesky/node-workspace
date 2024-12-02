@@ -9,8 +9,8 @@ export const defineConfig = (...hooks: ConfigFn[]): Config => {
             return hook(acc)
         },
         {
-            content: [defaultPath],
-        } as Config,
+            content: [defaultPath]
+        } as Config
     )
 
     return config

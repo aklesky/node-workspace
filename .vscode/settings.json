@@ -1,4 +1,19 @@
 {
-    "githubPullRequests.ignoredPullRequestBranches": ["master"],
-    "jest.jestCommandLine": "node_modules/.bin/jest --detectOpenHandles"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+        "**/.idea": true,
+        "**/.nx": true,
+        "**/base": true,
+        "**/dist": true,
+        "**/node_modules": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/base": true,
+        "**/dist": true,
+        "**/.idea": true,
+        "**/.nx": true
+    },
+    "makefile.configureOnOpen": false,
+    "prettier.configPath": "./packages/prettier-config/dist/index.js"
 }

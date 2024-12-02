@@ -6,7 +6,7 @@ export const withNesting = (options?: NestingOptions) => {
     return (config: Config) => {
         return {
             ...config,
-            plugins: [...config.plugins, nesting(options)],
+            plugins: [...config.plugins, nesting(options)]
         }
     }
 }

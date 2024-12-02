@@ -1,5 +1,7 @@
 import type { Config } from 'jest'
 
+export const files = ['**/*.spec.js', '**/*.test.js']
+export const transform = '^.+\\.(t|j)sx?$'
 export const defaultTestMatch = ['**/?(*.)+(spec|test).[jt]s?(x)']
 export const defaultEsmExtensions = ['.ts', '.tsx']
 export const defaultTimeout = 30000
@@ -14,8 +16,8 @@ export const base: Config = {
     extensionsToTreatAsEsm: defaultEsmExtensions,
     testMatch: defaultTestMatch,
     moduleNameMapper: {
-        '^(\\.{1,2}/.*)\\.js$': '$1',
+        '^(\\.{1,2}/.*)\\.js$': '$1'
     },
     testTimeout: defaultTimeout,
-    openHandlesTimeout: defaultTimeout,
+    openHandlesTimeout: defaultTimeout
 }

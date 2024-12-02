@@ -1,18 +1,11 @@
-import { ESLint } from 'eslint'
-import common from './common.js'
+import common from './presets/common.js'
+import node from './presets/node.js'
+import type { TSESLint } from './utils.js'
+import { eslint, tseslint } from './utils.js'
 
-const node = {
-    ...common,
-    env: {
-        node: true,
-    },
-    rules: {
-        ...common.rules,
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'off',
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
-    },
-} as ESLint.ConfigData
-
-export = node
+export default tseslint.config(
+    eslint.configs.recommended,
+    tseslint.configs.recommended,
+    common,
+    node
+) as TSESLint.FlatConfig.ConfigArray

@@ -17,10 +17,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - name: Build monorepo and run tests
+            - name: Build monorepo
               uses: actions/setup-node@v4
               with:
-                  node-version: 18
+                  node-version: 20.17.0
             - run: make ci
     release:
         runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
             - name: Create Release
               uses: actions/setup-node@v4
               with:
-                node-version: 18
+                node-version: 20.17.0
                 registry-url: 'https://registry.npmjs.org'
             - run: make ci
             - run: make release

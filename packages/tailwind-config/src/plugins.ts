@@ -7,7 +7,7 @@ export const withTypography = () => {
     return (config: Config) => {
         return {
             ...config,
-            plugins: [...(config?.plugins || []), typography],
+            plugins: [...(config?.plugins || []), typography]
         }
     }
 }
@@ -16,7 +16,7 @@ export const withForms = () => {
     return (config: Config) => {
         return {
             ...config,
-            plugins: [...(config?.plugins || []), forms],
+            plugins: [...(config?.plugins || []), forms]
         }
     }
 }
@@ -25,7 +25,7 @@ export const withAspectRatio = () => {
     return (config: Config) => {
         return {
             ...config,
-            plugins: [...(config?.plugins || []), aspectRatio],
+            plugins: [...(config?.plugins || []), aspectRatio]
         }
     }
 }

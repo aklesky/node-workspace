@@ -1,8 +1,6 @@
 {
+    "extends": "./packages/ts-config/node/20.x/node.json",
     "compilerOptions": {
-        "noEmit": true,
-        "paths": {
-            "@aklesky/jest-config/*": ["./packages/jest-config/src/*"]
-        }
+        "noEmit": true
     }
 }

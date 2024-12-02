@@ -10,8 +10,8 @@ export const defineConfig = (...hooks: ConfigFn[]): Config => {
             return hook(acc)
         },
         {
-            plugins: [],
-        } as Config,
+            plugins: []
+        } as Config
     )
 
     return config
