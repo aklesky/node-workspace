@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/eslint-config",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "Shareable collection of eslint configurations.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",

@@ -1,7 +1,7 @@
 {
     "name": "@aklesky/eslint-prettier-config",
     "description": "Shareable collection of eslint and prettier configurations.",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "license": "MIT",
     "type": "module",
     "module": "dist/index.js",
