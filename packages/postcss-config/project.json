@@ -1,4 +1,25 @@
 {
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "name": "@aklesky/postcss-config"
+    "name": "@aklesky/postcss-config",
+    "targets": {
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/postcss-config",
+                "commands": ["rimraf -rf ./dist"]
+            }
+        },
+        "build": {
+            "dependsOn": [
+                {
+                    "target": "clean"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/postcss-config",
+                "commands": ["tsc --project ./tsconfig.build.json"]
+            }
+        }
+    }
 }

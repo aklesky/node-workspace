@@ -1,4 +1,25 @@
 {
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "name": "@aklesky/tailwind-config"
+    "name": "@aklesky/tailwind-config",
+    "targets": {
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/tailwind-config",
+                "commands": ["rimraf -rf ./dist"]
+            }
+        },
+        "build": {
+            "dependsOn": [
+                {
+                    "target": "clean"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/tailwind-config",
+                "commands": ["tsc --project ./tsconfig.build.json"]
+            }
+        }
+    }
 }

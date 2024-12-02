@@ -1,9 +1,0 @@
-{
-    "extends": "../../shared/esm.json",
-    "compilerOptions": {
-        "target": "ESNext",
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
-        "types": ["jest", "node"]
-    }
-}

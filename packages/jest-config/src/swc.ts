@@ -12,9 +12,9 @@ export const withSWC = (config?: Partial<SWCConfig>) => {
                 '@swc/jest',
                 defineSwcConfiguration({
                     ...(swc || {}),
-                    ...(config || {}),
-                }),
-            ),
+                    ...(config || {})
+                })
+            )
         }
     }
 }
@@ -22,7 +22,7 @@ export const withSWC = (config?: Partial<SWCConfig>) => {
 export const defineSwcConfiguration = (config: Partial<SWCConfig>): Partial<SWCConfig> => {
     const options = {
         ...(swc || {}),
-        ...(config || {}),
+        ...(config || {})
     } satisfies Partial<SWCConfig>
 
     return {
@@ -32,8 +32,7 @@ export const defineSwcConfiguration = (config: Partial<SWCConfig>): Partial<SWCC
             parser: {
                 ...(options.jsc?.parser || {}),
                 syntax: options.jsc?.parser?.syntax || 'typescript',
-                decorators: options.jsc?.parser?.decorators || true,
-                dynamicImport: options.jsc?.parser?.dynamicImport || true,
+                decorators: options.jsc?.parser?.decorators || true
             },
             transform: {
                 legacyDecorator: true,
@@ -41,9 +40,9 @@ export const defineSwcConfiguration = (config: Partial<SWCConfig>): Partial<SWCC
                 ...(options.jsc?.transform || {}),
                 react: {
                     runtime: 'automatic',
-                    ...(options.jsc?.transform?.react || {}),
-                },
-            },
-        },
+                    ...(options.jsc?.transform?.react || {})
+                }
+            }
+        }
     }
 }

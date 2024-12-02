@@ -1,9 +1,10 @@
 {
-    "extends": "./tsconfig.json",
+    "extends": "@aklesky/ts-config/node/20.x/build.json",
     "compilerOptions": {
         "outDir": "./dist",
         "rootDir": "./src",
         "declaration": true,
+        "types": ["jest", "node"],
     },
     "exclude": ["node_modules", "dist"]
 }

@@ -1,6 +1,7 @@
 {
     "extends": "@aklesky/ts-config/shared/esm.json",
     "compilerOptions": {
+        "composite": true,
         "rootDir": "./src"
     },
     "exclude": ["node_modules", "dist"]

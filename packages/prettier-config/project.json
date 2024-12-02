@@ -1,4 +1,25 @@
 {
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "name": "@aklesky/prettier-config"
+    "name": "@aklesky/prettier-config",
+    "targets": {
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/prettier-config",
+                "commands": ["rimraf -rf ./dist"]
+            }
+        },
+        "build": {
+            "dependsOn": [
+                {
+                    "target": "clean"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/prettier-config",
+                "commands": ["tsc -p tsconfig.build.json"]
+            }
+        }
+    }
 }

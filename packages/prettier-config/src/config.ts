@@ -1,12 +1,18 @@
-import type { RequiredOptions } from 'prettier'
+import type { RequiredOptions, Options } from 'prettier'
 
-const config = {
+export const config = {
     printWidth: 120,
+    useTabs: false,
     semi: false,
     singleQuote: true,
     tabWidth: 4,
-    trailingComma: 'all',
+    trailingComma: 'none',
+    quoteProps: 'consistent',
+    bracketSpacing: true,
+    bracketSameLine: true,
     arrowParens: 'avoid',
 } as RequiredOptions
 
-export = config
+export default {
+    ...config,
+} as Options

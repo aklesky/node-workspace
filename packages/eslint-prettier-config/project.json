@@ -1,4 +1,28 @@
 {
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "name": "@aklesky/eslint-prettier-config"
+    "name": "@aklesky/eslint-prettier-config",
+    "targets": {
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/eslint-prettier-config",
+                "commands": ["rimraf -rf ./dist"]
+            }
+        },
+        "build": {
+            "dependsOn": [
+                {
+                    "target": "clean"
+                },
+                {
+                    "projects": ["@aklesky/eslint-config", "@aklesky/prettier-config"], "target": "build"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/eslint-prettier-config",
+                "commands": ["tsc -p tsconfig.build.json"]
+            }
+        }
+    }
 }

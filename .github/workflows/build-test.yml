@@ -1,24 +1,24 @@
 name: Build and Test monorepo
 
 on:
-  pull_request:
-    types:
-      - opened
-    branches:
-      - 'feat/**'
-      - 'feature/**'
-      - 'fix/**'
+    pull_request:
+        types:
+            - opened
+        branches:
+            - 'feat/**'
+            - 'feature/**'
+            - 'fix/**'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build monorepo and run tests with Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: make ci
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [20.x]
+        steps:
+            - uses: actions/checkout@v4
+            - name: Build monorepo and with Node ${{ matrix.node-version }}
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: make ci
