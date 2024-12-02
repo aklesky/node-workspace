@@ -17,8 +17,14 @@ jobs:
                 node-version: [20.x]
         steps:
             - uses: actions/checkout@v4
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                version: 9
+            - uses: actions/checkout@v4
             - name: Build monorepo and with Node ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: make ci
+                  cache: 'pnpm'
+            - run: make up
