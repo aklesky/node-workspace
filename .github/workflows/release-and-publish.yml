@@ -37,6 +37,10 @@ jobs:
               with:
                 fetch-depth: 0
                 persist-credentials: false
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                version: 9.14.4
             - name: Setup Github Credentials
               run: |
                   git config --global user.name "${{ github.actor }}"
