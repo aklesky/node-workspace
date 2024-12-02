@@ -2,12 +2,13 @@
 
 ## Supported Versions
 
-| Name    | Version | Supported          |
-| ------- | ------- | ------------------ |
-| Node    | 18.13.0 | :white_check_mark: |
-| Node    | 18.16.1 | :white_check_mark: |
-| Node    | 18.17.1 | :white_check_mark: |
-| React    | 18.2.0 | :white_check_mark: |
-| Typescript    | 4.9.4 | :white_check_mark: |
-| Typescript    | 5.2.2 | :white_check_mark: |
-| Vite    | 4.1.1 | :white_check_mark: |
+| Name        | Version | Supported          |
+| ----------- | ------- | ------------------ |
+| Node        | 20.17.0 | :white_check_mark: |
+| Eslint      | 9.16.0  | :white_check_mark: |
+| Prettier    | 3.4.1   | :white_check_mark: |
+| Typescript  | 5.7.2   | :white_check_mark: |
+| TailwindCSS | 3.4.15  | :white_check_mark: |
+| PostCSS     | 8.4.49  | :white_check_mark: |
+| Vite        | 6.0.2   | :white_check_mark: |
+| Vitest      | 2.1.7   | :white_check_mark: |

@@ -1,0 +1,32 @@
+{
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "extends": "nx/presets/npm.json",
+    "defaultBase": "next",
+    "release": {
+        "projects": ["packages/*"],
+        "git": {
+            "commitMessage": "chore(release): release {version}",
+            "commit": true,
+            "tag": true
+        },
+        "projectsRelationship": "independent",
+        "changelog": {
+            "projectChangelogs": {
+                "createRelease": "github"
+            },
+            "automaticFromRef": true,
+            "workspaceChangelog": {
+                "createRelease": "github"
+            },
+            "releaseTagPattern": "release/{version}"
+        },
+        "version": {
+            "generatorOptions": {
+                "currentVersionResolver": "git-tag",
+                "specifierSource": "conventional-commits",
+                "preserveLocalDependencyProtocols": true,
+                "fallbackCurrentVersionResolver": "disk"
+            }
+        }
+    }
+}

@@ -1,4 +1,7 @@
 {
-    "extends": "@aklesky/ts-config/node/18/jest.json",
-    "exclude": ["node_modules", "dist"]
+    "extends": "@aklesky/ts-config/node/20.x/node.json",
+    "compilerOptions": {
+        "types": ["jest", "node"]
+    },
+    "exclude": ["node_modules", "dist", "eslint.config.mjs"]
 }

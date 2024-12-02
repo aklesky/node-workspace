@@ -5,6 +5,6 @@ import base from './base.js'
 export default defineConfig({
     ...base,
     ...withLegacy({
-        targets: ['defaults', 'not IE 11'],
-    }),
+        targets: ['defaults', 'not IE 11']
+    })
 })

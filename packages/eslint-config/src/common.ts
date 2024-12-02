@@ -1,23 +1,9 @@
-import { ESLint } from 'eslint'
-import prettier from '@aklesky/prettier-config'
+import common from './presets/common.js'
+import type { TSESLint } from './utils.js'
+import { eslint, tseslint } from './utils.js'
 
-const common = {
-    root: true,
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint', 'prettier'],
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'prettier',
-    ],
-    rules: {
-        'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
-        'no-nested-ternary': 'error',
-        'no-shadow': 'off',
-        '@typescript-eslint/no-shadow': 'error',
-        'prettier/prettier': ['error', prettier],
-    },
-} as ESLint.ConfigData
-
-export = common
+export default tseslint.config(
+    eslint.configs.recommended,
+    tseslint.configs.recommended,
+    common
+) as TSESLint.FlatConfig.ConfigArray

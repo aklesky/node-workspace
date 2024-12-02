@@ -1,0 +1,29 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "@aklesky/vitest-config",
+    "targets": {
+        "clean": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/vitest-config",
+                "commands": ["rimraf -rf ./dist"]
+            }
+        },
+        "build": {
+            "dependsOn": [
+                {
+                    "target": "clean"
+                },
+                {
+                    "projects": ["@aklesky/eslint-prettier-config"],
+                    "target": "build"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "packages/vitest-config",
+                "commands": ["tsc --project ./tsconfig.build.json"]
+            }
+        }
+    }
+}
