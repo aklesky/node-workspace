@@ -24,4 +24,4 @@ clear:
 	npx -y rimraf -rf node_modules
 .PHONY: release
 release:
-	npx nx release
+	npx nx release -y
