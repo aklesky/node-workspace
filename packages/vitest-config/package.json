@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/vitest-config",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Vitest configuration preset.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
