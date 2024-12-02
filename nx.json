@@ -7,7 +7,8 @@
         "git": {
             "commitMessage": "chore(release): release {version}",
             "commit": true,
-            "tag": true
+            "tag": true,
+            "commitArgs": "--no-verify"
         },
         "projectsRelationship": "independent",
         "changelog": {
