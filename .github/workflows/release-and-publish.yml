@@ -3,9 +3,8 @@ name: Release and Publish
 on:
     pull_request:
         branches:
-        - master
+        - next
         types: [closed]
-    workflow_dispatch:
 
 permissions:
     contents: write
@@ -51,7 +50,12 @@ jobs:
               with:
                 node-version: 20.17.0
                 registry-url: 'https://registry.npmjs.org'
+                cache: 'pnpm'
             - run: make up
+            - name: Set pnpm config
+              run: |
+                pnpm config set registry https://registry.npmjs.org
+                pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_ACCESS_TOKEN }}
             - run: make release
               env:
                 NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
