@@ -1,3 +1,11 @@
+## 1.0.1 (2025-04-20)
+
+### 🩹 Fixes
+
+- **deps:** update dependencies (minor-patch) ([#267](https://github.com/aklesky/node-workspace/pull/267))
+- **deps:** update dependency vite to v6.0.15 [security] ([#268](https://github.com/aklesky/node-workspace/pull/268))
+- **deps:** update dependency vitest to v2.1.9 [security] ([#270](https://github.com/aklesky/node-workspace/pull/270))
+
 # 1.0.0 (2024-12-02)
 
 ### 🚀 Features

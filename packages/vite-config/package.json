@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/vite-config",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "List of configurations for vite setup",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
