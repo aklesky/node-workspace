@@ -1,10 +1,10 @@
-import tailwind, { Config } from 'tailwindcss'
+import tailwind from 'tailwindcss'
 
-export const withTailwindPlugin = (options?: Config) => {
+export const withTailwindPlugin = () => {
     return (config?: { plugins: unknown[] }) => {
         return {
             ...config,
-            plugins: [...(config?.plugins || []), tailwind(options)]
+            plugins: [...(config?.plugins || []), tailwind()]
         }
     }
 }

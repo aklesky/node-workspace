@@ -1,3 +1,3 @@
-import { defineConfig } from '../config.js'
+import { defineConfig, type Config } from '../config.js'
 
-export default defineConfig()
+export default defineConfig() as Config
