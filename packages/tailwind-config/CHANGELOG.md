@@ -1,3 +1,14 @@
+## 1.0.2 (2025-04-20)
+
+### 🩹 Fixes
+
+- **tailwind:** fixing tailwindcss typing ([#274](https://github.com/aklesky/node-workspace/pull/274))
+- **deps:** update dependencies (major) (major) ([#269](https://github.com/aklesky/node-workspace/pull/269))
+
+### ❤️ Thank You
+
+- Aleksei Semiglasov @aklesky
+
 ## 1.0.1 (2025-04-20)
 
 ### 🩹 Fixes

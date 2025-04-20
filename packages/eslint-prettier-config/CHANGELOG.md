@@ -1,3 +1,13 @@
+## 1.0.2 (2025-04-20)
+
+### 🩹 Fixes
+
+- **deps:** update dependencies (major) (major) ([#269](https://github.com/aklesky/node-workspace/pull/269))
+
+### 🧱 Updated Dependencies
+
+- Updated @aklesky/eslint-config to 1.0.2
+
 ## 1.0.1 (2025-04-20)
 
 ### 🩹 Fixes

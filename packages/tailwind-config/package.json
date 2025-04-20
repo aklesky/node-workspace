@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/tailwind-config",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Tailwind Css configuration presets",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
