@@ -3,7 +3,7 @@ import typography from '@tailwindcss/typography'
 import forms from '@tailwindcss/forms'
 import aspectRatio from '@tailwindcss/aspect-ratio'
 
-export const withTypography = () => {
+export const withTypography = (): ((config: Config) => Config) => {
     return (config: Config) => {
         return {
             ...config,
@@ -12,7 +12,7 @@ export const withTypography = () => {
     }
 }
 
-export const withForms = () => {
+export const withForms = (): ((config: Config) => Config) => {
     return (config: Config) => {
         return {
             ...config,
@@ -21,11 +21,17 @@ export const withForms = () => {
     }
 }
 
-export const withAspectRatio = () => {
+export const withAspectRatio = (): ((config: Config) => Config) => {
     return (config: Config) => {
         return {
             ...config,
             plugins: [...(config?.plugins || []), aspectRatio]
         }
     }
+}
+
+export default {
+    withTypography,
+    withForms,
+    withAspectRatio
 }
