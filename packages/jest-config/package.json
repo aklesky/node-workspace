@@ -40,14 +40,14 @@
     "devDependencies": {
         "@aklesky/eslint-config": "workspace:*",
         "@aklesky/ts-config": "workspace:*",
-        "@types/jest": "29.5.14"
+        "@types/jest": "30.0.0"
     },
     "dependencies": {
         "@aklesky/eslint-prettier-config": "workspace:*",
         "@swc/core": "1.11.20",
         "@swc/jest": "0.2.37",
-        "eslint-plugin-jest": "28.11.0",
-        "globals": "16.0.0",
-        "jest": "29.7.0"
+        "eslint-plugin-jest": "29.16.6",
+        "globals": "17.12.0",
+        "jest": "30.5.1"
     }
 }
