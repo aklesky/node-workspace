@@ -32,10 +32,10 @@
     },
     "dependencies": {
         "autoprefixer": "10.4.21",
-        "cssnano": "7.0.6",
+        "cssnano": "9.0.2",
         "postcss": "8.5.3",
         "postcss-load-config": "6.0.1",
-        "postcss-nesting": "13.0.1"
+        "postcss-nesting": "14.0.1"
     },
     "devDependencies": {
         "@aklesky/ts-config": "workspace:*"
