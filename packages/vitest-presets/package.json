@@ -1,0 +1,56 @@
+{
+    "name": "@aklesky/vitest-presets",
+    "version": "0.0.0",
+    "description": "Shareable Vitest presets with coverage, HTML reports, profiling and ESLint rules.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/preset.d.ts",
+            "default": "./dist/preset.js"
+        },
+        "./*.js": {
+            "types": "./dist/*.d.ts",
+            "default": "./dist/*.js"
+        },
+        "./tsconfig.json": "./tsconfig.json"
+    },
+    "files": [
+        "dist",
+        "tsconfig.json"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "rimraf ./dist && tsc --project ./tsconfig.build.json",
+        "lint": "oxlint ./src"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "peerDependencies": {
+        "@vitest/coverage-v8": "5.0.5",
+        "@vitest/ui": "5.0.5",
+        "vite": "8.3.4",
+        "vitest": "5.0.5"
+    },
+    "devDependencies": {
+        "@aklesky/typescript-presets": "workspace:*",
+        "@vitest/coverage-v8": "5.0.5",
+        "@vitest/ui": "5.0.5",
+        "vite": "8.3.4",
+        "vitest": "5.0.5"
+    },
+    "dependencies": {
+        "@aklesky/eslint-presets": "workspace:*",
+        "@vitest/eslint-plugin": "1.6.27"
+    }
+}

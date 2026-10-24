@@ -1,0 +1,49 @@
+{
+    "name": "@aklesky/oxc-presets",
+    "version": "0.0.0",
+    "description": "Shareable oxlint and oxfmt presets for TypeScript projects.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        "./*.js": {
+            "types": "./dist/*.d.ts",
+            "default": "./dist/*.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "rimraf ./dist && tsc --project ./tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "peerDependencies": {
+        "oxfmt": "0.74.0",
+        "oxlint": "1.89.0"
+    },
+    "peerDependenciesMeta": {
+        "oxfmt": {
+            "optional": true
+        },
+        "oxlint": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@aklesky/typescript-presets": "workspace:*",
+        "oxfmt": "0.74.0",
+        "oxlint": "1.89.0"
+    }
+}

@@ -1,0 +1,5 @@
+export type { Linter } from 'eslint'
+export { defineConfig, globalIgnores } from 'eslint/config'
+export { default as tseslint } from 'typescript-eslint'
+export { default as eslint } from '@eslint/js'
+export { default as globals } from 'globals'

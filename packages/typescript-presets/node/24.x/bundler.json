@@ -1,0 +1,8 @@
+{
+    "extends": "./node.json",
+    "compilerOptions": {
+        "lib": ["ES2024", "DOM", "DOM.Iterable"],
+        "module": "Preserve",
+        "moduleResolution": "Bundler"
+    }
+}

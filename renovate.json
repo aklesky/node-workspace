@@ -13,7 +13,7 @@
     "packageRules": [
         {
             "matchPackageNames": ["node"],
-            "allowedVersions": "18.9.0"
+            "groupName": "node"
         },
         {
             "matchDepTypes": ["devDependencies", "dependencies"],

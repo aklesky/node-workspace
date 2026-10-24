@@ -1,0 +1,39 @@
+{
+    "name": "@aklesky/typescript-presets",
+    "version": "0.0.0",
+    "description": "Shareable TypeScript configuration presets for Node.js 24 and 26.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "exports": {
+        "./node/*.json": "./node/*.json",
+        "./shared/*.json": "./shared/*.json",
+        "./package.json": "./package.json"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "node",
+        "shared"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "peerDependencies": {
+        "@types/node": "24.19.2",
+        "typescript": "6.0.2"
+    },
+    "peerDependenciesMeta": {
+        "@types/node": {
+            "optional": true
+        },
+        "typescript": {
+            "optional": true
+        }
+    }
+}

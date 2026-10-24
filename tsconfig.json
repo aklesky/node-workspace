@@ -1,5 +1,5 @@
 {
-    "extends": "./packages/ts-config/node/20.x/node.json",
+    "extends": "./packages/typescript-presets/node/24.x/node.json",
     "compilerOptions": {
         "noEmit": true
     }

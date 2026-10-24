@@ -1,0 +1,50 @@
+{
+    "name": "@aklesky/tailwindcss-presets",
+    "version": "0.0.0",
+    "description": "Shareable Tailwind CSS v4 presets with forms, typography and a Vite config.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        "./preset.css": "./src/preset.css",
+        "./forms.css": "./src/forms.css",
+        "./typography.css": "./src/typography.css",
+        "./vite.js": {
+            "types": "./dist/vite.d.ts",
+            "default": "./dist/vite.js"
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist",
+        "src/*.css"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "rimraf ./dist && tsc --project ./tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "peerDependencies": {
+        "tailwindcss": "4.3.3",
+        "vite": "8.3.4"
+    },
+    "devDependencies": {
+        "@aklesky/typescript-presets": "workspace:*",
+        "vite": "8.3.4"
+    },
+    "dependencies": {
+        "@aklesky/vite-presets": "workspace:*",
+        "@tailwindcss/forms": "0.5.11",
+        "@tailwindcss/typography": "0.5.20",
+        "@tailwindcss/vite": "4.3.3"
+    }
+}

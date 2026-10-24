@@ -1,0 +1,46 @@
+{
+    "name": "@aklesky/prettier-presets",
+    "version": "0.0.0",
+    "description": "Shareable Prettier configuration preset.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "type": "module",
+    "main": "dist/index.js",
+    "prettier": "./dist/index.js",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./config.js": {
+            "types": "./dist/config.d.ts",
+            "default": "./dist/config.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "rimraf ./dist && tsc --project ./tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "devDependencies": {
+        "@aklesky/typescript-presets": "workspace:*",
+        "prettier": "3.9.10"
+    },
+    "peerDependencies": {
+        "prettier": "3.9.10"
+    }
+}
