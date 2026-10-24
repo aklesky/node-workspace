@@ -84,7 +84,7 @@ allowBuilds:
 | Name         | Version |
 | ------------ | ------- |
 | Tailwind CSS | 4.3.3   |
-| Vite         | 8.3.4   |
+| Vite         | 8.3.5   |
 | Node.js      | 24.22.1 |
 
 ## License
