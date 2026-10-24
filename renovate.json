@@ -29,6 +29,11 @@
             "matchDepTypes": ["dependencies"],
             "matchUpdateTypes": ["minor", "patch"],
             "groupName": "dependencies (minor-patch)"
+        },
+        {
+            "description": "Keep oxc-transform-react inside the peer range of @vitejs/plugin-react 6.1.2 (^0.152.0). Update both together when plugin-react widens it.",
+            "matchPackageNames": ["oxc-transform-react"],
+            "allowedVersions": "~0.152.0"
         }
     ]
 }
