@@ -1,3 +1,13 @@
+## 0.1.3 (2026-10-24)
+
+### 🩹 Fixes
+
+- **deps:** match the typescript peer to the typescript 6 alias, refresh the lockfile ([#303](https://github.com/aklesky/node-workspace/pull/303))
+
+### ❤️ Thank You
+
+- Aleksei Semiglasov @aklesky
+
 ## 0.1.2 (2026-10-24)
 
 ### 🩹 Fixes

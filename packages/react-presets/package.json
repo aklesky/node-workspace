@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/react-presets",
-    "version": "0.10.2",
+    "version": "0.10.3",
     "description": "Shareable Vite presets for React apps, React Server Components and Cloudflare Workers.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",

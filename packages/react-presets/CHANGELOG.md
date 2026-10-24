@@ -1,3 +1,11 @@
+## 0.10.3 (2026-10-24)
+
+### 🧱 Updated Dependencies
+
+- Updated @aklesky/typescript-presets to 0.1.3
+- Updated @aklesky/worker-presets to 0.1.3
+- Updated @aklesky/vite-presets to 0.1.3
+
 ## 0.10.2 (2026-10-24)
 
 ### 🩹 Fixes
