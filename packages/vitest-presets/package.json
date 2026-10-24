@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/vitest-presets",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Shareable Vitest presets with coverage, HTML reports, profiling and ESLint rules.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",

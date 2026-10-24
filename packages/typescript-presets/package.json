@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/typescript-presets",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Shareable TypeScript configuration presets for Node.js 24 and 26.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
