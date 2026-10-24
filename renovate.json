@@ -7,7 +7,8 @@
     "minimumReleaseAge": "7 days",
     "internalChecksFilter": "strict",
     "lockFileMaintenance": {
-        "enabled": true
+        "enabled": true,
+        "schedule": ["before 4am on the first day of the month"]
     },
     "packageRules": [
         {
@@ -35,10 +36,10 @@
             "dependencyDashboardApproval": true
         },
         {
-            "description": "The typescript peer is the TypeScript 6 tool API (typescript-eslint needs <6.1.0); TypeScript 7 comes as @typescript/native",
+            "description": "The typescript peer matches @typescript/typescript6, the TypeScript 6 alias that apps install next to TypeScript 7. Renovate cannot follow that alias for this peer, so update it by hand when the alias moves.",
             "matchPackageNames": ["typescript"],
             "matchDepTypes": ["peerDependencies"],
-            "allowedVersions": "<7"
+            "enabled": false
         },
         {
             "description": "@types/node follows the Node.js 24 LTS line the presets target",
