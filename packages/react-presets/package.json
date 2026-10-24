@@ -60,6 +60,6 @@
         "@aklesky/vite-presets": "workspace:*",
         "@aklesky/worker-presets": "workspace:*",
         "@vitejs/plugin-react": "6.1.2",
-        "oxc-transform-react": "0.152.0"
+        "oxc-transform-react": "0.155.0"
     }
 }
