@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/oxc-presets",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Shareable oxlint and oxfmt presets for TypeScript projects.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",

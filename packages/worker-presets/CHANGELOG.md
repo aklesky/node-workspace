@@ -1,3 +1,18 @@
+## 0.1.1 (2026-10-24)
+
+### 🩹 Fixes
+
+- point each package's repository at its directory ([#294](https://github.com/aklesky/node-workspace/pull/294))
+
+### 🧱 Updated Dependencies
+
+- Updated @aklesky/typescript-presets to 0.1.1
+- Updated @aklesky/vite-presets to 0.1.1
+
+### ❤️ Thank You
+
+- Aleksei Semiglasov @aklesky
+
 ## 0.1.0 (2026-10-24)
 
 ### 🚀 Features

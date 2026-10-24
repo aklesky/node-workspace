@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/tailwindcss-presets",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Shareable Tailwind CSS v4 presets with forms, typography and a Vite config.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
