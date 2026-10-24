@@ -3,32 +3,47 @@
     "extends": ["config:best-practices", ":semanticCommits"],
     "schedule": ["before 9am on Monday"],
     "timezone": "Europe/Berlin",
-    "rebaseWhen": "conflicted",
     "rangeStrategy": "pin",
-    "ignoreUnstable": true,
     "minimumReleaseAge": "7 days",
+    "internalChecksFilter": "strict",
     "lockFileMaintenance": {
         "enabled": true
     },
     "packageRules": [
         {
-            "matchPackageNames": ["node"],
-            "groupName": "node"
+            "description": "Presets: every dependency, devDependency and peer of the published packages in one PR, released as a patch",
+            "matchFileNames": ["packages/**"],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "presets (minor-patch)",
+            "semanticCommitType": "fix"
         },
         {
-            "matchDepTypes": ["devDependencies", "dependencies"],
+            "description": "Workspace tooling in the root package.json",
+            "matchFileNames": ["package.json"],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupName": "workspace tooling (minor-patch)"
+        },
+        {
+            "description": "GitHub Actions in one PR",
+            "matchManagers": ["github-actions"],
+            "groupName": "github actions",
+            "semanticCommitType": "ci"
+        },
+        {
+            "description": "Majors wait for approval on the Dependency Dashboard, one PR each",
             "matchUpdateTypes": ["major"],
-            "groupName": "dependencies (major)"
+            "dependencyDashboardApproval": true
         },
         {
-            "matchDepTypes": ["devDependencies"],
-            "matchUpdateTypes": ["minor", "patch"],
-            "groupName": "devDependencies (minor-patch)"
+            "description": "The typescript peer is the TypeScript 6 tool API (typescript-eslint needs <6.1.0); TypeScript 7 comes as @typescript/native",
+            "matchPackageNames": ["typescript"],
+            "matchDepTypes": ["peerDependencies"],
+            "allowedVersions": "<7"
         },
         {
-            "matchDepTypes": ["dependencies"],
-            "matchUpdateTypes": ["minor", "patch"],
-            "groupName": "dependencies (minor-patch)"
+            "description": "@types/node follows the Node.js 24 LTS line the presets target",
+            "matchPackageNames": ["@types/node"],
+            "allowedVersions": "<25"
         },
         {
             "description": "Keep oxc-transform-react inside the peer range of @vitejs/plugin-react 6.1.2 (^0.152.0). Update both together when plugin-react widens it.",
