@@ -2,10 +2,22 @@
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
     "extends": "nx/presets/npm.json",
     "defaultBase": "next",
+    "namedInputs": {
+        "default": ["{projectRoot}/**/*"],
+        "production": ["default", "!{projectRoot}/README.md", "!{projectRoot}/CHANGELOG.md"]
+    },
+    "targetDefaults": {
+        "build": {
+            "cache": true,
+            "dependsOn": ["^build"],
+            "inputs": ["production", "^production"],
+            "outputs": ["{projectRoot}/dist"]
+        }
+    },
     "release": {
         "projects": ["packages/*"],
         "git": {
-            "commitMessage": "chore(release): release {version}",
+            "commitMessage": "chore(release): release",
             "commit": true,
             "tag": true,
             "commitArgs": "--no-verify"
@@ -16,18 +28,12 @@
                 "createRelease": "github"
             },
             "automaticFromRef": true,
-            "workspaceChangelog": {
-                "createRelease": "github"
-            },
-            "releaseTagPattern": "release/{version}"
+            "workspaceChangelog": false
         },
         "version": {
-            "generatorOptions": {
-                "currentVersionResolver": "git-tag",
-                "specifierSource": "conventional-commits",
-                "preserveLocalDependencyProtocols": true,
-                "fallbackCurrentVersionResolver": "disk"
-            }
+            "specifierSource": "conventional-commits",
+            "currentVersionResolver": "git-tag",
+            "fallbackCurrentVersionResolver": "disk"
         }
     }
 }

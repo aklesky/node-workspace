@@ -1,0 +1,47 @@
+{
+    "name": "@aklesky/vite-presets",
+    "version": "0.0.0",
+    "description": "Shareable Vite presets for production frontend apps and legacy browsers.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/presets/base.d.ts",
+            "default": "./dist/presets/base.js"
+        },
+        "./*.js": {
+            "types": "./dist/*.d.ts",
+            "default": "./dist/*.js"
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "rimraf ./dist && tsc --project ./tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "peerDependencies": {
+        "vite": "8.3.4"
+    },
+    "devDependencies": {
+        "@aklesky/typescript-presets": "workspace:*",
+        "vite": "8.3.4"
+    },
+    "dependencies": {
+        "@vitejs/plugin-legacy": "8.2.3",
+        "terser": "5.51.2"
+    }
+}

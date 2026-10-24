@@ -1,0 +1,4 @@
+{
+    "extends": "@aklesky/typescript-presets/node/24.x/node.json",
+    "exclude": ["node_modules", "dist"]
+}

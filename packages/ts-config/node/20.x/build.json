@@ -1,7 +1,0 @@
-{
-    "extends": "../../shared/esm.json",
-    "compilerOptions": {
-        "declaration": true
-    }
-}
-

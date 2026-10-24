@@ -1,3 +1,0 @@
-{
-    "extends": "@aklesky/ts-config/node/20.x/bundler.json"
-}

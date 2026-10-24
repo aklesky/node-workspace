@@ -1,0 +1,48 @@
+{
+    "name": "@aklesky/eslint-presets",
+    "version": "0.0.0",
+    "description": "Shareable ESLint flat config presets for TypeScript projects.",
+    "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
+    "homepage": "https://github.com/aklesky/node-workspace#readme",
+    "license": "MIT",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/node.d.ts",
+            "default": "./dist/node.js"
+        },
+        "./*.js": {
+            "types": "./dist/*.d.ts",
+            "default": "./dist/*.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aklesky/node-workspace.git"
+    },
+    "scripts": {
+        "clean": "rimraf ./dist",
+        "build": "rimraf ./dist && tsc --project ./tsconfig.build.json"
+    },
+    "bugs": {
+        "url": "https://github.com/aklesky/node-workspace/issues"
+    },
+    "peerDependencies": {
+        "eslint": "10.13.0"
+    },
+    "devDependencies": {
+        "@aklesky/typescript-presets": "workspace:*",
+        "eslint": "10.13.0"
+    },
+    "dependencies": {
+        "@eslint/js": "10.0.1",
+        "globals": "17.13.0",
+        "typescript-eslint": "8.72.0"
+    }
+}

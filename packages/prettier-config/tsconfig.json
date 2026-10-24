@@ -1,4 +1,0 @@
-{
-    "extends": "@aklesky/ts-config/shared/esm.json",
-    "exclude": ["node_modules", "dist"]
-}

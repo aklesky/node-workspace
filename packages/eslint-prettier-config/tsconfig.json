@@ -1,4 +1,0 @@
-{
-    "extends": "@aklesky/ts-config/node/20.x/node.json",
-    "exclude": ["node_modules", "dist"]
-}
