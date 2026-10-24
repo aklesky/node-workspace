@@ -88,7 +88,7 @@ allowBuilds:
 
 | Name                    | Version |
 | ----------------------- | ------- |
-| Vite                    | 8.3.4   |
+| Vite                    | 8.3.5   |
 | @cloudflare/vite-plugin | 1.65.0  |
 | Wrangler                | 4.152.0 |
 | Node.js                 | 24.22.1 |

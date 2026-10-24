@@ -74,7 +74,7 @@ allowBuilds:
 
 | Name                  | Version |
 | --------------------- | ------- |
-| Vite                  | 8.3.4   |
+| Vite                  | 8.3.5   |
 | @vitejs/plugin-legacy | 8.2.3   |
 | Node.js               | 24.22.1 |
 

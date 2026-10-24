@@ -72,7 +72,7 @@ export { default } from '@aklesky/vitest-presets/eslint.js'
 | Name    | Version |
 | ------- | ------- |
 | Vitest  | 5.0.5   |
-| Vite    | 8.3.4   |
+| Vite    | 8.3.5   |
 | Node.js | 24.22.1 |
 
 ## License
