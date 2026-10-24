@@ -24,7 +24,8 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aklesky/node-workspace.git"
+        "url": "git+https://github.com/aklesky/node-workspace.git",
+        "directory": "packages/vite-presets"
     },
     "scripts": {
         "clean": "rimraf ./dist",
