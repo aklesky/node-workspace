@@ -1,3 +1,19 @@
+## 0.10.2 (2026-10-24)
+
+### 🩹 Fixes
+
+- **deps:** update dependencies, github actions and the renovate config ([#302](https://github.com/aklesky/node-workspace/pull/302))
+
+### 🧱 Updated Dependencies
+
+- Updated @aklesky/typescript-presets to 0.1.2
+- Updated @aklesky/worker-presets to 0.1.2
+- Updated @aklesky/vite-presets to 0.1.2
+
+### ❤️ Thank You
+
+- Aleksei Semiglasov @aklesky
+
 ## 0.10.1 (2026-10-24)
 
 ### 🩹 Fixes

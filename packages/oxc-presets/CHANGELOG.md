@@ -1,3 +1,9 @@
+## 0.1.2 (2026-10-24)
+
+### 🧱 Updated Dependencies
+
+- Updated @aklesky/typescript-presets to 0.1.2
+
 ## 0.1.1 (2026-10-24)
 
 ### 🩹 Fixes

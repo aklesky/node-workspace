@@ -1,6 +1,6 @@
 {
     "name": "@aklesky/worker-presets",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Shareable Vite presets for Cloudflare Workers with static assets.",
     "author": "Aleksei Semiglasov <aleksey.semiglasov@gmail.com>",
     "homepage": "https://github.com/aklesky/node-workspace#readme",
