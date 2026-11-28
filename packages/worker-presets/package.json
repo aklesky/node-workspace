@@ -35,16 +35,16 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "peerDependencies": {
-        "vite": "8.3.5",
-        "wrangler": "4.152.0"
+        "vite": "8.3.8",
+        "wrangler": "4.168.0"
     },
     "devDependencies": {
         "@aklesky/typescript-presets": "workspace:*",
-        "vite": "8.3.5",
-        "wrangler": "4.152.0"
+        "vite": "8.3.8",
+        "wrangler": "4.168.0"
     },
     "dependencies": {
         "@aklesky/vite-presets": "workspace:*",
-        "@cloudflare/vite-plugin": "1.65.0"
+        "@cloudflare/vite-plugin": "1.70.2"
     }
 }

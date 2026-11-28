@@ -35,17 +35,17 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "peerDependencies": {
-        "tailwindcss": "4.3.3",
-        "vite": "8.3.5"
+        "tailwindcss": "4.3.5",
+        "vite": "8.3.8"
     },
     "devDependencies": {
         "@aklesky/typescript-presets": "workspace:*",
-        "vite": "8.3.5"
+        "vite": "8.3.8"
     },
     "dependencies": {
         "@aklesky/vite-presets": "workspace:*",
         "@tailwindcss/forms": "0.5.11",
         "@tailwindcss/typography": "0.5.20",
-        "@tailwindcss/vite": "4.3.3"
+        "@tailwindcss/vite": "4.3.5"
     }
 }
