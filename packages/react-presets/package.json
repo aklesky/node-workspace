@@ -37,11 +37,11 @@
         "url": "https://github.com/aklesky/node-workspace/issues"
     },
     "peerDependencies": {
-        "@vitejs/plugin-rsc": "0.5.38",
+        "@vitejs/plugin-rsc": "0.5.39",
         "react": "19.3.1",
         "react-dom": "19.3.1",
-        "vite": "8.3.5",
-        "wrangler": "4.152.0"
+        "vite": "8.3.8",
+        "wrangler": "4.168.0"
     },
     "peerDependenciesMeta": {
         "@vitejs/plugin-rsc": {
@@ -49,17 +49,17 @@
         }
     },
     "devDependencies": {
-        "@vitejs/plugin-rsc": "0.5.38",
+        "@vitejs/plugin-rsc": "0.5.39",
         "react": "19.3.1",
         "react-dom": "19.3.1",
-        "vite": "8.3.5",
-        "wrangler": "4.152.0"
+        "vite": "8.3.8",
+        "wrangler": "4.168.0"
     },
     "dependencies": {
         "@aklesky/typescript-presets": "workspace:*",
         "@aklesky/vite-presets": "workspace:*",
         "@aklesky/worker-presets": "workspace:*",
-        "@vitejs/plugin-react": "6.1.2",
+        "@vitejs/plugin-react": "6.3.0",
         "oxc-transform-react": "0.152.0"
     }
 }
